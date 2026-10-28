@@ -1,0 +1,499 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090d18">
+  <meta name="description" content="HEXAM Analytics — premium SaaS analytics dashboard demo.">
+  <title>HEXAM Analytics — Overview</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="HEXAM ANALYTICS.css">
+</head>
+<body>
+  <div class="app-shell">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <a class="brand" href="#overview" aria-label="HEXAM Analytics home">
+        <span class="brand-mark">
+          <svg viewBox="0 0 40 40" aria-hidden="true">
+            <path d="M8 29V11L20 23L32 11V29"
+              fill="none" stroke="currentColor" stroke-width="4"
+              stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="brand-copy">
+          <strong>HEXAM</strong>
+          <small>ANALYTICS</small>
+        </span>
+      </a>
+
+      <div class="workspace">
+        <div class="workspace-icon">N</div>
+        <div class="workspace-copy">
+          <strong>HEXAM Studio</strong>
+          <span>Free workspace</span>
+        </div>
+        <span class="chevron">⌄</span>
+      </div>
+
+      <div class="nav-section">
+        <p class="nav-label">WORKSPACE</p>
+        <nav class="nav-list" aria-label="Main navigation">
+          <a class="nav-link active" href="#overview" aria-current="page">
+            <span class="nav-icon">◫</span>
+            <span>Overview</span>
+            <span class="active-dot"></span>
+          </a>
+          <a class="nav-link" href="#analytics">
+            <span class="nav-icon">⌁</span>
+            <span>Analytics</span>
+          </a>
+          <a class="nav-link" href="#revenue">
+            <span class="nav-icon">↗</span>
+            <span>Revenue</span>
+          </a>
+          <a class="nav-link" href="#transactions">
+            <span class="nav-icon">▤</span>
+            <span>Transactions</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="nav-section">
+        <p class="nav-label">MANAGEMENT</p>
+        <nav class="nav-list" aria-label="Management navigation">
+          <a class="nav-link" href="#customers">
+            <span class="nav-icon">♧</span>
+            <span>Customers</span>
+          </a>
+          <a class="nav-link" href="#reports">
+            <span class="nav-icon">▥</span>
+            <span>Reports</span>
+            <span class="nav-count">3</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="sidebar-spacer"></div>
+
+      <a class="upgrade-card" href="#upgrade">
+        <div class="upgrade-icon">✦</div>
+        <strong>Unlock your potential</strong>
+        <p>Get deeper insights with HEXAM Pro.</p>
+        <span class="upgrade-link">Explore Pro <span>→</span></span>
+        <div class="upgrade-glow"></div>
+      </a>
+
+      <div class="sidebar-bottom">
+        <a class="nav-link" href="#settings">
+          <span class="nav-icon">⚙</span>
+          <span>Settings</span>
+        </a>
+        <div class="profile">
+          <div class="avatar avatar-purple">AR</div>
+          <div class="profile-copy">
+            <strong>Jeremi</strong>
+            <span>Admin account</span>
+          </div>
+          <span class="profile-menu">···</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content" id="overview">
+
+      <header class="topbar">
+        <div class="breadcrumbs">
+          <span>Workspace</span>
+          <span class="breadcrumb-slash">/</span>
+          <strong>Overview</strong>
+        </div>
+
+        <div class="topbar-actions">
+          <span class="demo-badge"><span></span> Demo data</span>
+          <a class="icon-button" href="#notifications" aria-label="Notifications">
+            ♧
+            <span class="notification-dot"></span>
+          </a>
+          <a class="help-link" href="#help">Help center ↗</a>
+        </div>
+      </header>
+
+      <div class="page-content">
+
+        <!-- PAGE INTRO -->
+        <section class="page-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span> MONDAY, OCTOBER 26, 2026</p>
+            <h1>Good morning, Boss Jeremy <span class="wave">✳</span></h1>
+            <p class="page-subtitle">
+              Here's what's happening with your business today.
+            </p>
+          </div>
+
+          <div class="heading-actions">
+            <a class="button button-secondary" href="#reports">
+              <span>↓</span> Export report
+            </a>
+            <a class="button button-primary" href="#analytics">
+              <span>＋</span> View analytics
+            </a>
+          </div>
+        </section>
+
+        <!-- KPI CARDS -->
+        <section class="stats-grid" aria-label="Key performance indicators">
+
+          <article class="stat-card">
+            <div class="stat-top">
+              <span class="stat-label">Total revenue</span>
+              <span class="stat-icon icon-cyan">↗</span>
+            </div>
+            <div class="stat-value">$48,294<span class="decimal">.00</span></div>
+            <div class="stat-bottom">
+              <span class="trend trend-up">↗ 12.8%</span>
+              <span class="stat-period">vs. last month</span>
+            </div>
+            <div class="sparkline spark-cyan" aria-hidden="true">
+              <svg viewBox="0 0 140 38" preserveAspectRatio="none">
+                <path class="spark-fill" d="M0 31 L14 25 L27 29 L41 16 L55 22 L69 11 L83 17 L97 6 L111 12 L125 3 L140 7 L140 38 L0 38Z"/>
+                <path class="spark-stroke" d="M0 31 L14 25 L27 29 L41 16 L55 22 L69 11 L83 17 L97 6 L111 12 L125 3 L140 7"/>
+              </svg>
+            </div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-top">
+              <span class="stat-label">Active users</span>
+              <span class="stat-icon icon-violet">♧</span>
+            </div>
+            <div class="stat-value">24,892</div>
+            <div class="stat-bottom">
+              <span class="trend trend-up">↗ 8.2%</span>
+              <span class="stat-period">vs. last month</span>
+            </div>
+            <div class="sparkline spark-violet" aria-hidden="true">
+              <svg viewBox="0 0 140 38" preserveAspectRatio="none">
+                <path class="spark-fill" d="M0 30 L14 22 L28 27 L42 20 L56 24 L70 12 L84 18 L98 8 L112 14 L126 4 L140 7 L140 38 L0 38Z"/>
+                <path class="spark-stroke" d="M0 30 L14 22 L28 27 L42 20 L56 24 L70 12 L84 18 L98 8 L112 14 L126 4 L140 7"/>
+              </svg>
+            </div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-top">
+              <span class="stat-label">Conversion rate</span>
+              <span class="stat-icon icon-pink">◎</span>
+            </div>
+            <div class="stat-value">3.64<span class="decimal">%</span></div>
+            <div class="stat-bottom">
+              <span class="trend trend-up">↗ 2.4%</span>
+              <span class="stat-period">vs. last month</span>
+            </div>
+            <div class="sparkline spark-pink" aria-hidden="true">
+              <svg viewBox="0 0 140 38" preserveAspectRatio="none">
+                <path class="spark-fill" d="M0 28 L14 31 L28 21 L42 24 L56 14 L70 20 L84 12 L98 15 L112 6 L126 10 L140 3 L140 38 L0 38Z"/>
+                <path class="spark-stroke" d="M0 28 L14 31 L28 21 L42 24 L56 14 L70 20 L84 12 L98 15 L112 6 L126 10 L140 3"/>
+              </svg>
+            </div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-top">
+              <span class="stat-label">Avg. order value</span>
+              <span class="stat-icon icon-orange">◇</span>
+            </div>
+            <div class="stat-value">$128<span class="decimal">.40</span></div>
+            <div class="stat-bottom">
+              <span class="trend trend-down">↘ 1.6%</span>
+              <span class="stat-period">vs. last month</span>
+            </div>
+            <div class="sparkline spark-orange" aria-hidden="true">
+              <svg viewBox="0 0 140 38" preserveAspectRatio="none">
+                <path class="spark-fill" d="M0 8 L14 13 L28 10 L42 18 L56 12 L70 23 L84 16 L98 27 L112 21 L126 30 L140 26 L140 38 L0 38Z"/>
+                <path class="spark-stroke" d="M0 8 L14 13 L28 10 L42 18 L56 12 L70 23 L84 16 L98 27 L112 21 L126 30 L140 26"/>
+              </svg>
+            </div>
+          </article>
+        </section>
+
+        <!-- CHARTS -->
+        <section class="charts-grid" id="analytics">
+
+          <article class="panel revenue-panel" id="revenue">
+            <div class="panel-header">
+              <div>
+                <p class="panel-kicker">PERFORMANCE</p>
+                <h2>Revenue overview</h2>
+                <p class="panel-description">Track your income over time.</p>
+              </div>
+              <a class="select-button" href="#revenue-chart">Last 12 months <span>⌄</span></a>
+            </div>
+
+            <div class="revenue-summary">
+              <div>
+                <span class="summary-label">Total revenue</span>
+                <div class="summary-value">$284,592<span>.80</span></div>
+              </div>
+              <div class="summary-comparison">
+                <span class="trend trend-up">↗ 18.6%</span>
+                <small>Compared to previous year</small>
+              </div>
+            </div>
+
+            <div class="chart-legend">
+              <span><i class="legend-dot dot-cyan"></i> Revenue</span>
+              <span><i class="legend-dot dot-violet"></i> Expenses</span>
+            </div>
+
+            <div class="chart-area" id="revenue-chart" role="img" aria-label="Demo chart showing monthly revenue and expenses from January to December.">
+              <div class="y-axis">
+                <span>$50k</span>
+                <span>$40k</span>
+                <span>$30k</span>
+                <span>$20k</span>
+                <span>$10k</span>
+                <span>$0</span>
+              </div>
+
+              <div class="chart-plot">
+                <div class="chart-grid-lines">
+                  <span></span><span></span><span></span>
+                  <span></span><span></span><span></span>
+                </div>
+
+                <svg class="revenue-svg" viewBox="0 0 720 240" preserveAspectRatio="none" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="revenueGradient" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#25d9ed" stop-opacity=".24"/>
+                      <stop offset="100%" stop-color="#25d9ed" stop-opacity="0"/>
+                    </linearGradient>
+                    <linearGradient id="expenseGradient" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#a78bfa" stop-opacity=".14"/>
+                      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+
+                  <path d="M0 183 C30 170 35 175 65 155 S100 172 130 142 S165 150 196 128 S235 143 262 113 S302 126 328 98 S368 120 393 86 S433 106 458 72 S498 93 523 61 S563 76 589 50 S630 69 655 33 S693 46 720 19 L720 240 L0 240Z"
+                    fill="url(#revenueGradient)"/>
+
+                  <path d="M0 183 C30 170 35 175 65 155 S100 172 130 142 S165 150 196 128 S235 143 262 113 S302 126 328 98 S368 120 393 86 S433 106 458 72 S498 93 523 61 S563 76 589 50 S630 69 655 33 S693 46 720 19"
+                    fill="none" stroke="#28d8eb" stroke-width="3" vector-effect="non-scaling-stroke"/>
+
+                  <path d="M0 210 C35 201 45 210 65 195 S102 205 130 184 S166 197 196 174 S231 183 262 161 S301 178 328 151 S365 165 393 141 S433 158 458 126 S498 143 523 117 S563 130 589 106 S628 123 655 91 S695 105 720 79 L720 240 L0 240Z"
+                    fill="url(#expenseGradient)"/>
+
+                  <path d="M0 210 C35 201 45 210 65 195 S102 205 130 184 S166 197 196 174 S231 183 262 161 S301 178 328 151 S365 165 393 141 S433 158 458 126 S498 143 523 117 S563 130 589 106 S628 123 655 91 S695 105 720 79"
+                    fill="none" stroke="#a78bfa" stroke-width="2" stroke-dasharray="5 5" vector-effect="non-scaling-stroke"/>
+                </svg>
+
+                <div class="chart-months">
+                  <span>Jan</span><span>Feb</span><span>Mar</span>
+                  <span>Apr</span><span>May</span><span>Jun</span>
+                  <span>Jul</span><span>Aug</span><span>Sep</span>
+                  <span>Oct</span><span>Nov</span><span>Dec</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="chart-note">
+              <span class="note-icon">✦</span>
+              <p><strong>Great momentum!</strong> Revenue is trending upward in this sample dataset.</p>
+            </div>
+          </article>
+
+          <article class="panel traffic-panel">
+            <div class="panel-header">
+              <div>
+                <p class="panel-kicker">ACQUISITION</p>
+                <h2>Traffic sources</h2>
+                <p class="panel-description">Where your visitors come from.</p>
+              </div>
+              <a class="more-button" href="#traffic-details" aria-label="Traffic details">···</a>
+            </div>
+
+            <div class="traffic-chart" role="img" aria-label="Demo traffic distribution: Organic Search 42 percent, Direct 28 percent, Social Media 18 percent, Referral 12 percent.">
+              <div class="donut-chart">
+                <div class="donut-center">
+                  <span>Total visitors</span>
+                  <strong>18,492</strong>
+                  <small><span>↗</span> 14.8%</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="traffic-legend" id="traffic-details">
+              <div class="traffic-row">
+                <span class="traffic-name"><i class="legend-dot dot-cyan"></i> Organic search</span>
+                <strong>42%</strong>
+              </div>
+              <div class="traffic-row">
+                <span class="traffic-name"><i class="legend-dot dot-violet"></i> Direct</span>
+                <strong>28%</strong>
+              </div>
+              <div class="traffic-row">
+                <span class="traffic-name"><i class="legend-dot dot-pink"></i> Social media</span>
+                <strong>18%</strong>
+              </div>
+              <div class="traffic-row">
+                <span class="traffic-name"><i class="legend-dot dot-orange"></i> Referral</span>
+                <strong>12%</strong>
+              </div>
+            </div>
+            <p class="data-caption">Illustrative traffic data · Demo only</p>
+          </article>
+        </section>
+
+        <!-- TRANSACTIONS -->
+        <section class="panel transactions-panel" id="transactions">
+          <div class="panel-header transaction-heading">
+            <div>
+              <p class="panel-kicker">RECENT ACTIVITY</p>
+              <h2>Latest transactions</h2>
+              <p class="panel-description">A snapshot of recent customer payments.</p>
+            </div>
+            <a class="button button-secondary button-small" href="#all-transactions">View all <span>→</span></a>
+          </div>
+
+          <div class="table-wrap" id="all-transactions">
+            <table>
+              <thead>
+                <tr>
+                  <th>Customer</th>
+                  <th>Transaction ID</th>
+                  <th>Date</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th><span class="sr-only">Details</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="customer-cell">
+                      <div class="avatar avatar-cyan">JD</div>
+                      <div><strong>James Davidson</strong><small>james@example.com</small></div>
+                    </div>
+                  </td>
+                  <td><span class="transaction-id">#NX-2048</span></td>
+                  <td>Oct 26, 2026</td>
+                  <td class="amount">$1,240.00</td>
+                  <td><span class="status status-paid"><i></i> Completed</span></td>
+                  <td><a class="row-action" href="#transaction-2048" aria-label="View James Davidson transaction">↗</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="customer-cell">
+                      <div class="avatar avatar-pink">SM</div>
+                      <div><strong>Sarah Mitchell</strong><small>sarah@example.com</small></div>
+                    </div>
+                  </td>
+                  <td><span class="transaction-id">#NX-2047</span></td>
+                  <td>Oct 26, 2026</td>
+                  <td class="amount">$890.50</td>
+                  <td><span class="status status-pending"><i></i> Pending</span></td>
+                  <td><a class="row-action" href="#transaction-2047" aria-label="View Sarah Mitchell transaction">↗</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="customer-cell">
+                      <div class="avatar avatar-orange">MC</div>
+                      <div><strong>Michael Chen</strong><small>michael@example.com</small></div>
+                    </div>
+                  </td>
+                  <td><span class="transaction-id">#NX-2046</span></td>
+                  <td>Oct 25, 2026</td>
+                  <td class="amount">$2,450.00</td>
+                  <td><span class="status status-paid"><i></i> Completed</span></td>
+                  <td><a class="row-action" href="#transaction-2046" aria-label="View Michael Chen transaction">↗</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="customer-cell">
+                      <div class="avatar avatar-green">EW</div>
+                      <div><strong>Emma Wilson</strong><small>emma@example.com</small></div>
+                    </div>
+                  </td>
+                  <td><span class="transaction-id">#NX-2045</span></td>
+                  <td>Oct 25, 2026</td>
+                  <td class="amount">$645.00</td>
+                  <td><span class="status status-failed"><i></i> Failed</span></td>
+                  <td><a class="row-action" href="#transaction-2045" aria-label="View Emma Wilson transaction">↗</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="customer-cell">
+                      <div class="avatar avatar-violet">DL</div>
+                      <div><strong>Daniel Lee</strong><small>daniel@example.com</small></div>
+                    </div>
+                  </td>
+                  <td><span class="transaction-id">#NX-2044</span></td>
+                  <td>Oct 24, 2026</td>
+                  <td class="amount">$1,820.75</td>
+                  <td><span class="status status-paid"><i></i> Completed</span></td>
+                  <td><a class="row-action" href="#transaction-2044" aria-label="View Daniel Lee transaction">↗</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="table-footer">
+            <span>Showing <strong>5</strong> of <strong>128</strong> transactions</span>
+            <div class="pagination">
+              <a href="#transactions" class="page-arrow" aria-label="Previous page">‹</a>
+              <a href="#transactions" class="page-number current" aria-current="page">1</a>
+              <a href="#transactions" class="page-number">2</a>
+              <a href="#transactions" class="page-number">3</a>
+              <span class="page-ellipsis">...</span>
+              <a href="#transactions" class="page-number">26</a>
+              <a href="#transactions" class="page-arrow" aria-label="Next page">›</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- BOTTOM INSIGHTS -->
+        <section class="bottom-grid">
+          <article class="panel insights-panel">
+            <div class="insight-symbol">✦</div>
+            <div class="insight-copy">
+              <p class="panel-kicker">WEEKLY INSIGHT</p>
+              <h3>Your audience is growing</h3>
+              <p>Organic search is your leading traffic source in this demo. Consider investing in content that serves your audience.</p>
+              <a href="#traffic-details" class="text-link">Explore traffic sources →</a>
+            </div>
+            <div class="insight-decoration" aria-hidden="true"></div>
+          </article>
+
+          <article class="panel goal-panel">
+            <div class="panel-header">
+              <div>
+                <p class="panel-kicker">MONTHLY TARGET</p>
+                <h3>Revenue goal</h3>
+              </div>
+              <span class="goal-icon">◎</span>
+            </div>
+            <div class="goal-amount">$48,294 <span>/ $60,000</span></div>
+            <div class="progress-track"><span></span></div>
+            <div class="goal-footer">
+              <span>80.5% achieved</span>
+              <span>$11,706 to go</span>
+            </div>
+          </article>
+        </section>
+
+        <footer class="footer" id="help">
+          <span>© 2026 HEXAM ANALYTICS. UI demo for portfolio use.</span>
+          <div><a href="#privacy">Privacy</a><a href="#terms">Terms</a><a href="#help">Support</a></div>
+        </footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
