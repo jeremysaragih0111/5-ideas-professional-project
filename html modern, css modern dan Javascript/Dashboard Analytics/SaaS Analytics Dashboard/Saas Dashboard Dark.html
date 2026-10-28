@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0a0f" />
+  <meta name="description" content="SaaS Analytics Dashboard - Dark Premium UI" />
+  <title>SaaS Metrics — Analytics Dashboard</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- Hidden checkbox untuk toggle sidebar mobile -->
+  <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle-input" />
+
+  <div class="dashboard">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar">
+      <div class="sidebar__header">
+        <div class="brand">
+          <div class="brand__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M3 3v18h18" stroke-linecap="round" />
+              <path d="M7 15l4-4 3 3 5-7" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div class="brand__text">
+            <span class="brand__name">SaaS</span><span class="brand__accent">Metrics</span>
+          </div>
+        </div>
+        <label for="sidebar-toggle" class="sidebar__close" aria-label="Tutup menu">✕</label>
+      </div>
+
+      <nav class="nav" aria-label="Navigasi utama">
+        <p class="nav__label">Menu</p>
+        <a href="#" class="nav__item nav__item--active">
+          <span class="nav__icon" aria-hidden="true">▤</span>
+          <span>Overview</span>
+        </a>
+        <a href="#" class="nav__item">
+          <span class="nav__icon" aria-hidden="true">◉</span>
+          <span>Pengguna</span>
+          <span class="nav__badge">1.2k</span>
+        </a>
+        <a href="#" class="nav__item">
+          <span class="nav__icon" aria-hidden="true">◆</span>
+          <span>Pendapatan</span>
+        </a>
+        <a href="#" class="nav__item">
+          <span class="nav__icon" aria-hidden="true">⚡</span>
+          <span>Aktivitas</span>
+        </a>
+
+        <p class="nav__label">Sistem</p>
+        <a href="#" class="nav__item">
+          <span class="nav__icon" aria-hidden="true">▦</span>
+          <span>Laporan</span>
+        </a>
+        <a href="#" class="nav__item">
+          <span class="nav__icon" aria-hidden="true">⚙</span>
+          <span>Pengaturan</span>
+        </a>
+      </nav>
+
+      <div class="sidebar__footer">
+        <div class="upgrade-card">
+          <div class="upgrade-card__glow" aria-hidden="true"></div>
+          <p class="upgrade-card__title">Upgrade ke Pro</p>
+          <p class="upgrade-card__desc">Buka analitik advanced & export tanpa batas.</p>
+          <button class="btn btn--primary btn--block" type="button">Upgrade Sekarang</button>
+        </div>
+        <div class="profile">
+          <div class="profile__avatar" aria-hidden="true">AD</div>
+          <div class="profile__info">
+            <span class="profile__name">Admin Demo</span>
+            <span class="profile__role">Super Admin</span>
+          </div>
+          <span class="profile__dot" aria-hidden="true"></span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Overlay untuk mobile -->
+    <label for="sidebar-toggle" class="overlay" aria-hidden="true"></label>
+
+    <!-- ============ MAIN ============ -->
+    <main class="main">
+
+      <!-- Topbar -->
+      <header class="topbar">
+        <label for="sidebar-toggle" class="topbar__menu" aria-label="Buka menu">☰</label>
+
+        <div class="topbar__title">
+          <h1>Dashboard Overview</h1>
+          <p>Selamat datang kembali, Admin. Berikut ringkasan hari ini.</p>
+        </div>
+
+        <div class="topbar__actions">
+          <div class="search">
+            <span class="search__icon" aria-hidden="true">⌕</span>
+            <input type="search" class="search__input" placeholder="Cari metrik, pengguna..." aria-label="Cari" />
+          </div>
+          <button class="icon-btn" type="button" aria-label="Notifikasi">
+            <span aria-hidden="true">🔔</span>
+            <span class="icon-btn__badge">3</span>
+          </button>
+          <button class="avatar-btn" type="button" aria-label="Profil pengguna">AD</button>
+        </div>
+      </header>
+
+      <!-- ============ KPI CARDS ============ -->
+      <section class="kpi-grid" aria-label="Metrik utama">
+
+        <article class="kpi-card">
+          <div class="kpi-card__glow kpi-card__glow--indigo" aria-hidden="true"></div>
+          <header class="kpi-card__header">
+            <span class="kpi-card__label">Total Pengguna</span>
+            <span class="kpi-card__icon kpi-card__icon--indigo" aria-hidden="true">👥</span>
+          </header>
+          <p class="kpi-card__value">12,840</p>
+          <footer class="kpi-card__footer">
+            <span class="trend trend--up">▲ 12.5%</span>
+            <span class="kpi-card__note">vs bulan lalu</span>
+          </footer>
+        </article>
+
+        <article class="kpi-card">
+          <div class="kpi-card__glow kpi-card__glow--emerald" aria-hidden="true"></div>
+          <header class="kpi-card__header">
+            <span class="kpi-card__label">Monthly Recurring Revenue</span>
+            <span class="kpi-card__icon kpi-card__icon--emerald" aria-hidden="true">💰</span>
+          </header>
+          <p class="kpi-card__value">$84,250</p>
+          <footer class="kpi-card__footer">
+            <span class="trend trend--up">▲ 8.2%</span>
+            <span class="kpi-card__note">vs bulan lalu</span>
+          </footer>
+        </article>
+
+        <article class="kpi-card">
+          <div class="kpi-card__glow kpi-card__glow--amber" aria-hidden="true"></div>
+          <header class="kpi-card__header">
+            <span class="kpi-card__label">Aktivitas Hari Ini</span>
+            <span class="kpi-card__icon kpi-card__icon--amber" aria-hidden="true">⚡</span>
+          </header>
+          <p class="kpi-card__value">3,241</p>
+          <footer class="kpi-card__footer">
+            <span class="trend trend--down">▼ 3.4%</span>
+            <span class="kpi-card__note">vs kemarin</span>
+          </footer>
+        </article>
+
+        <article class="kpi-card">
+          <div class="kpi-card__glow kpi-card__glow--rose" aria-hidden="true"></div>
+          <header class="kpi-card__header">
+            <span class="kpi-card__label">Churn Rate</span>
+            <span class="kpi-card__icon kpi-card__icon--rose" aria-hidden="true">📉</span>
+          </header>
+          <p class="kpi-card__value">2.8%</p>
+          <footer class="kpi-card__footer">
+            <span class="trend trend--good">▼ 1.1%</span>
+            <span class="kpi-card__note">lebih baik</span>
+          </footer>
+        </article>
+
+      </section>
+
+      <!-- ============ CHART ROW ============ -->
+      <section class="charts-row" aria-label="Grafik analitik">
+
+        <!-- Line chart (SVG statis) -->
+        <article class="card card--chart">
+          <header class="card__header">
+            <div>
+              <h2 class="card__title">Pendapatan & Pengguna</h2>
+              <p class="card__subtitle">7 hari terakhir</p>
+            </div>
+            <div class="chips" role="tablist" aria-label="Rentang waktu">
+              <button class="chip chip--active" type="button" role="tab" aria-selected="true">7H</button>
+              <button class="chip" type="button" role="tab" aria-selected="false">30H</button>
+              <button class="chip" type="button" role="tab" aria-selected="false">90H</button>
+            </div>
+          </header>
+
+          <div class="chart-legend">
+            <span class="legend-item"><span class="legend-dot legend-dot--indigo"></span>Pendapatan</span>
+            <span class="legend-item"><span class="legend-dot legend-dot--emerald"></span>Pengguna Baru</span>
+          </div>
+
+          <!-- SVG line chart statis -->
+          <div class="chart-svg-wrap">
+            <svg class="chart-svg" viewBox="0 0 700 260" preserveAspectRatio="none" role="img"
+                 aria-label="Grafik pendapatan dan pengguna baru selama 7 hari">
+              <defs>
+                <linearGradient id="gradRevenue" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#6366f1" stop-opacity="0.45" />
+                  <stop offset="100%" stop-color="#6366f1" stop-opacity="0" />
+                </linearGradient>
+                <linearGradient id="gradLine" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#818cf8" />
+                  <stop offset="100%" stop-color="#a78bfa" />
+                </linearGradient>
+              </defs>
+
+              <!-- Grid lines -->
+              <g stroke="#1f2937" stroke-width="1">
+                <line x1="0" y1="40"  x2="700" y2="40" />
+                <line x1="0" y1="90"  x2="700" y2="90" />
+                <line x1="0" y1="140" x2="700" y2="140" />
+                <line x1="0" y1="190" x2="700" y2="190" />
+              </g>
+
+              <!-- Area fill -->
+              <path d="M0,200 L100,170 L200,180 L300,140 L400,110 L500,130 L600,90 L700,100 L700,260 L0,260 Z"
+                    fill="url(#gradRevenue)" />
+
+              <!-- Revenue line -->
+              <path d="M0,200 L100,170 L200,180 L300,140 L400,110 L500,130 L600,90 L700,100"
+                    fill="none" stroke="url(#gradLine)" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+
+              <!-- Users line -->
+              <path d="M0,150 L100,130 L200,145 L300,110 L400,90 L500,120 L600,85 L700,95"
+                    fill="none" stroke="#10b981" stroke-width="2"
+                    stroke-dasharray="6 4" stroke-linecap="round" />
+
+              <!-- Data points -->
+              <g fill="#0a0a0f" stroke="#818cf8" stroke-width="2">
+                <circle cx="0"   cy="200" r="3.5" />
+                <circle cx="100" cy="170" r="3.5" />
+                <circle cx="200" cy="180" r="3.5" />
+                <circle cx="300" cy="140" r="3.5" />
+                <circle cx="400" cy="110" r="3.5" />
+                <circle cx="500" cy="130" r="3.5" />
+                <circle cx="600" cy="90"  r="3.5" />
+                <circle cx="700" cy="100" r="3.5" />
+              </g>
+            </svg>
+          </div>
+
+          <footer class="chart-xaxis" aria-hidden="true">
+            <span>Sen</span><span>Sel</span><span>Rab</span><span>Kam</span>
+            <span>Jum</span><span>Sab</span><span>Min</span>
+          </footer>
+        </article>
+
+        <!-- Donut chart (SVG statis) -->
+        <article class="card card--donut">
+          <header class="card__header">
+            <div>
+              <h2 class="card__title">Sumber Pendapatan</h2>
+              <p class="card__subtitle">Distribusi bulan ini</p>
+            </div>
+          </header>
+
+          <div class="donut-wrap">
+            <svg class="donut" viewBox="0 0 42 42" role="img" aria-label="Distribusi sumber pendapatan">
+              <circle class="donut__track" cx="21" cy="21" r="15.9155" />
+              <!-- 52% -->
+              <circle class="donut__seg donut__seg--1" cx="21" cy="21" r="15.9155"
+                      stroke-dasharray="52 48" stroke-dashoffset="25" />
+              <!-- 18% -->
+              <circle class="donut__seg donut__seg--2" cx="21" cy="21" r="15.9155"
+                      stroke-dasharray="18 82" stroke-dashoffset="-27" />
+              <!-- 24% -->
+              <circle class="donut__seg donut__seg--3" cx="21" cy="21" r="15.9155"
+                      stroke-dasharray="24 76" stroke-dashoffset="-45" />
+              <!-- 6% -->
+              <circle class="donut__seg donut__seg--4" cx="21" cy="21" r="15.9155"
+                      stroke-dasharray="6 94" stroke-dashoffset="-69" />
+              <text x="21" y="20" class="donut__value">$84k</text>
+              <text x="21" y="25" class="donut__label">Total MRR</text>
+            </svg>
+          </div>
+
+          <ul class="donut-legend">
+            <li><span class="legend-dot legend-dot--indigo"></span>Langganan <b>52%</b></li>
+            <li><span class="legend-dot legend-dot--purple"></span>Add-ons <b>18%</b></li>
+            <li><span class="legend-dot legend-dot--emerald"></span>Enterprise <b>24%</b></li>
+            <li><span class="legend-dot legend-dot--amber"></span>Lainnya <b>6%</b></li>
+          </ul>
+        </article>
+
+      </section>
+
+      <!-- ============ TABLE ============ -->
+      <section class="card card--table" aria-label="Aktivitas pengguna terbaru">
+        <header class="card__header">
+          <div>
+            <h2 class="card__title">Aktivitas Pengguna Terbaru</h2>
+            <p class="card__subtitle">Update realtime (data demo)</p>
+          </div>
+          <button class="btn btn--ghost" type="button">Lihat semua →</button>
+        </header>
+
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Pengguna</th>
+                <th>Email</th>
+                <th>Aktivitas</th>
+                <th>Plan</th>
+                <th>Status</th>
+                <th>Waktu</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="user-cell">
+                    <span class="user-avatar" style="--c1:#6366f1;--c2:#8b5cf6;">AW</span>
+                    <span class="user-cell__name">Andi Wijaya</span>
+                  </div>
+                </td>
+                <td class="text-muted">andi@mail.com</td>
+                <td>Login dashboard</td>
+                <td><span class="pill">Pro</span></td>
+                <td><span class="status status--active">● Active</span></td>
+                <td class="text-muted">2 menit lalu</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="user-cell">
+                    <span class="user-avatar" style="--c1:#ec4899;--c2:#f43f5e;">SR</span>
+                    <span class="user-cell__name">Siti Rahma</span>
+                  </div>
+                </td>
+                <td class="text-muted">siti@mail.com</td>
+                <td>Upgrade ke Enterprise</td>
+                <td><span class="pill pill--purple">Enterprise</span></td>
+                <td><span class="status status--active">● Active</span></td>
+                <td class="text-muted">15 menit lalu</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="user-cell">
+                    <span class="user-avatar" style="--c1:#f59e0b;--c2:#f97316;">BS</span>
+                    <span class="user-cell__name">Budi Santoso</span>
+                  </div>
+                </td>
+                <td class="text-muted">budi@mail.com</td>
+                <td>Membuat API key</td>
+                <td><span class="pill pill--muted">Free</span></td>
+                <td><span class="status status--pending">● Pending</span></td>
+                <td class="text-muted">1 jam lalu</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="user-cell">
+                    <span class="user-avatar" style="--c1:#10b981;--c2:#14b8a6;">DL</span>
+                    <span class="user-cell__name">Dewi Lestari</span>
+                  </div>
+                </td>
+                <td class="text-muted">dewi@mail.com</td>
+                <td>Menghapus workspace</td>
+                <td><span class="pill">Pro</span></td>
+                <td><span class="status status--churned">● Churned</span></td>
+                <td class="text-muted">3 jam lalu</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="user-cell">
+                    <span class="user-avatar" style="--c1:#3b82f6;--c2:#6366f1;">RH</span>
+                    <span class="user-cell__name">Rudi Hartono</span>
+                  </div>
+                </td>
+                <td class="text-muted">rudi@mail.com</td>
+                <td>Unduh laporan PDF</td>
+                <td><span class="pill">Pro</span></td>
+                <td><span class="status status--active">● Active</span></td>
+                <td class="text-muted">5 jam lalu</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p>© 2026 SaaS Metrics — Demo dashboard dengan HTML & CSS murni. Data statis.</p>
+      </footer>
+
+    </main>
+  </div>
+
+</body>
+</html>
