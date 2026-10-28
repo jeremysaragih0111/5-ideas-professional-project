@@ -1,0 +1,87 @@
+/* ============================================================
+   DESIGN TOKENS — Dark Premium Theme
+   ============================================================ */
+:root {
+  /* Background layers */
+  --bg-base: #0a0a0f;
+  --bg-elevated: #111118;
+  --bg-card: #13131c;
+  --bg-card-hover: #171722;
+  --bg-sidebar: #0d0d14;
+  --bg-input: #1a1a24;
+  --bg-hover: #1f1f2e;
+
+  /* Borders */
+  --border-subtle: #1f1f2e;
+  --border-default: #262636;
+  --border-strong: #34344a;
+
+  /* Text */
+  --text-primary: #f1f5f9;
+  --text-secondary: #a1a1b5;
+  --text-muted: #6b6b85;
+  --text-inverse: #0a0a0f;
+
+  /* Brand colors */
+  --primary: #6366f1;
+  --primary-light: #818cf8;
+  --primary-dark: #4f46e5;
+  --purple: #a78bfa;
+  --emerald: #10b981;
+  --emerald-light: #34d399;
+  --amber: #f59e0b;
+  --rose: #f43f5e;
+
+  /* Gradients */
+  --grad-brand: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  --grad-brand-soft: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(168, 85, 247, 0.15) 100%);
+  --grad-emerald: linear-gradient(135deg, #10b981 0%, #14b8a6 100%);
+  --grad-text: linear-gradient(135deg, #f1f5f9 0%, #a1a1b5 100%);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
+  --shadow-glow-indigo: 0 0 40px rgba(99, 102, 241, 0.15);
+  --shadow-glow-emerald: 0 0 40px rgba(16, 185, 129, 0.12);
+
+  /* Radii */
+  --r-xs: 6px;
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-xl: 20px;
+  --r-full: 999px;
+
+  /* Spacing */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+
+  /* Typography */
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", Menlo, monospace;
+
+  /* Layout */
+  --sidebar-w: 260px;
+  --topbar-h: 76px;
+  --sidebar-w: 260px;
+  --sidebar-w-collapsed: 76px;   /* NEW */
+  --topbar-h: 76px;
+
+  /* Transitions */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 150ms;
+  --dur-med: 250ms;
+  --dur-slow: 350ms;
+}
+
+/* Font fallback — tanpa Google Fonts (offline-friendly) */
+body {
+  font-family: var(--font-sans);
+}
