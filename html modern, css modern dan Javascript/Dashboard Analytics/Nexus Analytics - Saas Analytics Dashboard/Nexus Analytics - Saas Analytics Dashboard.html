@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nexus Analytics — Premium SaaS analytics dashboard" />
+  <meta name="theme-color" content="#0a0e1a" />
+  <title>Nexus Analytics — SaaS Dashboard</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/Nexus Analytics - Saas Analytics Dashboard.css" />
+
+  <!-- HANYA SATU sumber Chart.js: pakai lokal agar offline-friendly -->
+  <script src="js/Chart.min.js" defer></script>
+  <script src="js/Nexus Analytics - Saas Analytics Dashboard.js" defer></script>
+</head>
+
+<body>
+  <div class="app">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+
+      <header class="brand">
+        <div class="logo" aria-hidden="true">N</div>
+        <div class="brand-text">
+          <h1>Nexus</h1>
+          <span>Analytics</span>
+        </div>
+        <button
+          class="collapse-btn"
+          id="collapseBtn"
+          type="button"
+          aria-label="Collapse sidebar"
+          aria-expanded="true"
+          title="Collapse sidebar (Ctrl+B)"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15 6l-6 6 6 6"/>
+          </svg>
+        </button>
+      </header>
+
+      <nav class="nav">
+        <p class="nav-label">Menu</p>
+
+        <button class="nav-item active" data-page="Overview" aria-current="page">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="9" rx="1.5"/>
+            <rect x="14" y="3" width="7" height="5" rx="1.5"/>
+            <rect x="14" y="12" width="7" height="9" rx="1.5"/>
+            <rect x="3" y="16" width="7" height="5" rx="1.5"/>
+          </svg>
+          <span class="nav-text">Overview</span>
+          <span class="tooltip">Overview</span>
+        </button>
+
+        <button class="nav-item" data-page="Revenue">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 17l6-6 4 4 7-7"/>
+            <path d="M14 8h7v7"/>
+          </svg>
+          <span class="nav-text">Revenue</span>
+          <span class="tooltip">Revenue</span>
+        </button>
+
+        <button class="nav-item" data-page="Customers">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="9" cy="8" r="3.2"/>
+            <path d="M2.5 20a6.5 6.5 0 0113 0"/>
+            <path d="M16 5.2a3.2 3.2 0 010 5.6"/>
+            <path d="M18.5 20a6.5 6.5 0 00-3-5.4"/>
+          </svg>
+          <span class="nav-text">Customers</span>
+          <span class="tooltip">Customers</span>
+        </button>
+
+        <button class="nav-item" data-page="Products">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 8l-9-5-9 5 9 5 9-5z"/>
+            <path d="M3 8v8l9 5 9-5V8"/>
+            <path d="M12 13v8"/>
+          </svg>
+          <span class="nav-text">Products</span>
+          <span class="tooltip">Products</span>
+        </button>
+
+        <button class="nav-item" data-page="Transactions">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="2.5" y="5" width="19" height="14" rx="2.5"/>
+            <path d="M2.5 10h19"/>
+          </svg>
+          <span class="nav-text">Transactions</span>
+          <span class="badge">128</span>
+          <span class="tooltip">Transactions</span>
+        </button>
+
+        <p class="nav-label nav-label--spaced">Workspace</p>
+
+        <button class="nav-item" data-page="AI Insights">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3l1.8 4.9L19 9.6l-4 3.6.9 5.3L12 15.9 8.1 18.5 9 13.2 5 9.6l5.2-1.7L12 3z"/>
+          </svg>
+          <span class="nav-text">AI Insights</span>
+          <span class="badge badge--violet">New</span>
+          <span class="tooltip">AI Insights</span>
+        </button>
+
+        <button class="nav-item" data-page="Settings">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.7 1.7 0 00.3 1.9l.1.1a2 2 0 11-2.8 2.8l-.1-.1a1.7 1.7 0 00-1.9-.3 1.7 1.7 0 00-1 1.5V21a2 2 0 11-4 0v-.1a1.7 1.7 0 00-1.1-1.5 1.7 1.7 0 00-1.9.3l-.1.1a2 2 0 11-2.8-2.8l.1-.1a1.7 1.7 0 00.3-1.9 1.7 1.7 0 00-1.5-1H3a2 2 0 110-4h.1a1.7 1.7 0 001.5-1.1 1.7 1.7 0 00-.3-1.9l-.1-.1a2 2 0 112.8-2.8l.1.1a1.7 1.7 0 001.9.3H9a1.7 1.7 0 001-1.5V3a2 2 0 114 0v.1a1.7 1.7 0 001 1.5 1.7 1.7 0 001.9-.3l.1-.1a2 2 0 112.8 2.8l-.1.1a1.7 1.7 0 00-.3 1.9V9a1.7 1.7 0 001.5 1H21a2 2 0 110 4h-.1a1.7 1.7 0 00-1.5 1z"/>
+          </svg>
+          <span class="nav-text">Settings</span>
+          <span class="tooltip">Settings</span>
+        </button>
+      </nav>
+
+      <footer class="sidebar-footer">
+        <div class="upgrade">
+          <strong>Upgrade to Pro</strong>
+          <p>Unlock advanced forecasting, custom reports & unlimited seats.</p>
+          <button type="button" data-action="upgrade">Upgrade Plan</button>
+        </div>
+      </footer>
+    </aside>
+
+    <div class="backdrop" id="backdrop" aria-hidden="true"></div>
+
+    <!-- ============ MAIN (LENGKAP) ============ -->
+    <main class="main">
+
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="menu-btn" id="menuBtn" aria-label="Open menu" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 6h18M3 12h18M3 18h18"/>
+            </svg>
+          </button>
+          <div class="page-title">
+            <h2 id="pageTitle">Overview</h2>
+            <p id="pageSub">Welcome back, Alex — here's your business at a glance.</p>
+          </div>
+        </div>
+
+        <div class="search-wrap">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"/>
+            <path d="M21 21l-4.3-4.3"/>
+          </svg>
+          <input
+            type="search"
+            id="globalSearch"
+            placeholder="Search transactions, customers..."
+            aria-label="Search transactions"
+          />
+        </div>
+
+        <div class="topbar-actions">
+          <button class="icon-btn" id="refreshBtn" title="Refresh data" aria-label="Refresh data" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 12a9 9 0 11-3-6.7"/>
+              <path d="M21 4v5h-5"/>
+            </svg>
+          </button>
+          <button class="icon-btn" title="Notifications" aria-label="Notifications" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18 8a6 6 0 10-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/>
+              <path d="M10 21a2 2 0 004 0"/>
+            </svg>
+            <span class="dot" aria-hidden="true"></span>
+          </button>
+          <button class="avatar" title="Alex Morgan" aria-label="User menu" type="button">AM</button>
+        </div>
+      </header>
+
+      <section class="filters" aria-label="Filters">
+        <div class="segmented" id="periodFilter" role="tablist">
+          <button data-period="7" class="active" role="tab" aria-selected="true" type="button">7 Days</button>
+          <button data-period="30" role="tab" aria-selected="false" type="button">30 Days</button>
+          <button data-period="365" role="tab" aria-selected="false" type="button">12 Months</button>
+        </div>
+        <div class="spacer"></div>
+        <button class="btn" id="exportBtn" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+            <path d="M7 10l5 5 5-5"/>
+            <path d="M12 15V3"/>
+          </svg>
+          Export Report
+        </button>
+      </section>
+
+      <section class="kpi-grid" id="kpiGrid" aria-label="Key performance indicators">
+
+        <article class="kpi">
+          <div class="kpi-top">
+            <div class="kpi-icon cyan">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 1v22"/>
+                <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+              </svg>
+            </div>
+            <span class="kpi-trend up" id="revTrend">▲ 12.4%</span>
+          </div>
+          <p class="kpi-label">Total Revenue</p>
+          <p class="kpi-value" id="revValue">$284,920</p>
+          <p class="kpi-sub" id="revSub">vs. $253,410 last period</p>
+          <canvas class="kpi-spark" id="sparkRev" aria-hidden="true"></canvas>
+        </article>
+
+        <article class="kpi">
+          <div class="kpi-top">
+            <div class="kpi-icon violet">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="9" cy="8" r="3.2"/>
+                <path d="M2.5 20a6.5 6.5 0 0113 0"/>
+                <path d="M16 5.2a3.2 3.2 0 010 5.6"/>
+                <path d="M18.5 20a6.5 6.5 0 00-3-5.4"/>
+              </svg>
+            </div>
+            <span class="kpi-trend up" id="usersTrend">▲ 8.1%</span>
+          </div>
+          <p class="kpi-label">Active Users</p>
+          <p class="kpi-value" id="usersValue">18,742</p>
+          <p class="kpi-sub" id="usersSub">1,204 new this period</p>
+          <canvas class="kpi-spark" id="sparkUsers" aria-hidden="true"></canvas>
+        </article>
+
+        <article class="kpi">
+          <div class="kpi-top">
+            <div class="kpi-icon green">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 3v18h18"/>
+                <path d="M7 14l4-4 3 3 5-6"/>
+              </svg>
+            </div>
+            <span class="kpi-trend down" id="convTrend">▼ 1.2%</span>
+          </div>
+          <p class="kpi-label">Conversion Rate</p>
+          <p class="kpi-value" id="convValue">3.84%</p>
+          <p class="kpi-sub" id="convSub">Goal: 4.5%</p>
+          <canvas class="kpi-spark" id="sparkConv" aria-hidden="true"></canvas>
+        </article>
+
+        <article class="kpi">
+          <div class="kpi-top">
+            <div class="kpi-icon amber">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6L12 2z"/>
+              </svg>
+            </div>
+            <span class="kpi-trend up" id="mrrTrend">▲ 9.6%</span>
+          </div>
+          <p class="kpi-label">MRR</p>
+          <p class="kpi-value" id="mrrValue">$42,180</p>
+          <p class="kpi-sub" id="mrrSub">+$3,690 this month</p>
+          <canvas class="kpi-spark" id="sparkMrr" aria-hidden="true"></canvas>
+        </article>
+
+      </section>
+
+      <section class="charts-row" aria-label="Charts">
+        <article class="card">
+          <header class="card-head">
+            <div>
+              <h3>Revenue Growth</h3>
+              <p>Monthly recurring revenue trend</p>
+            </div>
+            <div class="legend">
+              <span><i class="legend-dot legend-dot--cyan"></i>Revenue</span>
+              <span><i class="legend-dot legend-dot--violet"></i>Target</span>
+            </div>
+          </header>
+          <div class="chart-box">
+            <canvas id="revenueChart" role="img" aria-label="Revenue growth chart"></canvas>
+          </div>
+        </article>
+
+        <article class="card">
+          <header class="card-head">
+            <div>
+              <h3>User Growth</h3>
+              <p>Active users over time</p>
+            </div>
+          </header>
+          <div class="chart-box chart-box--small">
+            <canvas id="usersChart" role="img" aria-label="User growth chart"></canvas>
+          </div>
+        </article>
+      </section>
+
+      <section class="bottom-row">
+
+        <article class="card">
+          <header class="card-head">
+            <div>
+              <h3>Recent Transactions</h3>
+              <p>Latest payments across all plans</p>
+            </div>
+            <button class="btn" id="viewAllBtn" type="button">View All</button>
+          </header>
+
+          <div class="table-wrap" id="tableWrap">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Customer</th>
+                  <th scope="col">Plan</th>
+                  <th scope="col">Amount</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Date</th>
+                </tr>
+              </thead>
+              <tbody id="txBody"></tbody>
+            </table>
+          </div>
+
+          <div class="state" id="emptyState">
+            <div class="emoji">🔍</div>
+            <h4>No transactions found</h4>
+            <p>We couldn't find any transactions matching your search. Try a different keyword.</p>
+            <button class="btn primary" id="clearSearch" type="button">Clear Search</button>
+          </div>
+
+          <div class="state" id="errorState">
+            <div class="emoji">⚠️</div>
+            <h4>Something went wrong</h4>
+            <p>We couldn't load your transactions. Please check your connection and try again.</p>
+            <button class="btn primary" id="retryBtn" type="button">Retry</button>
+          </div>
+        </article>
+
+        <aside class="ai-panel" aria-label="AI Insights">
+          <header class="ai-head">
+            <div class="ai-orb" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3l1.8 4.9L19 9.6l-4 3.6.9 5.3L12 15.9 8.1 18.5 9 13.2 5 9.6l5.2-1.7L12 3z"/>
+              </svg>
+            </div>
+            <div>
+              <h3>AI Insights</h3>
+              <p>Powered by Nexus Intelligence</p>
+            </div>
+          </header>
+
+          <div class="ai-list">
+            <div class="ai-item">
+              <span class="ico pos">▲</span>
+              <div><strong>Revenue is up 12.4%</strong> this period, driven mainly by annual plan upgrades. Consider promoting the Pro tier.</div>
+            </div>
+            <div class="ai-item">
+              <span class="ico warn">!</span>
+              <div><strong>Conversion dropped 1.2%</strong> — checkout friction on mobile is the likely cause. A/B test a simplified flow.</div>
+            </div>
+            <div class="ai-item">
+              <span class="ico info">i</span>
+              <div><strong>Churn risk detected</strong> for 3 enterprise accounts with declining login frequency over the last 14 days.</div>
+            </div>
+          </div>
+
+          <footer class="ai-foot">
+            <span>Updated 2 min ago</span>
+            <button type="button" data-action="ai-report">Full report →</button>
+          </footer>
+        </aside>
+
+      </section>
+
+    </main>
+  </div>
+
+  <div class="loading-overlay" id="loading" aria-hidden="true">
+    <div class="spinner"></div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <span class="dot"></span>
+    <span id="toastMsg">Done</span>
+  </div>
+</body>
+</html>
