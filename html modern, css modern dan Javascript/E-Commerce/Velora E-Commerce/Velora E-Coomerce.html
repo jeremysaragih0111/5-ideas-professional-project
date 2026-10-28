@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Velora Commerce - Premium lifestyle & fashion store" />
+  <title>Velora Commerce — Premium Lifestyle Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/Velora E-Commerce.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body>
+  <!-- ===== ANNOUNCEMENT BAR ===== -->
+  <div class="announcement">
+    <p>✦ Gratis ongkir seluruh Indonesia untuk pembelian di atas Rp 500.000 ✦</p>
+  </div>
+
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="brand">
+        <span class="brand-mark">V</span>
+        <span class="brand-name">Velora</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#collections" class="nav-link">Collections</a>
+        <a href="#products" class="nav-link">Produk</a>
+        <a href="#about" class="nav-link">Tentang</a>
+        <a href="#contact" class="nav-link">Kontak</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" aria-label="Cari" data-action="search">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+        <button class="icon-btn" aria-label="Keranjang" data-action="cart">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h2l2.4 12.4A2 2 0 0 0 9.36 17H19a2 2 0 0 0 1.96-1.6L22 8H6"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <span class="eyebrow">✦ Koleksi Eksklusif 2025</span>
+        <h1 class="hero-title">
+          Elegansi yang<br />
+          <em>Menentukan</em> Gaya.
+        </h1>
+        <p class="hero-sub">
+          Kurasi produk premium untuk kamu yang menghargai detail, kualitas,
+          dan keanggunan dalam setiap momen.
+        </p>
+        <div class="hero-cta">
+          <a href="#products" class="btn btn-primary">Jelajahi Koleksi</a>
+          <a href="#about" class="btn btn-ghost">Tentang Velora →</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>12K+</strong><span>Pelanggan</span></div>
+          <div><strong>4.9★</strong><span>Rating</span></div>
+          <div><strong>100%</strong><span>Original</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card card-1">
+          <div class="card-img gradient-1"></div>
+          <div class="card-info"><span>Signature Series</span><strong>Aurora Silk</strong></div>
+        </div>
+        <div class="hero-card card-2">
+          <div class="card-img gradient-2"></div>
+          <div class="card-info"><span>Limited Edition</span><strong>Velvet Noir</strong></div>
+        </div>
+        <div class="hero-blob"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LOGO / TRUST STRIP ===== -->
+  <section class="trust-strip">
+    <div class="container strip-inner">
+      <span>AS SEEN IN</span>
+      <div class="strip-logos">
+        <span>VOGUE</span><span>ELLE</span><span>HARPER'S</span><span>BAZAAR</span><span>GQ</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COLLECTIONS ===== -->
+  <section class="collections" id="collections">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">✦ Kurasi Kami</span>
+        <h2 class="section-title">Koleksi Pilihan</h2>
+        <p class="section-sub">Setiap koleksi dirancang dengan presisi dan rasa.</p>
+      </div>
+      <div class="collection-grid">
+        <a href="#products" class="collection-card" style="--g: linear-gradient(135deg,#1a1a1a,#4a3b2a);">
+          <span class="collection-tag">01</span>
+          <div class="collection-content">
+            <h3>Everyday Luxe</h3>
+            <p>Kenyamanan premium untuk hari-harimu</p>
+            <span class="collection-link">Lihat →</span>
+          </div>
+        </a>
+        <a href="#products" class="collection-card" style="--g: linear-gradient(135deg,#2b1b1f,#6b3a45);">
+          <span class="collection-tag">02</span>
+          <div class="collection-content">
+            <h3>Evening Edit</h3>
+            <p>Untuk momen yang layak dikenang</p>
+            <span class="collection-link">Lihat →</span>
+          </div>
+        </a>
+        <a href="#products" class="collection-card" style="--g: linear-gradient(135deg,#1b242b,#3a5566);">
+          <span class="collection-tag">03</span>
+          <div class="collection-content">
+            <h3>Timeless Basics</h3>
+            <p>Esensial yang tak pernah salah</p>
+            <span class="collection-link">Lihat →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCTS ===== -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">✦ Best Seller</span>
+        <h2 class="section-title">Produk Unggulan</h2>
+        <p class="section-sub">Pilihan favorit pelanggan Velora.</p>
+      </div>
+
+      <div class="filter-tabs" id="filterTabs">
+        <button class="filter-btn active" data-filter="all">Semua</button>
+        <button class="filter-btn" data-filter="fashion">Fashion</button>
+        <button class="filter-btn" data-filter="accessory">Aksesoris</button>
+        <button class="filter-btn" data-filter="beauty">Beauty</button>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <!-- Product 1 -->
+        <article class="product-card" data-category="fashion">
+          <div class="product-img gradient-1">
+            <span class="product-badge">Best Seller</span>
+            <button class="fav-btn" aria-label="Favorit">♡</button>
+          </div>
+          <div class="product-body">
+            <span class="product-cat">Fashion</span>
+            <h3 class="product-name">Aurora Silk Blouse</h3>
+            <p class="product-desc">Sutra premium dengan detail handmade.</p>
+            <div class="product-foot">
+              <span class="price">Rp 890.000</span>
+              <button class="add-cart" data-name="Aurora Silk Blouse">+ Keranjang</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="product-card" data-category="accessory">
+          <div class="product-img gradient-2">
+            <span class="product-badge">Limited</span>
+            <button class="fav-btn" aria-label="Favorit">♡</button>
+          </div>
+          <div class="product-body">
+            <span class="product-cat">Aksesoris</span>
+            <h3 class="product-name">Velvet Noir Clutch</h3>
+            <p class="product-desc">Clutch elegan dengan sentuhan emas.</p>
+            <div class="product-foot">
+              <span class="price">Rp 1.250.000</span>
+              <button class="add-cart" data-name="Velvet Noir Clutch">+ Keranjang</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 3 -->
+        <article class="product-card" data-category="beauty">
+          <div class="product-img gradient-3">
+            <button class="fav-btn" aria-label="Favorit">♡</button>
+          </div>
+          <div class="product-body">
+            <span class="product-cat">Beauty</span>
+            <h3 class="product-name">Lumière Serum</h3>
+            <p class="product-desc">Serum wajah dengan vitamin C murni.</p>
+            <div class="product-foot">
+              <span class="price">Rp 450.000</span>
+              <button class="add-cart" data-name="Lumière Serum">+ Keranjang</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 4 -->
+        <article class="product-card" data-category="fashion">
+          <div class="product-img gradient-4">
+            <button class="fav-btn" aria-label="Favorit">♡</button>
+          </div>
+          <div class="product-body">
+            <span class="product-cat">Fashion</span>
+            <h3 class="product-name">Noir Tailored Blazer</h3>
+            <p class="product-desc">Potongan presisi untuk tampilan tegas.</p>
+            <div class="product-foot">
+              <span class="price">Rp 1.450.000</span>
+              <button class="add-cart" data-name="Noir Tailored Blazer">+ Keranjang</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 5 -->
+        <article class="product-card" data-category="accessory">
+          <div class="product-img gradient-5">
+            <button class="fav-btn" aria-label="Favorit">♡</button>
+          </div>
+          <div class="product-body">
+            <span class="product-cat">Aksesoris</span>
+            <h3 class="product-name">Gold Éclat Earrings</h3>
+            <p class="product-desc">Anting emas dengan desain minimalis.</p>
+            <div class="product-foot">
+              <span class="price">Rp 720.000</span>
+              <button class="add-cart" data-name="Gold Éclat Earrings">+ Keranjang</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 6 -->
+        <article class="product-card" data-category="beauty">
+          <div class="product-img gradient-6">
+            <button class="fav-btn" aria-label="Favorit">♡</button>
+          </div>
+          <div class="product-body">
+            <span class="product-cat">Beauty</span>
+            <h3 class="product-name">Rose Velvet Parfum</h3>
+            <p class="product-desc">Aroma floral dengan sentuhan musk.</p>
+            <div class="product-foot">
+              <span class="price">Rp 980.000</span>
+              <button class="add-cart" data-name="Rose Velvet Parfum">+ Keranjang</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-visual">
+        <div class="about-frame gradient-2"></div>
+        <div class="about-badge">Est. 2025</div>
+      </div>
+      <div class="about-text">
+        <span class="eyebrow">✦ Tentang Velora</span>
+        <h2 class="section-title">Kemewahan dalam Kesederhanaan.</h2>
+        <p>
+          Velora lahir dari keyakinan bahwa kemewahan sejati tidak perlu berteriak.
+          Kami memilih material terbaik, bekerja sama dengan pengrajin lokal, dan
+          merancang setiap produk agar bertahan melampaui tren.
+        </p>
+        <p>
+          Setiap koleksi adalah hasil kurasi ketat — dari tekstur kain hingga
+          detail jahitan terkecil.
+        </p>
+        <ul class="about-list">
+          <li>✓ Material premium &amp; bersertifikat</li>
+          <li>✓ Dikerjakan pengrajin berpengalaman</li>
+          <li>✓ Kemasan eksklusif siap hadiah</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Hubungi Kami</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER ===== -->
+  <section class="newsletter">
+    <div class="container newsletter-inner">
+      <div>
+        <h2>Dapatkan Akses Awal</h2>
+        <p>Bergabung dengan newsletter kami untuk koleksi baru &amp; penawaran eksklusif.</p>
+      </div>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Alamat email kamu" required />
+        <button type="submit" class="btn btn-primary">Berlangganan</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="brand">
+          <span class="brand-mark">V</span>
+          <span class="brand-name">Velora</span>
+        </a>
+        <p>Premium lifestyle &amp; fashion store. Kurasi untuk kamu yang menghargai detail.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="TikTok">TikTok</a>
+          <a href="#" aria-label="Pinterest">Pinterest</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <a href="#products">Fashion</a>
+        <a href="#products">Aksesoris</a>
+        <a href="#products">Beauty</a>
+        <a href="#collections">Koleksi</a>
+      </div>
+      <div class="footer-col">
+        <h4>Bantuan</h4>
+        <a href="#">Pengiriman</a>
+        <a href="#">Pengembalian</a>
+        <a href="#">FAQ</a>
+        <a href="#">Hubungi Kami</a>
+      </div>
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <p>Jl. Kemang Raya No. 12<br />Jakarta Selatan</p>
+        <p>hello@velora.id</p>
+        <p>+62 812 3456 7890</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2025 Velora Commerce. Demo project — bukan toko online fungsional.</p>
+        <p>Dibuat dengan HTML &amp; CSS murni.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== TOAST ===== -->
+  <div class="toast" id="toast"></div>
+
+  <script src="assets/js/Velora E-Commerce.js"></script>
+</body>
+</html>
