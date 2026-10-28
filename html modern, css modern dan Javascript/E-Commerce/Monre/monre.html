@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#163d32">
+  <meta name="description" content="Velora Commerce — premium commerce dashboard demo">
+  <title>Monre Commerce — Overview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="monre.css">
+  <script src="monre.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#overview" aria-label="Velora Commerce home">
+        <span class="brand-mark">V</span>
+        <span class="brand-copy">
+          <strong>Monre</strong>
+          <small>COMMERCE STUDIO</small>
+        </span>
+      </a>
+
+      <div class="workspace">
+        <span class="workspace-avatar">V</span>
+        <span class="workspace-copy">
+          <strong>Monre Atelier</strong>
+          <small>Premium storefront</small>
+        </span>
+        <span class="workspace-dots">•••</span>
+      </div>
+
+      <span class="nav-label">WORKSPACE</span>
+      <nav class="nav-list" aria-label="Main navigation">
+        <a class="nav-link active" href="#overview">
+          <span class="nav-icon">▦</span> Overview
+        </a>
+        <a class="nav-link" href="#orders">
+          <span class="nav-icon">▤</span> Orders
+          <span class="nav-count" id="navOrderCount">0</span>
+        </a>
+        <a class="nav-link" href="#products">
+          <span class="nav-icon">◇</span> Products
+        </a>
+        <a class="nav-link" href="#inventory">
+          <span class="nav-icon">▧</span> Inventory
+        </a>
+        <a class="nav-link" href="#analytics">
+          <span class="nav-icon">⌁</span> Analytics
+        </a>
+      </nav>
+
+      <span class="nav-label secondary-label">PREFERENCES</span>
+      <nav class="nav-list">
+        <a class="nav-link" href="#settings">
+          <span class="nav-icon">⚙</span> Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="help-card">
+          <span class="help-icon">✳</span>
+          <strong>Need a hand?</strong>
+          <p>Your next great idea is one click away.</p>
+          <a href="mailto:hello@example.com">Contact support ↗</a>
+        </div>
+        <div class="profile">
+          <div class="profile-avatar">JS</div>
+          <div class="profile-copy">
+            <strong>Jeremi</strong>
+            <small>Store administrator</small>
+          </div>
+          <span class="profile-menu">•••</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content" id="overview">
+      <header class="topbar">
+        <button class="icon-button mobile-menu" id="menuToggle"
+          aria-label="Buka navigasi" aria-expanded="false">☰</button>
+        <div class="breadcrumb">Workspace <span>/</span> <strong>Overview</strong></div>
+        <div class="topbar-actions">
+          <span class="demo-pill"><span></span> Demo mode</span>
+          <button class="icon-button notification-button" id="notificationButton"
+            aria-label="Lihat notifikasi">♧<i></i></button>
+          <div class="top-avatar">NA</div>
+        </div>
+      </header>
+
+      <div class="page-content">
+        <section class="welcome-row">
+          <div>
+            <p class="eyebrow" id="welcomeDate">YOUR STORE AT A GLANCE</p>
+            <h1>Good morning, Jeremi<span>.</span></h1>
+            <p class="subtitle">Here’s what’s happening with your store today.</p>
+          </div>
+          <div class="welcome-actions">
+            <button class="button button-light" id="exportButton">↓ <span>Export report</span></button>
+            <button class="button button-primary" id="addProductButton">＋ <span>Add product</span></button>
+          </div>
+        </section>
+
+        <section class="stats-grid" aria-label="Store performance">
+          <article class="stat-card">
+            <div class="stat-top">
+              <span class="stat-label">Total revenue</span>
+              <span class="stat-icon gold-icon">↗</span>
+            </div>
+            <div class="stat-value" id="revenueValue">Rp 0</div>
+            <div class="stat-foot"><span class="trend positive">↗ 12.8%</span><span>vs. last period</span></div>
+            <div class="stat-spark spark-one"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-top">
+              <span class="stat-label">Total orders</span>
+              <span class="stat-icon green-icon">↗</span>
+            </div>
+            <div class="stat-value" id="ordersValue">0</div>
+            <div class="stat-foot"><span class="trend positive">↗ 8.4%</span><span>vs. last period</span></div>
+            <div class="stat-spark spark-two"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-top">
+              <span class="stat-label">Average order value</span>
+              <span class="stat-icon purple-icon">◈</span>
+            </div>
+            <div class="stat-value" id="aovValue">Rp 0</div>
+            <div class="stat-foot"><span class="trend positive">↗ 4.2%</span><span>vs. last period</span></div>
+            <div class="stat-spark spark-three"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-top">
+              <span class="stat-label">Pending orders</span>
+              <span class="stat-icon orange-icon">◷</span>
+            </div>
+            <div class="stat-value" id="pendingValue">0</div>
+            <div class="stat-foot"><span class="trend neutral">Needs attention</span></div>
+            <div class="stat-spark spark-four"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </article>
+        </section>
+
+        <section class="primary-grid">
+          <article class="panel sales-panel" id="analytics">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">PERFORMANCE</p>
+                <h2>Sales overview</h2>
+                <p class="panel-subtitle">Track your revenue over time.</p>
+              </div>
+              <select id="chartRange" class="select-control" aria-label="Rentang grafik">
+                <option value="week">This week</option>
+                <option value="month" selected>This month</option>
+                <option value="year">This year</option>
+              </select>
+            </div>
+            <div class="chart-summary">
+              <strong id="chartTotal">Rp 0</strong>
+              <span class="trend positive">↗ 12.8%</span>
+              <span class="muted">compared to previous period</span>
+            </div>
+            <div class="chart-wrap">
+              <div class="chart-y-labels" id="chartYLabels">
+                <span>Rp 8 jt</span><span>Rp 6 jt</span><span>Rp 4 jt</span><span>Rp 2 jt</span><span>Rp 0</span>
+              </div>
+              <div class="chart-main">
+                <div class="chart-grid-lines"><i></i><i></i><i></i><i></i><i></i></div>
+                <svg id="salesChart" viewBox="0 0 700 220" preserveAspectRatio="none"
+                  role="img" aria-label="Grafik demo penjualan">
+                  <defs>
+                    <linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1">
+                      <stop offset="0%" stop-color="#2c735a" stop-opacity=".22"/>
+                      <stop offset="100%" stop-color="#2c735a" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <path id="chartArea" d="" fill="url(#chartFill)"></path>
+                  <path id="chartLine" d="" fill="none" stroke="#28664f"
+                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <g id="chartPoints"></g>
+                </svg>
+                <div class="chart-x-labels" id="chartXLabels"></div>
+              </div>
+            </div>
+            <div class="chart-legend"><span class="legend-dot"></span> Revenue <span class="legend-period">Demo data</span></div>
+          </article>
+
+          <article class="panel channel-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">ACQUISITION</p>
+                <h2>Sales channels</h2>
+                <p class="panel-subtitle">Where customers find you.</p>
+              </div>
+              <button class="more-button" id="channelInfo" aria-label="Informasi kanal">•••</button>
+            </div>
+            <div class="donut-wrap">
+              <div class="donut-chart" aria-label="Diagram kanal penjualan demo">
+                <div class="donut-center"><strong>100%</strong><span>of sales</span></div>
+              </div>
+            </div>
+            <div class="channel-list">
+              <div class="channel-row"><span class="channel-name"><i class="channel-dot dot-green"></i>Online store</span><strong>48%</strong></div>
+              <div class="channel-row"><span class="channel-name"><i class="channel-dot dot-gold"></i>Marketplace</span><strong>32%</strong></div>
+              <div class="channel-row"><span class="channel-name"><i class="channel-dot dot-lilac"></i>Social commerce</span><strong>20%</strong></div>
+            </div>
+            <p class="channel-note">Illustrative channel distribution</p>
+          </article>
+        </section>
+
+        <section class="panel orders-panel" id="orders">
+          <div class="panel-heading orders-heading">
+            <div>
+              <p class="eyebrow">ORDER MANAGEMENT</p>
+              <h2>Recent orders <span class="heading-count" id="ordersHeadingCount">0</span></h2>
+              <p class="panel-subtitle">Keep track of your latest transactions.</p>
+            </div>
+            <a class="text-link" href="#orders" id="viewAllOrders">View all orders ↗</a>
+          </div>
+          <div class="table-toolbar">
+            <label class="search-box">
+              <span>⌕</span>
+              <input id="orderSearch" type="search" placeholder="Search order or customer..." aria-label="Cari pesanan">
+            </label>
+            <select id="statusFilter" class="select-control filter-select" aria-label="Filter status">
+              <option value="all">All statuses</option>
+              <option value="Processing">Processing</option>
+              <option value="Shipped">Shipped</option>
+              <option value="Delivered">Delivered</option>
+              <option value="Pending">Pending</option>
+            </select>
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr><th>ORDER ID</th><th>CUSTOMER</th><th>DATE</th><th>AMOUNT</th><th>STATUS</th><th>ACTION</th></tr>
+              </thead>
+              <tbody id="ordersTableBody"></tbody>
+            </table>
+          </div>
+          <div class="table-footer">
+            <span id="tableSummary">Showing 0 orders</span>
+            <div class="pagination">
+              <button id="prevPage" aria-label="Halaman sebelumnya" disabled>←</button>
+              <span id="pageIndicator">1 / 1</span>
+              <button id="nextPage" aria-label="Halaman berikutnya" disabled>→</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="bottom-grid">
+          <article class="panel products-panel" id="products">
+            <div class="panel-heading">
+              <div><p class="eyebrow">BEST SELLERS</p><h2>Top products</h2></div>
+              <a class="text-link" href="#products">View catalog ↗</a>
+            </div>
+            <div id="topProducts" class="top-products"></div>
+          </article>
+          <article class="panel inventory-panel" id="inventory">
+            <div class="panel-heading">
+              <div><p class="eyebrow">STOCK CONTROL</p><h2>Inventory status</h2></div>
+              <a class="text-link" href="#inventory">View stock ↗</a>
+            </div>
+            <div class="inventory-total"><strong id="inventoryTotal">0</strong><span>products in catalog</span></div>
+            <div class="inventory-bar"><i id="stockBarHealthy"></i><i id="stockBarLow"></i><i id="stockBarOut"></i></div>
+            <div class="inventory-row"><span><i class="stock-dot healthy"></i>Healthy stock</span><strong id="healthyStock">0</strong></div>
+            <div class="inventory-row"><span><i class="stock-dot low"></i>Low stock</span><strong id="lowStock">0</strong></div>
+            <div class="inventory-row"><span><i class="stock-dot out"></i>Out of stock</span><strong id="outStock">0</strong></div>
+            <div class="inventory-alert" id="inventoryAlert">Inventory insights will appear here.</div>
+          </article>
+        </section>
+
+        <footer class="footer">
+          <span>© 2025 Monre Commerce Studio</span>
+          <span><i></i> Local demo environment · No backend connected</span>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <dialog class="modal" id="productModal">
+    <form id="productForm" class="modal-card">
+      <div class="modal-heading">
+        <div><p class="eyebrow">PRODUCT CATALOG</p><h2>Add a product</h2></div>
+        <button type="button" class="icon-button modal-close" data-close="productModal" aria-label="Tutup">×</button>
+      </div>
+      <label class="field-label" for="productName">Product name</label>
+      <input id="productName" name="productName" class="field-input" required maxlength="60" placeholder="e.g. Signature Leather Tote">
+      <div class="form-row">
+        <div><label class="field-label" for="productPrice">Price (IDR)</label><input id="productPrice" name="productPrice" class="field-input" type="number" min="1" required placeholder="450000"></div>
+        <div><label class="field-label" for="productStock">Initial stock</label><input id="productStock" name="productStock" class="field-input" type="number" min="0" required value="10"></div>
+      </div>
+      <label class="field-label" for="productCategory">Category</label>
+      <select id="productCategory" class="field-input" name="productCategory">
+        <option>Accessories</option><option>Apparel</option><option>Home & Living</option><option>Beauty</option>
+      </select>
+      <p class="modal-hint">Produk akan disimpan di browser ini, bukan di server.</p>
+      <div class="modal-actions">
+        <button type="button" class="button button-light" data-close="productModal">Cancel</button>
+        <button type="submit" class="button button-primary">Save product</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="modal" id="orderModal">
+    <div class="modal-card">
+      <div class="modal-heading">
+        <div><p class="eyebrow">ORDER DETAILS</p><h2 id="orderModalTitle">Order detail</h2></div>
+        <button type="button" class="icon-button modal-close" data-close="orderModal" aria-label="Tutup">×</button>
+      </div>
+      <div id="orderDetails" class="order-details"></div>
+      <label class="field-label" for="orderStatusSelect">Update demo status</label>
+      <select id="orderStatusSelect" class="field-input">
+        <option>Pending</option><option>Processing</option><option>Shipped</option><option>Delivered</option>
+      </select>
+      <div class="modal-actions">
+        <button type="button" class="button button-light" data-close="orderModal">Close</button>
+        <button type="button" class="button button-primary" id="saveOrderStatus">Save status</button>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>
