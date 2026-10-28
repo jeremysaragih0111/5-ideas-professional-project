@@ -1,0 +1,14 @@
+Project Name : Velora - Commerce 
+
+using the Programming language are:
+1. html modern
+2. css modern
+3. Javascript
+
+To do the project:
+1. UI
+2. Intercation
+3. Data demo
+
+Visual Theme : 
+Custom
