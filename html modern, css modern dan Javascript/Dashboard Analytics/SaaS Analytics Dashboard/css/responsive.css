@@ -1,0 +1,152 @@
+/* ============================================================
+   RESPONSIVE — Tablet & Mobile
+   ============================================================ */
+
+/* ============ TABLET ≤ 1200px ============ */
+@media (max-width: 1200px) {
+  .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+  .charts-row { grid-template-columns: 1fr; }
+  .donut { width: 200px; height: 200px; }
+}
+
+/* ============ TABLET ≤ 900px — SIDEBAR JADI DRAWER ============ */
+@media (max-width: 900px) {
+
+  /* Paksa grid 1 kolom — collapse desktop diabaikan */
+  .dashboard,
+  body:has(.toggle-input--collapse:checked) .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  /* Sidebar drawer */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px !important;   /* override collapse width */
+    transform: translateX(-100%);
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* Reset semua efek collapse di mobile */
+  body:has(.toggle-input--collapse:checked) .sidebar__header,
+  .sidebar__header {
+    justify-content: space-between;
+    padding: var(--sp-5) var(--sp-5) var(--sp-4);
+  }
+
+  body:has(.toggle-input--collapse:checked) .brand__text,
+  .brand__text {
+    opacity: 1;
+    width: auto;
+  }
+
+  body:has(.toggle-input--collapse:checked) .nav,
+  .nav {
+    align-items: stretch;
+    padding: var(--sp-4) var(--sp-3);
+  }
+
+  body:has(.toggle-input--collapse:checked) .nav__label,
+  .nav__label {
+    opacity: 1;
+    height: auto;
+    padding: var(--sp-3) var(--sp-3) var(--sp-2);
+  }
+
+  body:has(.toggle-input--collapse:checked) .nav__item,
+  .nav__item {
+    justify-content: flex-start;
+    padding: 10px var(--sp-3);
+  }
+
+  body:has(.toggle-input--collapse:checked) .nav__text,
+  body:has(.toggle-input--collapse:checked) .nav__badge {
+    display: revert;
+  }
+
+  body:has(.toggle-input--collapse:checked) .nav__item::after {
+    display: none; /* matikan tooltip */
+  }
+
+  body:has(.toggle-input--collapse:checked) .nav__item--active::before {
+    display: block;
+  }
+
+  body:has(.toggle-input--collapse:checked) .sidebar__footer,
+  .sidebar__footer {
+    padding: var(--sp-4);
+  }
+
+  body:has(.toggle-input--collapse:checked) .upgrade-card { display: block; }
+  body:has(.toggle-input--collapse:checked) .profile { justify-content: flex-start; }
+  body:has(.toggle-input--collapse:checked) .profile__info,
+  body:has(.toggle-input--collapse:checked) .profile__dot { display: revert; }
+
+  /* Tombol close */
+  .sidebar__close { display: block; }
+
+  /* Tombol collapse di topbar — sembunyikan di mobile */
+  .topbar__collapse { display: none; }
+
+  /* Drawer toggle */
+  .toggle-input--mobile:checked ~ .dashboard .sidebar {
+    transform: translateX(0);
+  }
+
+  /* Overlay */
+  .overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--dur-med) var(--ease);
+    z-index: 90;
+  }
+
+  .toggle-input--mobile:checked ~ .dashboard .overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .topbar__menu { display: block; }
+
+  .main { padding: var(--sp-4) var(--sp-4) var(--sp-6); }
+  .search__input { width: 180px; }
+}
+
+/* ============ MOBILE ≤ 600px ============ */
+@media (max-width: 600px) {
+  .main { padding: var(--sp-3) var(--sp-3) var(--sp-5); gap: var(--sp-3); }
+  .topbar { padding: var(--sp-3) var(--sp-4); flex-wrap: wrap; gap: var(--sp-2); }
+  .topbar__title h1 { font-size: 1.05rem; }
+  .topbar__title p { display: none; }
+  .search { display: none; }
+  .kpi-grid { grid-template-columns: 1fr; gap: var(--sp-3); }
+  .kpi-card { padding: var(--sp-4); }
+  .kpi-card__value { font-size: 1.6rem; }
+  .card { padding: var(--sp-4); }
+  .card--table .table-wrap {
+    margin: 0 calc(var(--sp-4) * -1) calc(var(--sp-4) * -1);
+    padding: 0 var(--sp-4);
+  }
+  .charts-row { gap: var(--sp-3); }
+  .chart-svg-wrap { min-height: 180px; }
+  .donut { width: 170px; height: 170px; }
+  .card__header { margin-bottom: var(--sp-3); }
+  .chips { font-size: 0.7rem; }
+  .chip { padding: 4px 10px; }
+  .footer { font-size: 0.72rem; }
+}
+
+/* ============ PREFERS REDUCED MOTION ============ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
