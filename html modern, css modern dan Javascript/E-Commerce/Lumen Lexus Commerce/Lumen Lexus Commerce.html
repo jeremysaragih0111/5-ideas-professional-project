@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumen Lexus Commerce — Premium Essentials</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/Lumen Lexus Commerce.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="brand">
+        <span class="brand-mark">LL</span>
+        <span class="brand-name">Lumen Lexus</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#hero" class="nav-link">Beranda</a>
+        <a href="#categories" class="nav-link">Kategori</a>
+        <a href="#products" class="nav-link">Produk</a>
+        <a href="#testimonials" class="nav-link">Testimoni</a>
+        <a href="#newsletter" class="nav-link">Newsletter</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="searchToggle" aria-label="Cari">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="icon-btn cart-btn" id="cartToggle" aria-label="Keranjang">
+          <svg viewBox="0 0 24 24"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M6 6L5 3H2"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Search bar -->
+    <div class="search-bar" id="searchBar">
+      <div class="container">
+        <input type="text" id="searchInput" placeholder="Cari produk premium..." />
+      </div>
+    </div>
+  </header>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero" id="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <span class="eyebrow">✦ Koleksi Musim Ini</span>
+        <h1 class="hero-title">
+          Kemewahan dalam <em>Kesederhanaan</em>
+        </h1>
+        <p class="hero-desc">
+          Lumen Lexus menghadirkan produk pilihan dengan material premium dan desain abadi.
+          Dirancang untuk mereka yang menghargai detail.
+        </p>
+        <div class="hero-actions">
+          <a href="#products" class="btn btn-primary">Belanja Sekarang</a>
+          <a href="#categories" class="btn btn-ghost">Jelajahi Koleksi</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>12k+</strong><span>Pelanggan</span></div>
+          <div><strong>4.9★</strong><span>Rating</span></div>
+          <div><strong>100%</strong><span>Original</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card hero-card--1">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=80" alt="Jam premium" />
+        </div>
+        <div class="hero-card hero-card--2">
+          <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&q=80" alt="Tas premium" />
+        </div>
+        <div class="hero-glow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CATEGORIES ====== -->
+  <section class="section categories" id="categories">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Kategori</span>
+        <h2>Pilih Sesuai Gaya Anda</h2>
+      </div>
+      <div class="category-grid" id="categoryGrid"></div>
+    </div>
+  </section>
+
+  <!-- ====== PRODUCTS ====== -->
+  <section class="section products" id="products">
+    <div class="container">
+      <div class="section-head section-head--row">
+        <div>
+          <span class="eyebrow">Produk Unggulan</span>
+          <h2>Pilihan Terbaik Kami</h2>
+        </div>
+        <div class="filter-tabs" id="filterTabs"></div>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+      <p class="empty-state" id="emptyState" hidden>Produk tidak ditemukan.</p>
+    </div>
+  </section>
+
+  <!-- ====== TESTIMONIALS ====== -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Testimoni</span>
+        <h2>Apa Kata Mereka</h2>
+      </div>
+      <div class="testi-grid" id="testiGrid"></div>
+    </div>
+  </section>
+
+  <!-- ====== NEWSLETTER ====== -->
+  <section class="section newsletter" id="newsletter">
+    <div class="container newsletter-inner">
+      <div>
+        <span class="eyebrow">Newsletter</span>
+        <h2>Dapatkan Penawaran Eksklusif</h2>
+        <p>Berlangganan untuk info koleksi baru & promo. (Demo — tidak mengirim data ke mana pun.)</p>
+      </div>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="email@anda.com" required />
+        <button type="submit" class="btn btn-primary">Berlangganan</button>
+        <small class="form-msg" id="newsletterMsg"></small>
+      </form>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#" class="brand"><span class="brand-mark">V</span><span class="brand-name">Lumen Lexus</span></a>
+        <p class="footer-desc">Premium essentials untuk gaya hidup modern.</p>
+      </div>
+      <div>
+        <h4>Jelajahi</h4>
+        <a href="#products">Produk</a>
+        <a href="#categories">Kategori</a>
+        <a href="#testimonials">Testimoni</a>
+      </div>
+      <div>
+        <h4>Bantuan</h4>
+        <a href="#">Pengiriman</a>
+        <a href="#">Pengembalian</a>
+        <a href="#">Kontak</a>
+      </div>
+      <div>
+        <h4>Ikuti Kami</h4>
+        <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
+        <a href="#">Pinterest</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2025 Lumen Lexus Commerce. Frontend demo — bukan toko fungsional.</p>
+    </div>
+  </footer>
+
+  <!-- ====== CART DRAWER ====== -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-head">
+      <h3>Keranjang</h3>
+      <button class="icon-btn" id="cartClose" aria-label="Tutup">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-foot">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">Rp 0</strong>
+      </div>
+      <button class="btn btn-primary btn-block" id="checkoutBtn">Checkout (Demo)</button>
+    </div>
+  </aside>
+
+  <!-- ====== TOAST ====== -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/Lumen Lexus Commerce.js"></script>
+  <script src="js/chart.js"></script>
+</body>
+</html>
