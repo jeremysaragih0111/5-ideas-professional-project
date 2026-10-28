@@ -1,0 +1,19 @@
+Dashboard analitik untuk memantau pendapatan, pengguna aktif, performa produk, dan aktivitas bisnis dalam satu tempat.
+
+Konsep desain premium
+- Dark navy dengan aksen cyan dan violet yang terkontrol.
+- Sidebar elegan dengan ikon minimalis dan navigasi aktif.
+- KPI cards untuk Revenue, Active Users, Conversion Rate, dan MRR.
+- Grafik pertumbuhan pendapatan dan pengguna.
+- Tabel transaksi dengan status badge.
+- Panel AI Insights untuk menampilkan ringkasan tren bisnis.
+- Responsive layout untuk desktop, tablet, dan smartphone.
+Fitur utama
+- Filter periode: 7 hari, 30 hari, dan 12 bulan.
+- Pencarian transaksi.
+- Tombol ekspor laporan.
+- Navigasi antarhalaman dashboard.
+- Loading, empty state, dan error state.
+Teknologi yang disarankan: HTML5, CSS3, JavaScript, lalu Chart.js untuk grafik interaktif.
+
+Referensi desain: Stripe dan Linear. Dashboard modern lebih kuat jika menonjolkan metrik penting, tabel yang jelas, dan informasi yang membantu pengguna mengambil keputusan, bukan sekadar menumpuk grafik.
