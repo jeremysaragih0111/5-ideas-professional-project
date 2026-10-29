@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow AI — Premium Task Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/AgentTaskFlow-ai.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <!-- Ambient background glow -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <div class="bg-grid"></div>
+
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-logo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">TaskFlow</span>
+          <span class="brand-ai">AI</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-item active" data-filter="all">
+          <span class="nav-icon">📋</span>
+          <span>Semua Tugas</span>
+          <span class="nav-count" id="count-all">0</span>
+        </button>
+        <button class="nav-item" data-filter="active">
+          <span class="nav-icon">🎯</span>
+          <span>Aktif</span>
+          <span class="nav-count" id="count-active">0</span>
+        </button>
+        <button class="nav-item" data-filter="completed">
+          <span class="nav-icon">✅</span>
+          <span>Selesai</span>
+          <span class="nav-count" id="count-completed">0</span>
+        </button>
+        <button class="nav-item" data-filter="priority-high">
+          <span class="nav-icon">🔥</span>
+          <span>Prioritas Tinggi</span>
+          <span class="nav-count" id="count-high">0</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="progress-card">
+          <div class="progress-label">
+            <span>Progres Hari Ini</span>
+            <span id="progress-percent">0%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill" style="width:0%"></div>
+          </div>
+          <span class="progress-sub" id="progress-sub">Belum ada tugas</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <div class="topbar-title">
+          <h1 id="page-title">Semua Tugas</h1>
+          <p id="page-subtitle">Kelola produktivitas harianmu</p>
+        </div>
+        <div class="topbar-actions">
+          <div class="search-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="7"/>
+              <path d="M21 21l-4.35-4.35" stroke-linecap="round"/>
+            </svg>
+            <input type="text" id="search-input" placeholder="Cari tugas..." />
+          </div>
+        </div>
+      </header>
+
+      <!-- Stats -->
+      <section class="stats">
+        <div class="stat-card">
+          <div class="stat-icon" style="--c:#6366f1">📊</div>
+          <div class="stat-info">
+            <span class="stat-value" id="stat-total">0</span>
+            <span class="stat-label">Total Tugas</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon" style="--c:#22d3ee">⚡</div>
+          <div class="stat-info">
+            <span class="stat-value" id="stat-active">0</span>
+            <span class="stat-label">Sedang Dikerjakan</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon" style="--c:#10b981">🎉</div>
+          <div class="stat-info">
+            <span class="stat-value" id="stat-done">0</span>
+            <span class="stat-label">Selesai</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon" style="--c:#f43f5e">🔥</div>
+          <div class="stat-info">
+            <span class="stat-value" id="stat-high">0</span>
+            <span class="stat-label">Prioritas Tinggi</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Input -->
+      <section class="composer">
+        <form id="task-form" class="composer-form">
+          <input type="text" id="task-input" class="composer-input"
+                 placeholder="Tambahkan tugas baru..." autocomplete="off" maxlength="120" />
+          <select id="priority-select" class="composer-select" aria-label="Prioritas">
+            <option value="low">🟢 Rendah</option>
+            <option value="medium" selected>🟡 Sedang</option>
+            <option value="high">🔴 Tinggi</option>
+          </select>
+          <button type="submit" class="btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M12 5v14M5 12h14" stroke-linecap="round"/>
+            </svg>
+            <span>Tambah</span>
+          </button>
+        </form>
+      </section>
+
+      <!-- Task List -->
+      <section class="tasks-section">
+        <div class="tasks-header">
+          <h2 id="tasks-heading">Daftar Tugas</h2>
+          <button class="btn-ghost" id="clear-completed" title="Hapus tugas selesai">
+            🗑️ Hapus Selesai
+          </button>
+        </div>
+        <div class="task-list" id="task-list"></div>
+
+        <div class="empty-state" id="empty-state">
+          <div class="empty-icon">🌌</div>
+          <h3>Belum ada tugas</h3>
+          <p>Tambahkan tugas pertamamu di atas untuk memulai.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Overlay for mobile -->
+  <div class="overlay" id="overlay"></div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/AgentTaskFlow-ai.js"></script>
+</body>
+</html>
