@@ -1,0 +1,48 @@
+:root {
+  /* Warna dasar */
+  --bg-deep: #07070c;
+  --bg-base: #0b0b12;
+  --bg-elevated: #101018;
+  --bg-card: rgba(20, 20, 32, 0.72);
+  --bg-card-solid: #141420;
+
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-strong: rgba(255, 255, 255, 0.12);
+
+  --text-primary: #f2f2f7;
+  --text-secondary: #a1a1b8;
+  --text-muted: #6b6b82;
+
+  /* Aksen premium */
+  --accent-violet: #8b5cf6;
+  --accent-purple: #a855f7;
+  --accent-cyan: #22d3ee;
+  --accent-pink: #f472b6;
+  --accent-amber: #fbbf24;
+  --accent-green: #34d399;
+  --accent-red: #f87171;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #6366f1 45%, #22d3ee 100%);
+  --gradient-soft: linear-gradient(135deg, rgba(139, 92, 246, 0.18), rgba(34, 211, 238, 0.12));
+  --gradient-card: linear-gradient(160deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+
+  /* Efek */
+  --shadow-card: 0 24px 60px -20px rgba(0, 0, 0, 0.7);
+  --shadow-glow: 0 0 40px rgba(139, 92, 246, 0.25);
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 26px;
+
+  /* Tipografi */
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+
+  /* Layout */
+  --sidebar-width: 280px;
+  --topbar-height: 76px;
+
+  /* Transisi */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
