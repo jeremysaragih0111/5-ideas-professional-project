@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JCRM · Premium Dashboard</title>
+  <meta name="description" content="JCRM - Premium CRM Dashboard dengan dark dan light mode">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/JCRM - Dashboard.css">
+</head>
+<body>
+  <div class="app">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="logo">
+        <div class="logo-icon">J</div>
+        <div class="logo-text">J<span>CRM</span></div>
+      </div>
+      <nav class="nav">
+        <div class="nav-item active">
+          <i class="fas fa-chart-pie"></i>
+          <span>Dashboard</span>
+        </div>
+        <div class="nav-item">
+          <i class="fas fa-users"></i>
+          <span>Contacts</span>
+        </div>
+        <div class="nav-item">
+          <i class="fas fa-handshake"></i>
+          <span>Deals</span>
+        </div>
+        <div class="nav-item">
+          <i class="fas fa-chart-line"></i>
+          <span>Reports</span>
+        </div>
+        <div class="nav-item">
+          <i class="fas fa-cog"></i>
+          <span>Settings</span>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+      <!-- TOPBAR -->
+      <header class="topbar">
+        <div class="greeting">
+          <h1>Dashboard</h1>
+          <p>Selamat datang kembali, <strong>Alex</strong> · Berikut ringkasan hari ini.</p>
+        </div>
+        <div class="actions">
+          <div class="theme-toggle" id="themeToggle" role="button" tabindex="0" aria-label="Toggle dark mode">
+            <i class="fas fa-moon" id="themeIcon"></i>
+            <span id="themeLabel">Dark</span>
+          </div>
+          <div class="avatar">AR</div>
+        </div>
+      </header>
+
+      <!-- STATS CARDS -->
+      <section class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="stat-title">Total Contacts</span>
+            <div class="stat-icon"><i class="fas fa-address-book"></i></div>
+          </div>
+          <div class="stat-value">2,481</div>
+          <div class="stat-trend trend-up">
+            <i class="fas fa-arrow-up"></i> +8.3% <span class="text-muted">vs last month</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="stat-title">Active Deals</span>
+            <div class="stat-icon"><i class="fas fa-handshake"></i></div>
+          </div>
+          <div class="stat-value">142</div>
+          <div class="stat-trend trend-up">
+            <i class="fas fa-arrow-up"></i> +12.5%
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="stat-title">Revenue (MTD)</span>
+            <div class="stat-icon"><i class="fas fa-dollar-sign"></i></div>
+          </div>
+          <div class="stat-value">$48.9k</div>
+          <div class="stat-trend trend-down">
+            <i class="fas fa-arrow-down"></i> -2.4% <span class="text-muted">vs target</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="stat-title">Win Rate</span>
+            <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+          </div>
+          <div class="stat-value">32.8%</div>
+          <div class="stat-trend trend-up">
+            <i class="fas fa-arrow-up"></i> +4.1%
+          </div>
+        </div>
+      </section>
+
+      <!-- ACTIVITY + CONTACTS -->
+      <div class="dashboard-grid">
+        <!-- Recent Activity -->
+        <div class="card">
+          <div class="card-header">
+            <h3>Recent Activity</h3>
+            <span class="badge">Live</span>
+          </div>
+          <div class="activity-list">
+            <div class="activity-item">
+              <div class="activity-icon"><i class="fas fa-check-circle"></i></div>
+              <div class="activity-content">
+                <p>Deal "Enterprise Plan" closed won</p>
+                <span>2 jam yang lalu · oleh Sarah</span>
+              </div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon"><i class="fas fa-phone"></i></div>
+              <div class="activity-content">
+                <p>Call with PT Maju Jaya (follow-up)</p>
+                <span>4 jam yang lalu · oleh Alex</span>
+              </div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon"><i class="fas fa-envelope"></i></div>
+              <div class="activity-content">
+                <p>Email campaign "Q3 Promo" sent to 1,240 contacts</p>
+                <span>6 jam yang lalu</span>
+              </div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon"><i class="fas fa-user-plus"></i></div>
+              <div class="activity-content">
+                <p>New lead from website: Budi Santoso</p>
+                <span>8 jam yang lalu</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Key Contacts -->
+        <div class="card">
+          <div class="card-header">
+            <h3>Key Contacts</h3>
+            <i class="fas fa-ellipsis-h" style="color: var(--text-muted);"></i>
+          </div>
+          <div class="contact-list">
+            <div class="contact-row">
+              <div class="contact-avatar">WS</div>
+              <div class="contact-info">
+                <h4>Wijaya S.</h4>
+                <span>PT Sinar Abadi</span>
+              </div>
+              <div class="contact-status">Hot</div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-avatar">ML</div>
+              <div class="contact-info">
+                <h4>Maria L.</h4>
+                <span>Global Niaga</span>
+              </div>
+              <div class="contact-status">Warm</div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-avatar">AR</div>
+              <div class="contact-info">
+                <h4>Andi R.</h4>
+                <span>Prima Solusi</span>
+              </div>
+              <div class="contact-status">New</div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-avatar">CT</div>
+              <div class="contact-info">
+                <h4>Citra T.</h4>
+                <span>Maju Bersama</span>
+              </div>
+              <div class="contact-status">Hot</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DEALS TABLE -->
+      <div class="card table-section">
+        <div class="table-header">
+          <h3>Deals Overview</h3>
+          <a href="#">View all →</a>
+        </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Deal Name</th>
+                <th>Contact</th>
+                <th>Value</th>
+                <th>Stage</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Enterprise License</td>
+                <td>Wijaya S.</td>
+                <td>$12,400</td>
+                <td>Negotiation</td>
+                <td><span class="status-chip">Pending</span></td>
+              </tr>
+              <tr>
+                <td>Annual Support</td>
+                <td>Maria L.</td>
+                <td>$8,200</td>
+                <td>Closed</td>
+                <td><span class="status-chip won">Won</span></td>
+              </tr>
+              <tr>
+                <td>Cloud Migration</td>
+                <td>Andi R.</td>
+                <td>$21,000</td>
+                <td>Proposal</td>
+                <td><span class="status-chip pending">Pending</span></td>
+              </tr>
+              <tr>
+                <td>Custom Dev</td>
+                <td>Citra T.</td>
+                <td>$7,850</td>
+                <td>Closed</td>
+                <td><span class="status-chip won">Won</span></td>
+              </tr>
+              <tr>
+                <td>Security Audit</td>
+                <td>Budi S.</td>
+                <td>$5,600</td>
+                <td>Discovery</td>
+                <td><span class="status-chip">Active</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/theme.js"></script>
+</body>
+</html>
