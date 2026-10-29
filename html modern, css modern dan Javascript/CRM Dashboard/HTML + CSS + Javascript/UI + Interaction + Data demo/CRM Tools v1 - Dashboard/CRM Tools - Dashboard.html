@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRM Dashboard</title>
+  <link rel="stylesheet" href="css/CRM Tools -Dashboard.css">
+  <script defer src="js/data.js"></script>
+  <script defer src="js/CRM Tools - Dashboard.js"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#">crm<span>.</span></a>
+    <p class="workspace">NORTHSTAR STUDIO</p>
+    <nav>
+      <a href="#overview" class="active">▦ Overview</a>
+      <a href="#contacts">♙ Contacts</a>
+      <a href="#pipeline">◇ Sales pipeline</a>
+      <a href="#activities">◷ Activities</a>
+      <a href="#reports">▤ Reports</a>
+    </nav>
+    <div class="sidebar-bottom">
+      <p>CRM Dashboard</p>
+      <small>Professional workspace</small>
+    </div>
+  </aside>
+
+  <main class="main" id="overview">
+    <header class="topbar">
+      <button class="mobile-menu" id="mobileMenu">☰</button>
+      <span>Workspace / <strong>Overview</strong></span>
+      <div class="top-actions">
+        <input id="globalSearch" type="search" placeholder="Search contacts...">
+        <button id="themeToggle" class="icon-button" aria-label="Ganti tema">☾</button>
+      </div>
+    </header>
+
+    <section class="content">
+      <div class="heading">
+        <div>
+          <p class="eyebrow">YOUR BUSINESS AT A GLANCE</p>
+          <h1>CRM Dashboard</h1>
+          <p class="muted">Manage relationships. Grow together.</p>
+        </div>
+        <button class="primary" id="addContactButton">＋ Add contact</button>
+      </div>
+
+      <section class="metrics">
+        <article class="card">
+          <p>Total revenue</p>
+          <h2>$128,430</h2>
+          <span class="positive">↗ 12.8% this month</span>
+        </article>
+        <article class="card">
+          <p>Active contacts</p>
+          <h2 id="activeContacts">2,420</h2>
+          <span class="positive">↗ 8.2% this month</span>
+        </article>
+        <article class="card">
+          <p>Conversion rate</p>
+          <h2>24.8%</h2>
+          <span class="positive">↗ 4.6% this month</span>
+        </article>
+        <article class="card">
+          <p>Average deal value</p>
+          <h2>$3,840</h2>
+          <span class="negative">↘ 2.4% this month</span>
+        </article>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="card" id="reports">
+          <div class="section-heading">
+            <div>
+              <h3>Revenue overview</h3>
+              <p class="muted">Demo revenue performance</p>
+            </div>
+            <select id="revenueRange" aria-label="Rentang grafik">
+              <option value="7">7 days</option>
+              <option value="30" selected>30 days</option>
+              <option value="90">90 days</option>
+            </select>
+          </div>
+          <div class="chart-total" id="chartTotal">$128,430</div>
+          <div class="chart" id="revenueChart" aria-label="Grafik revenue demo"></div>
+          <div class="chart-legend">
+            <span>● This period</span>
+            <span>● Previous period</span>
+          </div>
+        </article>
+
+        <article class="card" id="pipeline">
+          <h3>Sales pipeline</h3>
+          <p class="muted">Deal distribution by stage</p>
+          <h2>$84,250</h2>
+          <div class="pipeline-bar">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div id="pipelineLegend" class="pipeline-legend"></div>
+          <p class="muted">42 open deals</p>
+        </article>
+      </section>
+
+      <section class="card contacts" id="contacts">
+        <div class="section-heading">
+          <div>
+            <h3>Recent contacts <span class="count" id="contactCount">8</span></h3>
+            <p class="muted">Manage your latest customer relationships.</p>
+          </div>
+          <button class="secondary" id="exportButton">↓ Export CSV</button>
+        </div>
+
+        <div class="filters">
+          <input type="search" id="contactSearch" placeholder="Search contacts...">
+          <select id="statusFilter" aria-label="Filter status">
+            <option value="all">All status</option>
+            <option value="Active">Active</option>
+            <option value="Lead">Lead</option>
+            <option value="Inactive">Inactive</option>
+          </select>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th><th>Company</th><th>Status</th>
+                <th>Last contact</th><th>Deal value</th><th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="contactTableBody"></tbody>
+          </table>
+        </div>
+        <div class="table-footer">
+          <span id="tableSummary">Showing contacts</span>
+          <div>
+            <button class="secondary" id="prevPage">←</button>
+            <span id="pageIndicator">1 / 1</span>
+            <button class="secondary" id="nextPage">→</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="bottom-grid">
+        <article class="card" id="activities">
+          <h3>Recent activity</h3>
+          <p class="muted">Latest updates from your team</p>
+          <div id="activityList"></div>
+        </article>
+        <article class="card">
+          <h3>Upcoming tasks</h3>
+          <p class="muted">Keep track of your priorities</p>
+          <div id="taskList"></div>
+          <button class="secondary full-width" id="newTaskButton">＋ Add a new task</button>
+        </article>
+      </section>
+
+      <footer>© 2026 CRM Dashboard · Demo workspace</footer>
+    </section>
+  </main>
+
+  <div class="modal-backdrop" id="contactModal" aria-hidden="true">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="section-heading">
+        <h2 id="modalTitle">Add new contact</h2>
+        <button class="icon-button" id="closeModal" aria-label="Tutup">×</button>
+      </div>
+      <form id="contactForm">
+        <label>Full name *
+          <input name="name" required placeholder="Jamie Chen">
+        </label>
+        <label>Email *
+          <input name="email" type="email" required placeholder="jamie@company.com">
+        </label>
+        <label>Company *
+          <input name="company" required placeholder="Company name">
+        </label>
+        <label>Role
+          <input name="role" placeholder="Sales manager">
+        </label>
+        <label>Status
+          <select name="status">
+            <option>Lead</option><option>Active</option><option>Inactive</option>
+          </select>
+        </label>
+        <label>Deal value (USD)
+          <input name="deal" type="number" min="0" value="0">
+        </label>
+        <div class="modal-actions">
+          <button type="button" class="secondary" id="cancelModal">Cancel</button>
+          <button type="submit" class="primary">Save contact</button>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
