@@ -1,0 +1,53 @@
+/* =========================================================
+  CRM Tools V2 - Dashboard — themes.css
+   ========================================================= */
+
+[data-theme="dark"]{
+  --bg: #0b1020;
+  --surface: #131a2e;
+  --surface-2: #1b2440;
+  --text: #e8ecf7;
+  --muted: #94a3b8;
+  --border: #232e4d;
+  --brand: #7b8cff;
+  --brand-2: #a78bfa;
+  --brand-soft: rgba(123,140,255,.16);
+  --success: #34d399;
+  --warning: #fbbf24;
+  --danger: #f87171;
+  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,.55);
+}
+
+[data-theme="dark"] .brand-logo{
+  box-shadow: 0 6px 20px rgba(123,140,255,.45);
+}
+[data-theme="dark"] .stat::after{
+  opacity: 1;
+}
+[data-theme="dark"] .pill.customer,
+[data-theme="dark"] .pill.won{
+  background: rgba(52,211,153,.16); color: #34d399;
+}
+[data-theme="dark"] .pill.lead{
+  background: rgba(251,191,36,.16); color: #fbbf24;
+}
+[data-theme="dark"] .pill.prospect{
+  background: rgba(123,140,255,.16); color: var(--brand);
+}
+[data-theme="dark"] .pill.lost{
+  background: rgba(248,113,113,.16); color: #f87171;
+}
+[data-theme="dark"] .pill.negotiation{
+  background: rgba(167,139,250,.16); color: #a78bfa;
+}
+[data-theme="dark"] .slider::before{
+  background: #e8ecf7;
+}
+
+/* Smooth transition */
+body, .sidebar, .card, .stat, .icon-btn, .search,
+.table tr, .kcard, .kcol, .topbar{
+  transition: background .25s ease, color .25s ease,
+              border-color .25s ease, box-shadow .25s ease;
+}
