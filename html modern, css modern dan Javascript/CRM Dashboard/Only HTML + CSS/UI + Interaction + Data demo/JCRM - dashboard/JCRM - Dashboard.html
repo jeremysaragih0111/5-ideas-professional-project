@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+  <title>JCRM · Premium CRM Dashboard</title>
+
+  <!-- Font Awesome 6 (Free) untuk ikon premium -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Stylesheet utama (layout, komponen, responsif) -->
+  <link rel="stylesheet" href="css/JCRM-dashboard.css">
+
+  <!-- Stylesheet tema (variabel warna & dark mode) -->
+  <link rel="stylesheet" href="css/theme.css">
+</head>
+<body>
+
+  <!-- ===== WRAPPER UTAMA ===== -->
+  <div class="app-wrapper">
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar">
+      <!-- Logo brand JCRM -->
+      <div class="logo">
+        <i class="fas fa-chart-pie"></i>
+        <span>JCRM<small>pro</small></span>
+      </div>
+
+      <!-- Navigasi utama -->
+      <nav class="nav-section">
+        <div class="nav-item active">
+          <i class="fas fa-th-large"></i>
+          <span>Dashboard</span>
+        </div>
+        <div class="nav-item">
+          <i class="fas fa-users"></i>
+          <span>Leads</span>
+        </div>
+        <div class="nav-item">
+          <i class="fas fa-handshake"></i>
+          <span>Deals</span>
+        </div>
+        <div class="nav-item">
+          <i class="fas fa-chart-line"></i>
+          <span>Analytics</span>
+        </div>
+        <div class="nav-item">
+          <i class="fas fa-cog"></i>
+          <span>Settings</span>
+        </div>
+      </nav>
+
+      <!-- Toggle dark mode: checkbox murni CSS -->
+      <div class="theme-toggle-wrap">
+        <label class="theme-toggle-label" for="theme-switch">
+          <span><i class="fas fa-moon"></i> Dark mode</span>
+          <input type="checkbox" id="theme-switch">
+          <span class="switch" aria-hidden="true"></span>
+        </label>
+      </div>
+    </aside>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main">
+
+      <!-- Header dengan judul & profil -->
+      <div class="header">
+        <h1><i class="fas fa-chart-pie"></i> CRM Dashboard</h1>
+        <div class="user-profile">
+          <div class="user-info">
+            <span class="name">Jeremy</span>
+            <span class="role">Sales Manager</span>
+          </div>
+          <div class="user-avatar">AL</div>
+        </div>
+      </div>
+
+      <!-- STATISTIK CARDS -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-title">Total Leads <i class="fas fa-arrow-up trend-up"></i></div>
+          <div class="stat-value">1,284</div>
+          <div class="stat-trend trend-up"><i class="fas fa-arrow-up"></i> +12.5% vs bulan lalu</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-title">Conversion Rate</div>
+          <div class="stat-value">24.8%</div>
+          <div class="stat-trend trend-up"><i class="fas fa-arrow-up"></i> +3.2%</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-title">Deals Closed</div>
+          <div class="stat-value">86</div>
+          <div class="stat-trend trend-down"><i class="fas fa-arrow-down"></i> -2.1%</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-title">Revenue (Rp)</div>
+          <div class="stat-value">1.84M</div>
+          <div class="stat-trend trend-up"><i class="fas fa-arrow-up"></i> +8.3%</div>
+        </div>
+      </div>
+
+      <!-- ROW: CHART + TABEL -->
+      <div class="dashboard-row">
+
+        <!-- CHART BAR CSS -->
+        <div class="chart-card">
+          <div class="card-header">
+            <h3><i class="fas fa-chart-simple"></i> Monthly Leads</h3>
+            <span class="badge">2025</span>
+          </div>
+          <div class="chart-bars">
+            <div class="bar-wrapper"><div class="bar" style="--h: 42;"></div><span class="bar-label">Jan</span></div>
+            <div class="bar-wrapper"><div class="bar" style="--h: 63;"></div><span class="bar-label">Feb</span></div>
+            <div class="bar-wrapper"><div class="bar" style="--h: 55;"></div><span class="bar-label">Mar</span></div>
+            <div class="bar-wrapper"><div class="bar" style="--h: 78;"></div><span class="bar-label">Apr</span></div>
+            <div class="bar-wrapper"><div class="bar" style="--h: 68;"></div><span class="bar-label">Mei</span></div>
+            <div class="bar-wrapper"><div class="bar" style="--h: 90;"></div><span class="bar-label">Jun</span></div>
+            <div class="bar-wrapper"><div class="bar" style="--h: 74;"></div><span class="bar-label">Jul</span></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-top: 1.2rem; font-size: 0.75rem; color: var(--text-muted);">
+            <span><i class="fas fa-circle" style="color: var(--chart-1); font-size: 0.5rem;"></i> Leads</span>
+            <span>Total: 1,284 leads</span>
+          </div>
+        </div>
+
+        <!-- TABEL RECENT LEADS -->
+        <div class="table-card">
+          <div class="card-header">
+            <h3><i class="fas fa-user-plus"></i> Recent Leads</h3>
+            <span class="badge">7 new</span>
+          </div>
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr><th>Name</th><th>Company</th><th>Status</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><i class="fas fa-user-circle" style="color: var(--accent); margin-right: 6px;"></i> Rizky Pratama</td><td>Tokopedia</td><td><span class="status-badge hot">Hot</span></td></tr>
+                <tr><td><i class="fas fa-user-circle" style="color: var(--accent); margin-right: 6px;"></i> Dewi Anggraini</td><td>Gojek</td><td><span class="status-badge">Contacted</span></td></tr>
+                <tr><td><i class="fas fa-user-circle" style="color: var(--accent); margin-right: 6px;"></i> Fajar Nugroho</td><td>Traveloka</td><td><span class="status-badge won">Won</span></td></tr>
+                <tr><td><i class="fas fa-user-circle" style="color: var(--accent); margin-right: 6px;"></i> Sinta Maharani</td><td>Bukalapak</td><td><span class="status-badge hot">Hot</span></td></tr>
+                <tr><td><i class="fas fa-user-circle" style="color: var(--accent); margin-right: 6px;"></i> Andi Wijaya</td><td>Blibli</td><td><span class="status-badge">Contacted</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- AKTIVITAS TERBARU -->
+      <div class="activity-card">
+        <div class="card-header">
+          <h3><i class="fas fa-bolt"></i> Aktivitas Terbaru</h3>
+          <span class="badge">Live</span>
+        </div>
+        <div class="activity-item">
+          <div class="activity-icon"><i class="fas fa-phone-alt"></i></div>
+          <div>
+            <div class="activity-text"><strong>Rizky Pratama</strong> melakukan panggilan telepon — status <strong>Hot lead</strong>.</div>
+            <div class="activity-time">10 menit yang lalu</div>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <div class="activity-text">Email penawaran dikirim ke <strong>Dewi Anggraini</strong> (Gojek).</div>
+            <div class="activity-time">45 menit yang lalu</div>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-icon"><i class="fas fa-file-signature"></i></div>
+          <div>
+            <div class="activity-text">Kontrak dengan <strong>Fajar Nugroho</strong> (Traveloka) telah <strong>ditandatangani</strong>.</div>
+            <div class="activity-time">2 jam yang lalu</div>
+          </div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-icon"><i class="fas fa-calendar-check"></i></div>
+          <div>
+            <div class="activity-text">Meeting dengan <strong>Sinta Maharani</strong> dijadwalkan besok 10:00.</div>
+            <div class="activity-time">3 jam yang lalu</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div style="text-align: right; font-size: 0.75rem; color: var(--text-muted); margin-top: 1rem;">
+        <i class="fas fa-database"></i> Data demo — JCRM v2.0
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>
