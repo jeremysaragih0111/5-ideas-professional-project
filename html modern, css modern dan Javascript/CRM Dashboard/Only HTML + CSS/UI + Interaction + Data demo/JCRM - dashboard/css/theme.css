@@ -1,0 +1,69 @@
+/* =========================================================
+   theme.css — Variabel warna & dark mode (tanpa JavaScript)
+   ========================================================= */
+
+:root {
+  /* ---------- LIGHT PREMIUM THEME (default) ---------- */
+  --bg-page: #f6f9fc;
+  --bg-surface: #ffffff;
+  --bg-sidebar: #ffffff;
+  --bg-card: #ffffff;
+  --text-primary: #1a2639;
+  --text-secondary: #4b5b6c;
+  --text-muted: #8c9aa8;
+  --border-light: #eef2f6;
+  --border-subtle: #e0e9f0;
+  --shadow-sm: 0 4px 12px rgba(0, 20, 40, 0.04);
+  --shadow-md: 0 8px 28px rgba(0, 20, 40, 0.06);
+  --shadow-lg: 0 20px 40px -12px rgba(0, 20, 40, 0.12);
+  --accent: #0b6e8f;         /* brand teal JCRM */
+  --accent-soft: #d9eaf2;
+  --accent-light: #e6f2f8;
+  --success: #1e9e7c;
+  --warning: #c07a1b;
+  --danger: #c74a4a;
+  --chart-1: #0b6e8f;
+  --chart-2: #3895b3;
+  --chart-3: #7bb8cc;
+  --chart-4: #b0d4e2;
+  --icon-bg: #f0f6fa;
+  --nav-active-bg: #e6f2f8;
+  --nav-active-text: #0b6e8f;
+  --table-header: #f9fbfd;
+  --hover-row: #f9fcfe;
+}
+
+/* =========================================================
+   DARK MODE — diaktifkan saat checkbox #theme-switch checked.
+   Menggunakan selector :has() (CSS Level 4) → tanpa JS.
+   Semua komponen yang memakai var() otomatis ikut berubah.
+   ========================================================= */
+html:has(#theme-switch:checked) {
+  --bg-page: #0d151c;
+  --bg-surface: #16212b;
+  --bg-sidebar: #111c24;
+  --bg-card: #1a2833;
+  --text-primary: #ebf1f7;
+  --text-secondary: #a8bfcf;
+  --text-muted: #6e8598;
+  --border-light: #233340;
+  --border-subtle: #2f4050;
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 28px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 20px 40px -12px rgba(0, 0, 0, 0.7);
+  --accent: #37b0d0;
+  --accent-soft: #1b4052;
+  --accent-light: #1a2f3c;
+  --success: #42c9a5;
+  --warning: #e6a64a;
+  --danger: #e06b6b;
+  --chart-1: #37b0d0;
+  --chart-2: #57b8d4;
+  --chart-3: #7ec8dd;
+  --chart-4: #a5d7e8;
+  --icon-bg: #1f2f3c;
+  --nav-active-bg: #1b4052;
+  --nav-active-text: #7ec8dd;
+  --table-header: #1a2934;
+  --hover-row: #1e2e3b;
+}
