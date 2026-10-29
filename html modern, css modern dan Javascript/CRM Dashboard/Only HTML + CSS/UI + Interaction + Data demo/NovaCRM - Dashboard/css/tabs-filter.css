@@ -1,0 +1,110 @@
+/* ============================================================
+   TABS-FILTER.CSS — Interaksi Tab & Filter (CSS-only)
+   Menggunakan radio :checked untuk mengontrol visibilitas panel
+   dan menyaring baris tabel.
+   ============================================================ */
+
+/* ---------- TABS BAR ---------- */
+.tabs {
+  display: flex;
+  gap: 4px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 4px;
+  margin-bottom: 20px;
+  width: fit-content;
+}
+
+.tab {
+  padding: 8px 18px;
+  border-radius: 9px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+}
+
+.tab:hover { color: var(--text); }
+
+.tab .count {
+  font-size: 0.7rem;
+  padding: 1px 7px;
+  border-radius: 20px;
+  background: var(--surface);
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+/* ---------- TAB PANEL (default hidden) ---------- */
+.tab-panel { display: none; }
+
+/* Tampilkan panel yang sesuai saat radio checked */
+#tab-leads:checked    ~ .panel-container #panel-leads,
+#tab-deals:checked    ~ .panel-container #panel-deals,
+#tab-contacts:checked ~ .panel-container #panel-contacts {
+  display: block;
+}
+
+/* Styling tab aktif */
+#tab-leads:checked    ~ .tabs .tab[for="tab-leads"],
+#tab-deals:checked    ~ .tabs .tab[for="tab-deals"],
+#tab-contacts:checked ~ .tabs .tab[for="tab-contacts"] {
+  background: var(--surface);
+  color: var(--brand-600);
+  box-shadow: var(--shadow);
+}
+
+/* Override warna tab aktif saat dark mode */
+#theme-toggle:checked ~ .app #tab-leads:checked    ~ .tabs .tab[for="tab-leads"],
+#theme-toggle:checked ~ .app #tab-deals:checked    ~ .tabs .tab[for="tab-deals"],
+#theme-toggle:checked ~ .app #tab-contacts:checked ~ .tabs .tab[for="tab-contacts"] {
+  color: var(--brand-300);
+}
+
+/* ---------- FILTER CHIPS ---------- */
+.filter-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.chip:hover {
+  border-color: var(--brand-300);
+  color: var(--text);
+}
+
+/* Chip aktif — menggunakan radio :checked */
+#filter-all:checked    ~ .filter-group .chip[for="filter-all"],
+#filter-active:checked ~ .filter-group .chip[for="filter-active"],
+#filter-new:checked    ~ .filter-group .chip[for="filter-new"],
+#filter-closed:checked ~ .filter-group .chip[for="filter-closed"] {
+  background: var(--brand-600);
+  border-color: var(--brand-600);
+  color: #fff;
+}
+
+/* ---------- FILTER ROWS ---------- */
+.row-item { display: table-row; }
+
+#filter-active:checked ~ .table-wrap .row-item:not(.r-active) { display: none; }
+#filter-new:checked    ~ .table-wrap .row-item:not(.r-new)    { display: none; }
+#filter-closed:checked ~ .table-wrap .row-item:not(.r-closed) { display: none; }
