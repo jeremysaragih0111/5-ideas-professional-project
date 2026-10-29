@@ -1,0 +1,31 @@
+/* ============================================================
+   RESPONSIVE.CSS — Media Queries untuk Tablet & Mobile
+   ============================================================ */
+
+/* ---------- TABLET (≤1024px) ---------- */
+@media (max-width: 1024px) {
+  .stats-grid   { grid-template-columns: repeat(2, 1fr); }
+  .sidebar      { width: 200px; }
+  .topbar-search { width: 220px; }
+}
+
+/* ---------- MOBILE (≤768px) ---------- */
+@media (max-width: 768px) {
+  .sidebar       { display: none; }
+  .main          { padding: 20px 16px; }
+  .topbar        { padding: 0 16px; }
+  .topbar-search { display: none; }
+  .stats-grid    { grid-template-columns: repeat(2, 1fr); }
+  .page-title    { font-size: 1.4rem; }
+  thead th,
+  tbody td       { padding: 12px 14px; }
+  .tabs          { width: 100%; overflow-x: auto; }
+
+  .hide-mobile   { display: none; }
+}
+
+/* ---------- MOBILE KECIL (≤520px) ---------- */
+@media (max-width: 520px) {
+  .stats-grid { grid-template-columns: 1fr; }
+  .theme-switch .opt span { display: none; }
+}
