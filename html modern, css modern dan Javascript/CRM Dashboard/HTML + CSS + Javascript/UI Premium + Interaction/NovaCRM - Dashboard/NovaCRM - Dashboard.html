@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f6fb">
+  <title>Nova CRM — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="NovaCRM - Dashboard.css">
+  <script src="NovaCRM - Dashboard.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#overview">
+      <span class="brand-logo">N</span>
+      <span>nova<span class="accent">.</span><small>CRM PLATFORM</small></span>
+    </a>
+
+    <div class="workspace">
+      <span class="workspace-logo">S</span>
+      <span><b>Studio North</b><small>Business workspace</small></span>
+      <span class="muted">⌄</span>
+    </div>
+
+    <p class="nav-heading">WORKSPACE</p>
+    <nav class="nav">
+      <a class="nav-link active" href="#overview">▦ <span>Overview</span></a>
+      <a class="nav-link" href="#contacts">♙ <span>Contacts</span><i>128</i></a>
+      <a class="nav-link" href="#pipeline">◫ <span>Deal pipeline</span></a>
+      <a class="nav-link" href="#activities">◷ <span>Activities</span></a>
+      <a class="nav-link" href="#reports">▥ <span>Reports</span></a>
+    </nav>
+
+    <p class="nav-heading manage-heading">MANAGE</p>
+    <nav class="nav">
+      <a class="nav-link" href="#team">♧ <span>Team</span></a>
+      <a class="nav-link" href="#settings">⚙ <span>Settings</span></a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <div class="upgrade">
+        <span class="upgrade-icon">✦</span>
+        <b>Grow with Nova</b>
+        <p>Keep your relationships moving forward.</p>
+        <a href="#reports">Explore insights ↗</a>
+      </div>
+      <div class="profile">
+        <div class="avatar purple">AR</div>
+        <span><b>Alexandra Reed</b><small>Administrator</small></span>
+        <button class="icon-button" id="profileMenu" aria-label="Profile menu">···</button>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main" id="overview">
+    <header class="topbar">
+      <button class="icon-button mobile-menu" id="menuToggle" aria-label="Toggle navigation">☰</button>
+      <div class="breadcrumb">Workspace <span>/</span> <b>Overview</b></div>
+      <div class="top-actions">
+        <label class="search">
+          <span>⌕</span>
+          <input id="searchInput" type="search" placeholder="Search contacts..." aria-label="Search contacts">
+          <kbd>Ctrl K</kbd>
+        </label>
+        <button class="icon-button" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">☾</button>
+        <button class="icon-button notification" id="notifications" aria-label="Notifications">♧<i></i></button>
+        <div class="avatar purple top-avatar">AR</div>
+      </div>
+    </header>
+
+    <div class="page">
+      <section class="welcome">
+        <div>
+          <p class="eyebrow"><span></span> YOUR BUSINESS AT A GLANCE</p>
+          <h1>Welcome back, Alexandra <span class="wave">✳</span></h1>
+          <p class="muted">Here’s what’s happening with your business today.</p>
+        </div>
+        <div class="actions">
+          <button class="button secondary" id="exportButton">↓ Export CSV</button>
+          <button class="button primary" id="addContactButton">＋ Add contact</button>
+        </div>
+      </section>
+
+      <section class="metrics">
+        <article class="metric">
+          <div class="metric-top"><span>Total revenue</span><span class="metric-icon violet">↗</span></div>
+          <strong>$84,250</strong>
+          <p><span class="positive">↗ 12.8%</span> <span class="muted">vs last month</span></p>
+          <div class="sparkline"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </article>
+        <article class="metric">
+          <div class="metric-top"><span>Total contacts</span><span class="metric-icon blue">♙</span></div>
+          <strong id="contactMetric">1,284</strong>
+          <p><span class="positive">↗ 8.2%</span> <span class="muted">vs last month</span></p>
+          <div class="sparkline blue-line"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </article>
+        <article class="metric">
+          <div class="metric-top"><span>Active deals</span><span class="metric-icon orange">◫</span></div>
+          <strong>32</strong>
+          <p><span class="positive">↗ 8.4%</span> <span class="muted">vs last month</span></p>
+          <div class="sparkline orange-line"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </article>
+        <article class="metric">
+          <div class="metric-top"><span>Conversion rate</span><span class="metric-icon green">◎</span></div>
+          <strong>24.8%</strong>
+          <p><span class="negative">↘ 1.4%</span> <span class="muted">vs last month</span></p>
+          <div class="sparkline green-line"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </article>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="panel" id="reports">
+          <div class="panel-heading">
+            <div><h2>Revenue overview</h2><p class="muted">Your revenue performance over time.</p></div>
+            <select id="chartRange" aria-label="Chart period">
+              <option value="6">Last 6 months</option>
+              <option value="12">Last 12 months</option>
+            </select>
+          </div>
+          <div class="chart-summary">
+            <span><i class="dot violet-dot"></i> Revenue</span>
+            <span><i class="dot gray-dot"></i> Expenses</span>
+            <strong>$48,290 <small class="positive">+12.8%</small></strong>
+          </div>
+          <div class="chart">
+            <div class="y-labels"><span>$50k</span><span>$40k</span><span>$30k</span><span>$20k</span><span>$10k</span><span>$0</span></div>
+            <div class="plot">
+              <div class="grid-line"></div><div class="grid-line"></div>
+              <div class="grid-line"></div><div class="grid-line"></div>
+              <div class="grid-line"></div><div class="grid-line"></div>
+              <svg viewBox="0 0 600 220" preserveAspectRatio="none" role="img" aria-label="Demo revenue line chart">
+                <defs><linearGradient id="fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#7967ef" stop-opacity=".25"/><stop offset="1" stop-color="#7967ef" stop-opacity="0"/></linearGradient></defs>
+                <path d="M0 175 C50 165 60 135 105 150 S165 175 205 122 S270 140 310 103 S375 115 415 78 S475 92 515 47 S565 65 600 20 L600 220 L0 220Z" fill="url(#fill)"/>
+                <path d="M0 175 C50 165 60 135 105 150 S165 175 205 122 S270 140 310 103 S375 115 415 78 S475 92 515 47 S565 65 600 20" fill="none" stroke="#7967ef" stroke-width="3.5" stroke-linecap="round"/>
+                <path d="M0 194 C50 184 60 182 105 180 S165 170 205 178 S270 165 310 161 S375 168 415 145 S475 151 515 137 S565 140 600 120" fill="none" stroke="#bfc4d4" stroke-width="2.5" stroke-dasharray="5 6" stroke-linecap="round"/>
+              </svg>
+              <div class="x-labels"><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel" id="pipeline">
+          <div class="panel-heading">
+            <div><h2>Deal pipeline</h2><p class="muted">Your deals at a glance.</p></div>
+            <button class="text-button" id="pipelineButton">View all ↗</button>
+          </div>
+          <div class="pipeline-total"><span><small>Total pipeline value</small><strong>$126,500</strong></span><span class="pill">+18.6%</span></div>
+          <div class="stages">
+            <div class="stage"><div><span><i class="stage-dot s-violet"></i>Qualified</span><b>$42,000 <small>33%</small></b></div><div class="progress"><i style="width:33%;background:#7967ef"></i></div></div>
+            <div class="stage"><div><span><i class="stage-dot s-blue"></i>Proposal</span><b>$36,500 <small>29%</small></b></div><div class="progress"><i style="width:29%;background:#5998f4"></i></div></div>
+            <div class="stage"><div><span><i class="stage-dot s-orange"></i>Negotiation</span><b>$28,000 <small>22%</small></b></div><div class="progress"><i style="width:22%;background:#f0a45c"></i></div></div>
+            <div class="stage"><div><span><i class="stage-dot s-green"></i>Won</span><b>$20,000 <small>16%</small></b></div><div class="progress"><i style="width:16%;background:#42b995"></i></div></div>
+          </div>
+          <div class="pipeline-footer"><span>● 32 active deals</span><span>Demo data</span></div>
+        </article>
+      </section>
+
+      <section class="dashboard-grid lower-grid">
+        <article class="panel contacts-panel" id="contacts">
+          <div class="panel-heading contacts-heading">
+            <div><h2>Recent contacts <span class="count" id="contactCount">6</span></h2><p class="muted">Manage your customer relationships.</p></div>
+            <button class="text-button" id="showAllContacts">View all ↗</button>
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th><input type="checkbox" id="selectAll" aria-label="Select all"></th><th>CONTACT</th><th>COMPANY</th><th>STATUS</th><th>LAST CONTACT</th><th></th></tr></thead>
+              <tbody id="contactsBody">
+                <tr><td><input class="row-check" type="checkbox" aria-label="Select Olivia"></td><td><div class="contact"><span class="avatar pink">OR</span><span><b>Olivia Rhye</b><small>olivia@orbitlabs.com</small></span></div></td><td>Orbit Labs</td><td><span class="status customer">Customer</span></td><td>Today, 10:42 AM</td><td><button class="row-menu" aria-label="Contact menu">···</button></td></tr>
+                <tr><td><input class="row-check" type="checkbox" aria-label="Select Phoenix"></td><td><div class="contact"><span class="avatar orange">PB</span><span><b>Phoenix Baker</b><small>phoenix@acme.io</small></span></div></td><td>Acme Inc.</td><td><span class="status lead">Lead</span></td><td>Today, 9:18 AM</td><td><button class="row-menu" aria-label="Contact menu">···</button></td></tr>
+                <tr><td><input class="row-check" type="checkbox" aria-label="Select Lana"></td><td><div class="contact"><span class="avatar blue">LS</span><span><b>Lana Steiner</b><small>lana@catalog.app</small></span></div></td><td>Catalog</td><td><span class="status lead">Lead</span></td><td>Yesterday</td><td><button class="row-menu" aria-label="Contact menu">···</button></td></tr>
+                <tr><td><input class="row-check" type="checkbox" aria-label="Select Demi"></td><td><div class="contact"><span class="avatar green">DW</span><span><b>Demi Wilkinson</b><small>demi@layers.com</small></span></div></td><td>Layers Inc.</td><td><span class="status customer">Customer</span></td><td>Oct 27, 2026</td><td><button class="row-menu" aria-label="Contact menu">···</button></td></tr>
+                <tr><td><input class="row-check" type="checkbox" aria-label="Select Candice"></td><td><div class="contact"><span class="avatar purple">CW</span><span><b>Candice Wu</b><small>candice@circooles.com</small></span></div></td><td>Circooles</td><td><span class="status prospect">Prospect</span></td><td>Oct 26, 2026</td><td><button class="row-menu" aria-label="Contact menu">···</button></td></tr>
+                <tr><td><input class="row-check" type="checkbox" aria-label="Select Natali"></td><td><div class="contact"><span class="avatar teal">NC</span><span><b>Natali Craig</b><small>natali@quotient.co</small></span></div></td><td>Quotient</td><td><span class="status customer">Customer</span></td><td>Oct 25, 2026</td><td><button class="row-menu" aria-label="Contact menu">···</button></td></tr>
+              </tbody>
+            </table>
+            <p class="empty-state" id="emptyState" hidden>No matching contacts found.</p>
+          </div>
+          <div class="table-footer"><span id="tableSummary">Showing 6 demo contacts</span><button class="text-button" id="clearSearch">Clear search</button></div>
+        </article>
+
+        <article class="panel tasks-panel" id="activities">
+          <div class="panel-heading"><div><h2>My tasks <span class="count" id="taskCount">3</span></h2><p class="muted">Your priorities for today.</p></div><button class="icon-button" id="addTask" aria-label="Add task">＋</button></div>
+          <div class="agenda"><span class="agenda-icon">▦</span><span><b>Today's agenda</b><small>Thursday, October 29</small></span><small id="tasksRemaining">3 remaining</small></div>
+          <div class="task-list" id="taskList">
+            <label class="task"><input type="checkbox"><span class="fake-check"></span><span class="task-copy"><b>Follow up with Olivia</b><small><i class="priority high"></i> High priority · 10:30 AM</small></span><span class="avatar pink task-avatar">OR</span></label>
+            <label class="task"><input type="checkbox"><span class="fake-check"></span><span class="task-copy"><b>Prepare proposal for Acme</b><small><i class="priority medium"></i> Medium · 1:00 PM</small></span><span class="avatar orange task-avatar">PB</span></label>
+            <label class="task"><input type="checkbox"><span class="fake-check"></span><span class="task-copy"><b>Review Q4 sales report</b><small><i class="priority low"></i> Low priority · 3:30 PM</small></span><span class="avatar purple task-avatar">AR</span></label>
+          </div>
+          <button class="all-tasks" id="allTasks">View all tasks ↗</button>
+          <div class="divider"></div>
+          <div class="panel-heading"><div><h2>Recent activity</h2><p class="muted">Latest team updates.</p></div></div>
+          <div class="activity"><span class="activity-icon violet">＋</span><span><b>Alexandra Reed</b> added a contact<small>Olivia Rhye · 12 min ago</small></span></div>
+          <div class="activity"><span class="activity-icon green">✓</span><span><b>Marcus Chen</b> closed a deal<small>Website redesign · 1 hour ago</small></span></div>
+          <div class="activity"><span class="activity-icon blue">↗</span><span><b>Alexandra Reed</b> updated a deal<small>Acme Inc. · 3 hours ago</small></span></div>
+        </article>
+      </section>
+      <footer class="footer"><span>© 2026 Nova CRM. All rights reserved.</span><span>● All systems operational <b>·</b> Demo workspace</span></footer>
+    </div>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog id="contactDialog">
+    <form id="contactForm">
+      <div class="dialog-head"><div><small>NOVA CONTACTS</small><h2>Add new contact</h2><p>New entries are stored in this page only.</p></div><button type="button" id="closeDialog" class="icon-button" aria-label="Close">×</button></div>
+      <label>Full name<input name="name" required minlength="2" placeholder="Jordan Lee"></label>
+      <label>Email address<input name="email" type="email" required placeholder="jordan@company.com"></label>
+      <label>Company<input name="company" required placeholder="Company name"></label>
+      <label>Status<select name="status"><option>Lead</option><option>Customer</option><option>Prospect</option></select></label>
+      <div class="dialog-actions"><button type="button" class="button secondary" id="cancelDialog">Cancel</button><button type="submit" class="button primary">Add contact ＋</button></div>
+    </form>
+  </dialog>
+</body>
+</html>
