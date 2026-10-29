@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TaskFlow AI — Kelola tugas dengan tampilan premium dark." />
+  <title>TaskFlow AI — Premium Task Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/reset.css" />
+  <link rel="stylesheet" href="/css/variables.css" />
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+  <link rel="stylesheet" href="/css/component.css" />
+  <link rel="stylesheet" href="/css/responsive.css" />
+</head>
+<body>
+  <!-- ====== SIDEBAR ====== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__brand">
+      <div class="brand-logo">
+        <span class="brand-logo__spark"></span>
+      </div>
+      <div class="brand-text">
+        <span class="brand-text__name">TaskFlow</span>
+        <span class="brand-text__badge">AI</span>
+      </div>
+    </div>
+
+    <nav class="sidebar__nav" aria-label="Navigasi utama">
+      <p class="nav-label">Menu</p>
+      <a href="#" class="nav-item nav-item--active">
+        <span class="nav-item__icon">◈</span>
+        <span>Dashboard</span>
+      </a>
+      <a href="#" class="nav-item">
+        <span class="nav-item__icon">☰</span>
+        <span>My Tasks</span>
+        <span class="nav-item__count">12</span>
+      </a>
+      <a href="#" class="nav-item">
+        <span class="nav-item__icon">◔</span>
+        <span>Calendar</span>
+      </a>
+      <a href="#" class="nav-item">
+        <span class="nav-item__icon">✦</span>
+        <span>AI Assistant</span>
+        <span class="nav-item__tag">PRO</span>
+      </a>
+
+      <p class="nav-label">Workspace</p>
+      <a href="#" class="nav-item">
+        <span class="nav-item__icon">▣</span>
+        <span>Projects</span>
+      </a>
+      <a href="#" class="nav-item">
+        <span class="nav-item__icon">◉</span>
+        <span>Team</span>
+      </a>
+      <a href="#" class="nav-item">
+        <span class="nav-item__icon">⚙</span>
+        <span>Settings</span>
+      </a>
+    </nav>
+
+    <div class="sidebar__upgrade">
+      <div class="upgrade-card">
+        <p class="upgrade-card__title">Upgrade ke Pro</p>
+        <p class="upgrade-card__desc">Buka insight AI tak terbatas & otomasi workflow.</p>
+        <a href="#" class="btn btn--gradient btn--block">Upgrade Sekarang</a>
+      </div>
+    </div>
+
+    <div class="sidebar__profile">
+      <div class="avatar avatar--md">AR</div>
+      <div class="profile-info">
+        <span class="profile-info__name">Andi Ramadhan</span>
+        <span class="profile-info__role">Product Designer</span>
+      </div>
+      <button class="icon-btn" aria-label="Menu profil">⋯</button>
+    </div>
+  </aside>
+
+  <!-- ====== MAIN ====== -->
+  <div class="app-main">
+    <!-- ====== TOPBAR ====== -->
+    <header class="topbar">
+      <div class="topbar__left">
+        <button class="icon-btn topbar__toggle" id="sidebarToggle" aria-label="Buka menu">☰</button>
+        <div class="topbar__search">
+          <span class="topbar__search-icon">⌕</span>
+          <input type="text" placeholder="Cari tugas, project, atau orang..." aria-label="Cari" />
+          <kbd class="kbd">⌘K</kbd>
+        </div>
+      </div>
+      <div class="topbar__right">
+        <button class="icon-btn" aria-label="Notifikasi">
+          <span class="dot-indicator"></span>◔
+        </button>
+        <button class="btn btn--ghost">Undang Tim</button>
+        <button class="btn btn--gradient">+ Tugas Baru</button>
+      </div>
+    </header>
+
+    <!-- ====== CONTENT ====== -->
+    <main class="content">
+      <!-- Hero / Greeting -->
+      <section class="hero">
+        <div class="hero__text">
+          <p class="hero__eyebrow">✦ Selamat datang kembali</p>
+          <h1 class="hero__title">Halo, Andi 👋<br />Mari selesaikan <span class="text-gradient">hari ini</span>.</h1>
+          <p class="hero__desc">Kamu punya 5 tugas prioritas tinggi dan 2 meeting dalam 3 jam ke depan.</p>
+        </div>
+        <div class="hero__actions">
+          <button class="btn btn--gradient">Mulai Fokus</button>
+          <button class="btn btn--outline">Lihat Agenda</button>
+        </div>
+      </section>
+
+      <!-- Stat Cards -->
+      <section class="stats">
+        <article class="card stat-card">
+          <div class="stat-card__head">
+            <span class="stat-card__icon stat-card__icon--violet">◈</span>
+            <span class="chip chip--up">+8.2%</span>
+          </div>
+          <p class="stat-card__value">24</p>
+          <p class="stat-card__label">Tugas Aktif</p>
+          <div class="progress"><span class="progress__bar" style="width: 68%"></span></div>
+        </article>
+
+        <article class="card stat-card">
+          <div class="stat-card__head">
+            <span class="stat-card__icon stat-card__icon--cyan">✓</span>
+            <span class="chip chip--up">+12%</span>
+          </div>
+          <p class="stat-card__value">87%</p>
+          <p class="stat-card__label">Completion Rate</p>
+          <div class="progress"><span class="progress__bar progress__bar--cyan" style="width: 87%"></span></div>
+        </article>
+
+        <article class="card stat-card">
+          <div class="stat-card__head">
+            <span class="stat-card__icon stat-card__icon--amber">⏱</span>
+            <span class="chip chip--down">-3%</span>
+          </div>
+          <p class="stat-card__value">6.4h</p>
+          <p class="stat-card__label">Fokus Hari Ini</p>
+          <div class="progress"><span class="progress__bar progress__bar--amber" style="width: 54%"></span></div>
+        </article>
+
+        <article class="card stat-card">
+          <div class="stat-card__head">
+            <span class="stat-card__icon stat-card__icon--pink">✦</span>
+            <span class="chip chip--pro">PRO</span>
+          </div>
+          <p class="stat-card__value">18</p>
+          <p class="stat-card__label">Saran AI</p>
+          <p class="stat-card__hint">Insight baru tersedia</p>
+        </article>
+      </section>
+
+      <!-- Grid utama -->
+      <section class="grid-main">
+        <!-- Task List -->
+        <div class="panel">
+          <div class="panel__head">
+            <div>
+              <h2 class="panel__title">Tugas Prioritas</h2>
+              <p class="panel__sub">Dikelompokkan berdasarkan deadline</p>
+            </div>
+            <div class="panel__tabs">
+              <button class="tab tab--active">Hari Ini</button>
+              <button class="tab">Minggu Ini</button>
+              <button class="tab">Semua</button>
+            </div>
+          </div>
+
+          <ul class="task-list">
+            <li class="task">
+              <span class="task__check"></span>
+              <div class="task__body">
+                <p class="task__title">Finalisasi desain dashboard v2</p>
+                <div class="task__meta">
+                  <span class="chip chip--violet">Design</span>
+                  <span class="task__time">⏰ 10:00 — 12:00</span>
+                </div>
+              </div>
+              <div class="task__people">
+                <span class="avatar avatar--sm avatar--violet">AR</span>
+                <span class="avatar avatar--sm avatar--cyan">DP</span>
+              </div>
+              <span class="chip chip--high">High</span>
+            </li>
+
+            <li class="task">
+              <span class="task__check"></span>
+              <div class="task__body">
+                <p class="task__title">Review pull request AI Assistant</p>
+                <div class="task__meta">
+                  <span class="chip chip--cyan">Engineering</span>
+                  <span class="task__time">⏰ 13:30 — 14:00</span>
+                </div>
+              </div>
+              <div class="task__people">
+                <span class="avatar avatar--sm avatar--amber">RK</span>
+              </div>
+              <span class="chip chip--med">Medium</span>
+            </li>
+
+            <li class="task">
+              <span class="task__check"></span>
+              <div class="task__body">
+                <p class="task__title">Meeting sync dengan tim marketing</p>
+                <div class="task__meta">
+                  <span class="chip chip--pink">Meeting</span>
+                  <span class="task__time">⏰ 15:00 — 15:45</span>
+                </div>
+              </div>
+              <div class="task__people">
+                <span class="avatar avatar--sm avatar--pink">LM</span>
+                <span class="avatar avatar--sm avatar--cyan">DP</span>
+                <span class="avatar avatar--sm avatar--more">+3</span>
+              </div>
+              <span class="chip chip--low">Low</span>
+            </li>
+
+            <li class="task task--done">
+              <span class="task__check task__check--done">✓</span>
+              <div class="task__body">
+                <p class="task__title">Kirim laporan progres mingguan</p>
+                <div class="task__meta">
+                  <span class="chip chip--violet">Report</span>
+                  <span class="task__time">✓ Selesai 08:45</span>
+                </div>
+              </div>
+              <span class="chip chip--done">Done</span>
+            </li>
+          </ul>
+
+          <button class="panel__more">Lihat semua tugas →</button>
+        </div>
+
+        <!-- Sidebar kanan -->
+        <aside class="side-col">
+          <!-- AI Insight -->
+          <div class="card insight-card">
+            <div class="insight-card__head">
+              <span class="chip chip--pro">✦ AI Insight</span>
+              <span class="insight-card__spark"></span>
+            </div>
+            <h3 class="insight-card__title">Kamu paling produktif di pagi hari</h3>
+            <p class="insight-card__desc">Jadwalkan tugas desain antara 09:00–11:00 untuk hasil terbaik. AI menyarankan blok fokus 90 menit.</p>
+            <div class="insight-card__actions">
+              <button class="btn btn--gradient btn--sm">Terapkan Jadwal</button>
+              <button class="btn btn--ghost btn--sm">Nanti</button>
+            </div>
+          </div>
+
+          <!-- Progress -->
+          <div class="card progress-card">
+            <div class="panel__head panel__head--compact">
+              <h2 class="panel__title">Progres Mingguan</h2>
+              <span class="chip chip--up">+18%</span>
+            </div>
+            <div class="chart">
+              <div class="chart__bar" style="--h: 45%"><span>Sen</span></div>
+              <div class="chart__bar" style="--h: 70%"><span>Sel</span></div>
+              <div class="chart__bar chart__bar--active" style="--h: 92%"><span>Rab</span></div>
+              <div class="chart__bar" style="--h: 60%"><span>Kam</span></div>
+              <div class="chart__bar" style="--h: 80%"><span>Jum</span></div>
+              <div class="chart__bar" style="--h: 35%"><span>Sab</span></div>
+              <div class="chart__bar" style="--h: 20%"><span>Min</span></div>
+            </div>
+          </div>
+
+          <!-- Team -->
+          <div class="card team-card">
+            <div class="panel__head panel__head--compact">
+              <h2 class="panel__title">Tim Aktif</h2>
+              <a href="#" class="link-muted">Lihat semua</a>
+            </div>
+            <ul class="team-list">
+              <li class="team-item">
+                <span class="avatar avatar--sm avatar--violet">AR</span>
+                <div class="team-item__info">
+                  <span class="team-item__name">Andi Ramadhan</span>
+                  <span class="team-item__status"><span class="status-dot status-dot--online"></span>Online</span>
+                </div>
+                <span class="chip chip--ghost">Designer</span>
+              </li>
+              <li class="team-item">
+                <span class="avatar avatar--sm avatar--cyan">DP</span>
+                <div class="team-item__info">
+                  <span class="team-item__name">Dewi Pratiwi</span>
+                  <span class="team-item__status"><span class="status-dot status-dot--online"></span>Online</span>
+                </div>
+                <span class="chip chip--ghost">Engineer</span>
+              </li>
+              <li class="team-item">
+                <span class="avatar avatar--sm avatar--amber">RK</span>
+                <div class="team-item__info">
+                  <span class="team-item__name">Rizky Kurnia</span>
+                  <span class="team-item__status"><span class="status-dot status-dot--away"></span>5m lalu</span>
+                </div>
+                <span class="chip chip--ghost">PM</span>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </section>
+
+      <footer class="footer">
+        <p>TaskFlow AI · Premium UI Demo · Hanya tampilan statis (HTML + CSS)</p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
