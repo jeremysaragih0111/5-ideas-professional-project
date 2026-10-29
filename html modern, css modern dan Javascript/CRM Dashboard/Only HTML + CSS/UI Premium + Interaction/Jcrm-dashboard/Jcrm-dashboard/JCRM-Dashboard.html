@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080f1d">
+  <meta name="description" content="JCRM — premium dark CRM dashboard built with HTML and CSS only.">
+  <title>JCRM — Sales Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="JCRM-Dashboard.css">
+</head>
+<body>
+  <!-- CSS-only mobile navigation toggle -->
+  <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Toggle navigation">
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Navigasi utama">
+      <a class="brand" href="#overview" aria-label="JCRM beranda">
+        <span class="brand-mark"><i></i><i></i><i></i></span>
+        <span class="brand-copy"><strong>JCRM</strong><small>Grow Together</small></span>
+      </a>
+
+      <label class="mobile-close" for="menu-toggle" aria-label="Tutup navigasi">×</label>
+
+      <nav class="main-nav">
+        <a class="nav-link active" href="#overview"><span class="nav-icon">⌂</span><span>Dashboard</span></a>
+        <a class="nav-link" href="#contacts"><span class="nav-icon">♙</span><span>Contacts</span><span class="nav-count">248</span></a>
+        <a class="nav-link" href="#deals"><span class="nav-icon">▱</span><span>Deals</span><span class="nav-count">42</span></a>
+        <a class="nav-link" href="#companies"><span class="nav-icon">▦</span><span>Companies</span></a>
+        <a class="nav-link" href="#tasks"><span class="nav-icon">☑</span><span>Tasks</span><span class="nav-count alert-count">5</span></a>
+        <a class="nav-link" href="#calendar"><span class="nav-icon">▣</span><span>Calendar</span></a>
+        <a class="nav-link" href="#reports"><span class="nav-icon">▥</span><span>Reports</span></a>
+        <a class="nav-link" href="#settings"><span class="nav-icon">⚙</span><span>Settings</span></a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="upgrade-card">
+          <div class="sparkle">✦</div>
+          <h3>Upgrade to Pro</h3>
+          <p>Get more features and unlimited access.</p>
+          <a href="#upgrade" class="button button-primary button-small">Explore plans <span>↗</span></a>
+        </div>
+        <div class="workspace"><span class="workspace-logo">N</span><span><b>JCRM</b><small>Workspace</small></span><span class="dots">•••</span></div>
+      </div>
+    </aside>
+
+    <label class="sidebar-scrim" for="menu-toggle" aria-label="Tutup menu"></label>
+
+    <main class="main-area" id="overview">
+      <header class="topbar">
+        <label class="mobile-menu-button" for="menu-toggle" aria-label="Buka navigasi">☰</label>
+        <form class="search-box" action="#contacts">
+          <span class="search-icon">⌕</span>
+          <input type="search" placeholder="Search contacts, deals, or companies…" aria-label="Cari kontak, deal, atau perusahaan">
+          <kbd>⌘ K</kbd>
+        </form>
+        <div class="topbar-actions">
+          <details class="notification-wrap">
+            <summary class="icon-button notification-button" aria-label="Notifikasi"><span>♧</span><i></i></summary>
+            <div class="popover notification-popover">
+              <strong>Notifications</strong>
+              <p><span class="activity-dot blue"></span> New lead assigned to you <small>12 min ago</small></p>
+              <p><span class="activity-dot green"></span> Deal moved to Proposal <small>1 hour ago</small></p>
+              <p><span class="activity-dot purple"></span> Weekly report is ready <small>Yesterday</small></p>
+            </div>
+          </details>
+          <div class="topbar-divider"></div>
+          <details class="profile-wrap">
+            <summary class="profile">
+              <span class="avatar avatar-photo">AC</span>
+              <span class="profile-copy"><b>Jeremy</b><small>Sales Manager</small></span>
+              <span class="chevron">⌄</span>
+            </summary>
+            <div class="popover profile-popover">
+              <strong>Jeremy</strong>
+              <a href="#settings">Account settings</a>
+              <a href="#settings">Preferences</a>
+              <a href="#settings">Sign out (demo)</a>
+            </div>
+          </details>
+        </div>
+      </header>
+
+      <div class="content-wrap">
+        <section class="page-heading">
+          <div>
+            <div class="eyebrow"><span class="live-dot"></span> WORKSPACE OVERVIEW</div>
+            <h1>Good morning, Boss Jeremy <span class="wave">✦</span></h1>
+            <p>Here's what's happening with your sales today.</p>
+          </div>
+          <div class="heading-actions">
+            <details class="date-picker">
+              <summary><span>▣</span> Apr 1 – Apr 30, 2025 <span class="chevron">⌄</span></summary>
+              <div class="popover date-popover">
+                <strong>Reporting period</strong>
+                <a href="#overview">This month · Apr 2025</a>
+                <a href="#overview">Last month · Mar 2025</a>
+                <a href="#overview">This quarter · Q2 2025</a>
+              </div>
+            </details>
+            <a class="button button-primary" href="#quick-add"><span>＋</span> Add new</a>
+          </div>
+        </section>
+
+        <section class="metrics-grid" aria-label="Ringkasan metrik">
+          <article class="metric-card">
+            <div class="metric-top"><span class="metric-icon icon-blue">♙</span><span class="metric-menu">•••</span></div>
+            <p class="metric-label">Total Contacts</p>
+            <div class="metric-value">2,486</div>
+            <div class="metric-foot"><span class="trend positive">↗ 12.8%</span><span>vs last month</span></div>
+            <div class="sparkline spark-blue"><span style="height:28%"></span><span style="height:42%"></span><span style="height:34%"></span><span style="height:58%"></span><span style="height:48%"></span><span style="height:75%"></span><span style="height:62%"></span><span style="height:92%"></span></div>
+          </article>
+          <article class="metric-card">
+            <div class="metric-top"><span class="metric-icon icon-purple">▱</span><span class="metric-menu">•••</span></div>
+            <p class="metric-label">Active Deals</p>
+            <div class="metric-value">184</div>
+            <div class="metric-foot"><span class="trend positive">↗ 8.2%</span><span>vs last month</span></div>
+            <div class="sparkline spark-purple"><span style="height:35%"></span><span style="height:26%"></span><span style="height:50%"></span><span style="height:42%"></span><span style="height:68%"></span><span style="height:56%"></span><span style="height:72%"></span><span style="height:95%"></span></div>
+          </article>
+          <article class="metric-card">
+            <div class="metric-top"><span class="metric-icon icon-green">$</span><span class="metric-menu">•••</span></div>
+            <p class="metric-label">Revenue generated</p>
+            <div class="metric-value">$128,450</div>
+            <div class="metric-foot"><span class="trend positive">↗ 24.6%</span><span>vs last month</span></div>
+            <div class="sparkline spark-green"><span style="height:22%"></span><span style="height:34%"></span><span style="height:31%"></span><span style="height:50%"></span><span style="height:43%"></span><span style="height:64%"></span><span style="height:73%"></span><span style="height:96%"></span></div>
+          </article>
+          <article class="metric-card">
+            <div class="metric-top"><span class="metric-icon icon-orange">◎</span><span class="metric-menu">•••</span></div>
+            <p class="metric-label">Conversion rate</p>
+            <div class="metric-value">18.2<span class="value-unit">%</span></div>
+            <div class="metric-foot"><span class="trend positive">↗ 4.8%</span><span>vs last month</span></div>
+            <div class="sparkline spark-orange"><span style="height:36%"></span><span style="height:30%"></span><span style="height:47%"></span><span style="height:41%"></span><span style="height:62%"></span><span style="height:53%"></span><span style="height:77%"></span><span style="height:94%"></span></div>
+          </article>
+        </section>
+
+        <section class="dashboard-grid">
+          <div class="primary-column">
+            <div class="analytics-grid">
+              <article class="panel performance-panel" id="reports">
+                <div class="panel-heading">
+                  <div><h2>Sales performance</h2><p>Revenue overview across the last 6 months</p></div>
+                  <details class="more-menu"><summary aria-label="Opsi grafik">•••</summary><div class="popover compact-popover"><a href="#reports">Revenue overview</a><a href="#reports">Export (demo)</a></div></details>
+                </div>
+                <div class="chart-legend"><span><i class="legend-dot blue"></i> Revenue</span><span><i class="legend-dot purple"></i> Deals</span><span class="legend-period">Last 6 months⌄</span></div>
+                <div class="chart-area" role="img" aria-label="Grafik ilustratif penjualan meningkat dari November sampai April">
+                  <div class="y-labels"><span>$150k</span><span>$100k</span><span>$50k</span><span>$0</span></div>
+                  <div class="chart-plot">
+                    <div class="grid-lines"><i></i><i></i><i></i><i></i></div>
+                    <svg class="chart-svg" viewBox="0 0 600 220" preserveAspectRatio="none" aria-hidden="true">
+                      <defs><linearGradient id="blueFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#5687ff" stop-opacity=".28"/><stop offset="100%" stop-color="#5687ff" stop-opacity="0"/></linearGradient><linearGradient id="purpleFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#a855f7" stop-opacity=".2"/><stop offset="100%" stop-color="#a855f7" stop-opacity="0"/></linearGradient></defs>
+                      <path d="M0 172 C45 165 62 157 120 150 S205 116 240 121 S330 100 360 91 S450 64 480 69 S560 39 600 28 L600 220 L0 220 Z" fill="url(#blueFill)"/>
+                      <path d="M0 172 C45 165 62 157 120 150 S205 116 240 121 S330 100 360 91 S450 64 480 69 S560 39 600 28" fill="none" stroke="#5b8cff" stroke-width="3" vector-effect="non-scaling-stroke"/>
+                      <path d="M0 198 C55 194 70 185 120 187 S205 165 240 169 S330 149 360 151 S450 124 480 130 S560 100 600 91 L600 220 L0 220 Z" fill="url(#purpleFill)"/>
+                      <path d="M0 198 C55 194 70 185 120 187 S205 165 240 169 S330 149 360 151 S450 124 480 130 S560 100 600 91" fill="none" stroke="#ad63f6" stroke-width="3" vector-effect="non-scaling-stroke"/>
+                      <g fill="#5b8cff"><circle cx="0" cy="172" r="4"/><circle cx="120" cy="150" r="4"/><circle cx="240" cy="121" r="4"/><circle cx="360" cy="91" r="4"/><circle cx="480" cy="69" r="4"/><circle cx="600" cy="28" r="4"/></g>
+                      <g fill="#ad63f6"><circle cx="0" cy="198" r="4"/><circle cx="120" cy="187" r="4"/><circle cx="240" cy="169" r="4"/><circle cx="360" cy="151" r="4"/><circle cx="480" cy="130" r="4"/><circle cx="600" cy="91" r="4"/></g>
+                    </svg>
+                    <div class="x-labels"><span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span></div>
+                  </div>
+                </div>
+                <div class="chart-insight"><span class="insight-icon">↗</span><span><b>Revenue is up 24.6%</b> compared to the previous period.</span><a href="#deals">View report ↗</a></div>
+              </article>
+
+              <article class="panel pipeline-panel" id="deals">
+                <div class="panel-heading"><div><h2>Deals by stage</h2><p>Current pipeline breakdown</p></div><a class="text-link" href="#top-deals">Details ↗</a></div>
+                <div class="pipeline-content">
+                  <div class="donut-wrap"><div class="donut"><div class="donut-center"><strong>184</strong><span>Total deals</span></div></div></div>
+                  <div class="pipeline-legend">
+                    <div><span><i class="legend-dot blue"></i>New</span><b>48 <small>26%</small></b></div>
+                    <div><span><i class="legend-dot purple"></i>Contacted</span><b>42 <small>23%</small></b></div>
+                    <div><span><i class="legend-dot green"></i>Proposal</span><b>36 <small>20%</small></b></div>
+                    <div><span><i class="legend-dot orange"></i>Negotiation</span><b>31 <small>17%</small></b></div>
+                    <div><span><i class="legend-dot pink"></i>Won</span><b>27 <small>14%</small></b></div>
+                  </div>
+                </div>
+                <div class="panel-bottom-note"><span class="trend positive">+14.2%</span> pipeline growth this month</div>
+              </article>
+            </div>
+
+            <div class="lower-grid">
+              <article class="panel deals-panel" id="top-deals">
+                <div class="panel-heading"><div><h2>Top deals</h2><p>Your highest-value opportunities</p></div><a class="text-link" href="#deals">View all <span>↗</span></a></div>
+                <div class="table-wrap">
+                  <table>
+                    <thead><tr><th>Deal name</th><th>Company</th><th>Value</th><th>Stage</th><th>Close date</th></tr></thead>
+                    <tbody>
+                      <tr><td><span class="deal-name"><span class="company-icon">✧</span><b>Enterprise Software</b></span></td><td>Acme Corp</td><td class="money">$45,000</td><td><span class="status status-proposal">Proposal</span></td><td>Apr 28, 2025</td></tr>
+                      <tr><td><span class="deal-name"><span class="company-icon">◈</span><b>Website Redesign</b></span></td><td>Global Media</td><td class="money">$28,000</td><td><span class="status status-negotiation">Negotiation</span></td><td>May 05, 2025</td></tr>
+                      <tr><td><span class="deal-name"><span class="company-icon">⌘</span><b>Mobile App</b></span></td><td>TechSolutions</td><td class="money">$18,000</td><td><span class="status status-contacted">Contacted</span></td><td>May 12, 2025</td></tr>
+                      <tr><td><span class="deal-name"><span class="company-icon">⬡</span><b>Cloud Migration</b></span></td><td>BrightFuture</td><td class="money">$12,000</td><td><span class="status status-new">New</span></td><td>May 20, 2025</td></tr>
+                      <tr><td><span class="deal-name"><span class="company-icon">✳</span><b>IT Consulting</b></span></td><td>JTech</td><td class="money">$8,500</td><td><span class="status status-won">Closed Won</span></td><td>Apr 18, 2025</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="table-footer"><span>Showing <b>5</b> of 184 deals</span><div class="pagination"><a href="#top-deals" aria-label="Halaman sebelumnya">‹</a><a class="current-page" href="#top-deals">1</a><a href="#top-deals">2</a><a href="#top-deals">3</a><a href="#top-deals" aria-label="Halaman berikutnya">›</a></div></div>
+              </article>
+
+              <article class="panel sources-panel" id="companies">
+                <div class="panel-heading"><div><h2>Lead sources</h2><p>Where leads come from</p></div><details class="more-menu"><summary aria-label="Opsi lead sources">•••</summary><div class="popover compact-popover"><a href="#companies">This month</a><a href="#companies">Export (demo)</a></div></details></div>
+                <div class="source-list">
+                  <div class="source-row"><div class="source-label"><span>Website</span><b>32%</b></div><div class="progress-track"><i class="bar-blue" style="width:32%"></i></div></div>
+                  <div class="source-row"><div class="source-label"><span>Referral</span><b>24%</b></div><div class="progress-track"><i class="bar-purple" style="width:24%"></i></div></div>
+                  <div class="source-row"><div class="source-label"><span>Social media</span><b>18%</b></div><div class="progress-track"><i class="bar-green" style="width:18%"></i></div></div>
+                  <div class="source-row"><div class="source-label"><span>Cold outreach</span><b>15%</b></div><div class="progress-track"><i class="bar-orange" style="width:15%"></i></div></div>
+                  <div class="source-row"><div class="source-label"><span>Other</span><b>11%</b></div><div class="progress-track"><i class="bar-gray" style="width:11%"></i></div></div>
+                </div>
+                <a class="source-link" href="#reports">View acquisition report <span>↗</span></a>
+              </article>
+            </div>
+
+            <article class="panel contacts-panel" id="contacts">
+              <div class="panel-heading"><div><h2>Recent contacts</h2><p>People your team connected with recently</p></div><a class="text-link" href="#contacts">View contacts ↗</a></div>
+              <div class="contact-list">
+                <div class="contact-row"><span class="avatar avatar-lilac">SJ</span><div class="contact-main"><b>Sarah Johnson</b><small>sarah@acmecorp.com</small></div><span class="contact-company">Acme Corp</span><span class="contact-date">Today, 10:24 AM</span><a href="mailto:sarah@acmecorp.com" class="contact-action">↗</a></div>
+                <div class="contact-row"><span class="avatar avatar-teal">MB</span><div class="contact-main"><b>Michael Brown</b><small>michael@globalmedia.co</small></div><span class="contact-company">Global Media</span><span class="contact-date">Today, 9:12 AM</span><a href="mailto:michael@globalmedia.co" class="contact-action">↗</a></div>
+                <div class="contact-row"><span class="avatar avatar-orange">ED</span><div class="contact-main"><b>Emily Davis</b><small>emily@technoJ.io</small></div><span class="contact-company">TechNoJ</span><span class="contact-date">Yesterday</span><a href="mailto:emily@technoJ.io" class="contact-action">↗</a></div>
+              </div>
+            </article>
+
+            <footer class="page-footer"><span>© 2025 JCRM. All rights reserved.</span><span>Made for meaningful relationships <b>✦</b></span></footer>
+          </div>
+
+          <aside class="right-column">
+            <article class="panel activity-panel">
+              <div class="panel-heading"><div><h2>Recent activity</h2><p>Latest updates from your team</p></div><a class="text-link" href="#activity-list">View all ↗</a></div>
+              <div class="activity-list" id="activity-list">
+                <div class="activity-item"><span class="activity-avatar activity-blue">♙</span><div class="activity-copy"><b>Sarah Johnson</b><p>New contact added</p><small>2 hours ago</small></div></div>
+                <div class="activity-item"><span class="activity-avatar activity-green">▣</span><div class="activity-copy"><b>Acme Corp</b><p>Deal moved to Proposal</p><small>4 hours ago</small></div></div>
+                <div class="activity-item"><span class="activity-avatar activity-teal">✓</span><div class="activity-copy"><b>Michael Brown</b><p>Task completed</p><small>5 hours ago</small></div></div>
+                <div class="activity-item"><span class="activity-avatar activity-purple">▦</span><div class="activity-copy"><b>TechSolutions Ltd</b><p>Meeting scheduled</p><small>6 hours ago</small></div></div>
+                <div class="activity-item"><span class="activity-avatar activity-orange">✦</span><div class="activity-copy"><b>Emily Davis</b><p>New contact added</p><small>8 hours ago</small></div></div>
+                <div class="activity-item"><span class="activity-avatar activity-pink">★</span><div class="activity-copy"><b>Global Media</b><p>Deal won</p><small>Yesterday</small></div></div>
+              </div>
+            </article>
+
+            <article class="panel tasks-panel" id="tasks">
+              <div class="panel-heading"><div><h2>Upcoming tasks</h2><p>Stay on top of your day</p></div><a class="text-link" href="#tasks">View all ↗</a></div>
+              <div class="task-list">
+                <label class="task-item"><input type="checkbox"><span class="fake-check"></span><span class="task-copy"><b>Follow up with Acme Corp</b><small class="urgent">Today, 10:00 AM</small></span><span class="task-priority priority-high"></span></label>
+                <label class="task-item"><input type="checkbox"><span class="fake-check"></span><span class="task-copy"><b>Send proposal to Global Media</b><small>Today, 2:00 PM</small></span><span class="task-priority priority-medium"></span></label>
+                <label class="task-item"><input type="checkbox"><span class="fake-check"></span><span class="task-copy"><b>Demo call with TechSolutions</b><small>Tomorrow, 11:00 AM</small></span><span class="task-priority priority-medium"></span></label>
+                <label class="task-item"><input type="checkbox"><span class="fake-check"></span><span class="task-copy"><b>Prepare pricing for BrightFuture</b><small>Apr 29, 10:00 AM</small></span><span class="task-priority priority-low"></span></label>
+                <label class="task-item"><input type="checkbox"><span class="fake-check"></span><span class="task-copy"><b>Client meeting — JTech</b><small>Apr 30, 2:00 PM</small></span><span class="task-priority priority-low"></span></label>
+              </div>
+              <a class="button button-ghost button-full" href="#calendar">＋ Add a task</a>
+            </article>
+
+            <article class="panel goal-panel">
+              <div class="goal-top"><span class="goal-icon">✦</span><span class="goal-tag">MONTHLY GOAL</span></div>
+              <h2>You're doing great!</h2>
+              <p>You're close to reaching your monthly revenue target.</p>
+              <div class="goal-numbers"><strong>$128,450</strong><span>of $150,000</span></div>
+              <div class="progress-track goal-track"><i style="width:85.6%"></i></div>
+              <div class="goal-foot"><span>85.6% completed</span><b>$21,550 to go</b></div>
+            </article>
+          </aside>
+        </section>
+
+        <section class="quick-add-section" id="quick-add">
+          <details class="panel quick-add">
+            <summary><span class="quick-add-icon">＋</span><span><b>Quick add a lead</b><small>Open this form to preview a CSS-only contact form.</small></span><span class="quick-add-arrow">＋</span></summary>
+            <form class="demo-form" action="#quick-add">
+              <label>Full name<input type="text" placeholder="e.g. Jordan Lee" required></label>
+              <label>Work email<input type="email" placeholder="jordan@company.com" required></label>
+              <label>Company<input type="text" placeholder="Company name"></label>
+              <label>Lead source<select><option>Website</option><option>Referral</option><option>Social media</option><option>Cold outreach</option></select></label>
+              <button class="button button-primary" type="submit">Preview form submission ↗</button>
+              <p class="form-note">Demo only: this form does not save or send data. Connect a backend to persist leads.</p>
+            </form>
+          </details>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
