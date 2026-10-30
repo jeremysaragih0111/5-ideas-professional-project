@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="JProMan — Professional project management workspace demo">
+  <meta name="theme-color" content="#f5f6fa">
+  <title>Good morning, Alexandra ✦ · JProMan</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <input class="theme-control" type="checkbox" id="theme-toggle" aria-label="Aktifkan dark mode">
+  <input class="theme-control mobile-toggle" type="checkbox" id="mobile-toggle" aria-label="Buka navigasi">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="index.html" aria-label="JProMan home">
+        <span class="brand-mark">J<span style="opacity:.7">P</span></span>
+        <span class="brand-copy">JProMan<small>PROJECT MANAGEMENT</small></span>
+      </a>
+      <div class="workspace-switch"><span class="workspace-mark">J</span><span class="workspace-text"><strong>JProMan Studio</strong><small>Professional workspace</small></span><span class="workspace-caret">⌄</span></div>
+      <div class="nav-section">WORKSPACE</div>
+      <nav class="nav-list" aria-label="Main navigation"><a class="nav-link active" href="index.html" aria-current=page><span class="nav-icon">▦</span>Overview</a><a class="nav-link " href="projects.html" ><span class="nav-icon">▧</span>Projects<span class=nav-badge>12</span></a><a class="nav-link " href="tasks.html" ><span class="nav-icon">☑</span>My Tasks<span class=nav-badge>8</span></a><a class="nav-link " href="calendar.html" ><span class="nav-icon">▦</span>Calendar</a><a class="nav-link " href="team.html" ><span class="nav-icon">♙</span>Team</a><a class="nav-link " href="reports.html" ><span class="nav-icon">▥</span>Reports</a></nav>
+      <div class="nav-section spaced">PREFERENCES</div>
+      <nav class="nav-list" aria-label="Preferences">
+        <a class="nav-link" href="reports.html#settings"><span class="nav-icon">⚙</span>Settings</a>
+        <a class="nav-link" href="reports.html#help"><span class="nav-icon">?</span>Help center</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-promo"><span class="promo-symbol">✦</span><strong>Make work flow better</strong><p>Bring projects, people, and progress into one clear space.</p><a href="projects.html">Explore projects →</a></div>
+        <div class="profile"><span class="avatar">AR</span><span class="profile-copy"><strong>Alexandra Rose</strong><small>Workspace admin</small></span><span class="profile-more">···</span></div>
+      </div>
+    </aside>
+    <label class="mobile-backdrop" for="mobile-toggle" aria-label="Tutup navigasi"></label>
+    <main class="main-area">
+      <header class="topbar">
+        <label class="mobile-menu" for="mobile-toggle" aria-label="Buka navigasi">☰</label>
+        <div class="breadcrumbs"><span>JProMan Studio</span><span class="crumb-sep">/</span><strong>Good morning, Alexandra ✦</strong></div>
+        <div class="top-actions">
+          <label class="search-field" aria-label="Demo search"><span class="search-glyph">⌕</span><input type="search" placeholder="Search anything…" aria-label="Search anything"><kbd>⌘ K</kbd></label>
+          <label class="icon-button theme-label" for="theme-toggle" title="Toggle light/dark mode" aria-label="Ganti tema"><span class="moon">☾</span><span class="sun">☀</span></label>
+          <a class="icon-button" href="calendar.html" aria-label="Notifications">♧<i class="notification-dot"></i></a>
+          <span class="avatar round">AR</span>
+        </div>
+      </header>
+      <div class="page-wrap">
+        <section class="page-heading">
+          <div><div class="eyebrow"><i class="eyebrow-dot"></i>YOUR WORKSPACE AT A GLANCE</div><h1>Good morning, Alexandra ✦</h1><p class="page-subtitle">Here’s what is moving across your workspace today.</p></div>
+          <div class="heading-actions"><a class="button button-secondary" href="reports.html">↗ Export overview</a><a class="button button-primary" href="projects.html#new-project">＋ New project</a></div>
+        </section>
+        
+<section class="stats-grid" aria-label="Workspace metrics">
+  <article class="stat-card"><div class="stat-head"><span>Active projects</span><span class="stat-icon purple">▧</span></div><div class="stat-value">24</div><div class="stat-foot"><span class="positive">↗ 12.5%</span><span>vs. last month</span></div><div class="spark-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+  <article class="stat-card"><div class="stat-head"><span>Tasks completed</span><span class="stat-icon cyan">✓</span></div><div class="stat-value">186</div><div class="stat-foot"><span class="positive">↗ 8.2%</span><span>vs. last month</span></div><div class="spark-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+  <article class="stat-card"><div class="stat-head"><span>Team members</span><span class="stat-icon amber">♙</span></div><div class="stat-value">32</div><div class="stat-foot"><span class="positive">+ 4 new</span><span>this quarter</span></div><div class="spark-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+  <article class="stat-card"><div class="stat-head"><span>On-time delivery</span><span class="stat-icon green">◎</span></div><div class="stat-value">94.8<span style="font-size:15px">%</span></div><div class="stat-foot"><span class="positive">↗ 3.4%</span><span>vs. last month</span></div><div class="spark-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+</section>
+<section class="grid-main">
+  <article class="panel"><div class="panel-header"><div><h2>Project performance</h2><p>Delivery progress across your workspace</p></div><a class="panel-link" href="reports.html">View report <span>→</span></a></div>
+    <div class="revenue-legend"><span class="legend-key"><i></i> Completed work</span><span class="legend-key"><i class="previous-key"></i> Planned work</span></div>
+    <div class="chart-box"><div class="chart-y"><span>100%</span><span>75%</span><span>50%</span><span>25%</span><span>0%</span></div>
+      <svg class="chart-svg" viewBox="0 0 640 220" preserveAspectRatio="none" role="img" aria-label="Sample project performance chart"><defs><linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8172ec" stop-opacity=".24"/><stop offset="1" stop-color="#8172ec" stop-opacity="0"/></linearGradient></defs><g class="chart-grid"><line x1="0" y1="8" x2="640" y2="8"/><line x1="0" y1="59" x2="640" y2="59"/><line x1="0" y1="110" x2="640" y2="110"/><line x1="0" y1="161" x2="640" y2="161"/><line x1="0" y1="212" x2="640" y2="212"/></g><path class="chart-area" d="M0 158 L90 136 L180 143 L270 95 L360 112 L450 58 L540 78 L640 27 L640 212 L0 212Z"/><path class="chart-prev-line" d="M0 174 L90 160 L180 157 L270 140 L360 132 L450 112 L540 104 L640 86"/><path class="chart-main-line" d="M0 158 L90 136 L180 143 L270 95 L360 112 L450 58 L540 78 L640 27"/></svg>
+    </div><div class="chart-x"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span></div>
+  </article>
+  <article class="panel"><div class="panel-header"><div><h2>Project health</h2><p>Current status distribution</p></div><a class="more" href="projects.html" aria-label="All projects">···</a></div><div class="progress-summary"><strong>24</strong><span>projects tracked</span></div>
+    <div class="pipeline-rows"><div><div class="pipeline-meta"><span>On track</span><strong>15 projects · 62.5%</strong></div><div class="pipeline-track"><i class="pipeline-fill green" style="width:62.5%"></i></div><div class="pipeline-value">Healthy delivery pace</div></div><div><div class="pipeline-meta"><span>At risk</span><strong>6 projects · 25%</strong></div><div class="pipeline-track"><i class="pipeline-fill amber" style="width:25%"></i></div><div class="pipeline-value">Needs attention</div></div><div><div class="pipeline-meta"><span>Off track</span><strong>3 projects · 12.5%</strong></div><div class="pipeline-track"><i class="pipeline-fill" style="width:12.5%;background:var(--red)"></i></div><div class="pipeline-value">Review blockers</div></div></div>
+  </article>
+</section>
+<section class="grid-bottom">
+  <article class="panel"><div class="panel-header"><div><h2>Recent projects</h2><p>Latest work across your team</p></div><a class="panel-link" href="projects.html">All projects <span>→</span></a></div>
+    <div class="table-scroll" style="margin-top:16px"><table><thead><tr><th>PROJECT</th><th>OWNER</th><th>PROGRESS</th><th>STATUS</th><th>DUE DATE</th></tr></thead><tbody>
+      <tr><td><div class="person-cell"><span class="project-mark">✦</span><span class="person-info"><strong>Website redesign</strong><small>Design & Development</small></span></div></td><td>Alex Rose</td><td style="min-width:105px"><div class="pipeline-track"><i class="pipeline-fill" style="width:78%"></i></div><small class="muted">78%</small></td><td><span class="status active">On track</span></td><td>Nov 12, 2026</td></tr>
+      <tr><td><div class="person-cell"><span class="project-mark cyan">◈</span><span class="person-info"><strong>Mobile app launch</strong><small>Product</small></span></div></td><td>David Kim</td><td><div class="pipeline-track"><i class="pipeline-fill blue" style="width:52%"></i></div><small class="muted">52%</small></td><td><span class="status progress">In progress</span></td><td>Nov 18, 2026</td></tr>
+      <tr><td><div class="person-cell"><span class="project-mark amber">↗</span><span class="person-info"><strong>Q4 campaign</strong><small>Marketing</small></span></div></td><td>Sarah Lee</td><td><div class="pipeline-track"><i class="pipeline-fill amber" style="width:35%"></i></div><small class="muted">35%</small></td><td><span class="status review">At risk</span></td><td>Nov 22, 2026</td></tr>
+      <tr><td><div class="person-cell"><span class="project-mark green">▤</span><span class="person-info"><strong>Customer portal</strong><small>Engineering</small></span></div></td><td>Michael Tan</td><td><div class="pipeline-track"><i class="pipeline-fill green" style="width:91%"></i></div><small class="muted">91%</small></td><td><span class="status active">On track</span></td><td>Nov 08, 2026</td></tr>
+    </tbody></table></div><div class="table-footer"><span>Showing 4 of 24 sample projects</span><a class="panel-link" href="projects.html">Open project list →</a></div>
+  </article>
+  <div style="display:grid;gap:15px;align-content:start">
+    <article class="panel"><div class="panel-header"><div><h2>My priorities</h2><p>Tasks that need your focus</p></div><a class="panel-link" href="tasks.html">See all</a></div><div class="task-list">
+      <label class="task-row"><input class="task-toggle" type="checkbox"><span class="task-copy"><strong>Review homepage wireframes</strong><small>Website redesign · Today, 11:00 AM</small></span><span class="priority">High</span></label>
+      <label class="task-row"><input class="task-toggle" type="checkbox"><span class="task-copy"><strong>Approve sprint backlog</strong><small>Mobile app · Today, 2:30 PM</small></span><span class="priority">High</span></label>
+      <label class="task-row"><input class="task-toggle" type="checkbox"><span class="task-copy"><strong>Share campaign feedback</strong><small>Q4 campaign · Tomorrow</small></span><span class="priority low">Low</span></label>
+    </div></article>
+    <article class="panel"><div class="panel-header"><div><h2>Team activity</h2><p>Latest workspace updates</p></div><a class="panel-link" href="team.html">Team</a></div><div class="activity-list">
+      <div class="activity-row"><span class="avatar aqua">SL</span><div class="activity-copy"><p><strong>Sarah Lee</strong> moved Q4 campaign to review</p><small>18 minutes ago</small></div></div>
+      <div class="activity-row"><span class="avatar green">DK</span><div class="activity-copy"><p><strong>David Kim</strong> completed 3 tasks</p><small>1 hour ago</small></div></div>
+      <div class="activity-row"><span class="avatar amber">MT</span><div class="activity-copy"><p><strong>Michael Tan</strong> added a milestone</p><small>Yesterday</small></div></div>
+    </div></article>
+  </div>
+</section>
+        <footer class="page-footer"><span>© 2026 JProMan. Designed for focused teams.</span><span class="footer-live"><i></i> Demo workspace · Sample data</span></footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
