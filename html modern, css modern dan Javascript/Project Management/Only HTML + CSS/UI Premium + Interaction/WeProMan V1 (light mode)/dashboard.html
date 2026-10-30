@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard — WeProMan</title>
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+<input type="checkbox" id="menu-toggle" class="hidden">
+<div class="app-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <a href="WeProMan.html" class="sidebar-brand"><span class="brand-mark">W</span> WeProMan</a>
+
+    <div class="nav-group">
+      <div class="nav-label">Workspace</div>
+
+      <!-- LIGHT nav -->
+      <div class="nav-theme-light">
+        <a class="nav-link active" href="dashboard.html#light"><span class="ico">▦</span> Dashboard</a>
+        <a class="nav-link" href="projects.html#light"><span class="ico">▣</span> Projects</a>
+        <a class="nav-link" href="tasks.html#light"><span class="ico">✓</span> Tasks</a>
+        <a class="nav-link" href="team.html#light"><span class="ico">◉</span> Team</a>
+        <a class="nav-link" href="calendar.html#light"><span class="ico">▤</span> Calendar</a>
+        <a class="nav-link" href="reports.html#light"><span class="ico">▧</span> Reports</a>
+      </div>
+
+      <!-- DARK nav -->
+      <div class="nav-theme-dark">
+        <a class="nav-link active" href="dashboard.html#dark"><span class="ico">▦</span> Dashboard</a>
+        <a class="nav-link" href="projects.html#dark"><span class="ico">▣</span> Projects</a>
+        <a class="nav-link" href="tasks.html#dark"><span class="ico">✓</span> Tasks</a>
+        <a class="nav-link" href="team.html#dark"><span class="ico">◉</span> Team</a>
+        <a class="nav-link" href="calendar.html#dark"><span class="ico">▤</span> Calendar</a>
+        <a class="nav-link" href="reports.html#dark"><span class="ico">▧</span> Reports</a>
+      </div>
+    </div>
+
+    <div class="nav-group">
+      <div class="nav-label">Akun</div>
+      <div class="nav-theme-light">
+        <a class="nav-link" href="settings.html#light"><span class="ico">⚙</span> Settings</a>
+        <a class="nav-link" href="login.html#light"><span class="ico">↪</span> Keluar</a>
+      </div>
+      <div class="nav-theme-dark">
+        <a class="nav-link" href="settings.html#dark"><span class="ico">⚙</span> Settings</a>
+        <a class="nav-link" href="login.html#dark"><span class="ico">↪</span> Keluar</a>
+      </div>
+    </div>
+
+    <div class="sidebar-foot">
+      <div class="user-chip">
+        <div class="avatar">AR</div>
+        <div class="meta"><strong>Aisyah R.</strong><br><span>Product Manager</span></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main-area">
+    <header class="topbar">
+      <div class="flex items-center gap-3">
+        <label for="menu-toggle" class="menu-btn">☰</label>
+        <h1>Dashboard</h1>
+      </div>
+      <div class="topbar-actions">
+        <div class="search-box">🔎 <input type="search" placeholder="Cari task, project, orang…"></div>
+        <span class="theme-toggle-wrap">
+          <a href="#dark" class="theme-btn theme-to-dark" title="Aktifkan Dark Mode">🌙</a>
+          <a href="#light" class="theme-btn theme-to-light" title="Aktifkan Light Mode">☀️</a>
+        </span>
+        <span class="nav-theme-light"><a href="settings.html#light" class="avatar">AR</a></span>
+        <span class="nav-theme-dark" style="display:none"><a href="settings.html#dark" class="avatar">AR</a></span>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="page-head">
+        <div>
+          <h2>Selamat pagi, Aisyah 👋</h2>
+          <p>Anda memiliki 6 task due hari ini dan 2 meeting terjadwal.</p>
+        </div>
+        <div class="page-actions nav-theme-light">
+          <a href="tasks.html#light" class="btn btn-ghost btn-sm">+ New Task</a>
+          <a href="projects.html#light" class="btn btn-primary btn-sm">+ New Project</a>
+        </div>
+        <div class="page-actions nav-theme-dark" style="display:none">
+          <a href="tasks.html#dark" class="btn btn-ghost btn-sm">+ New Task</a>
+          <a href="projects.html#dark" class="btn btn-primary btn-sm">+ New Project</a>
+        </div>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card"><div class="ico">📁</div><div class="value">24</div><div class="label">Total Project</div><div class="trend up">▲ 3 bulan ini</div></div>
+        <div class="stat-card"><div class="ico">✅</div><div class="value">186</div><div class="label">Task Selesai</div><div class="trend up">▲ 12% dari bulan lalu</div></div>
+        <div class="stat-card"><div class="ico">⏳</div><div class="value">42</div><div class="label">Task Aktif</div><div class="trend down">▼ 5 overdue</div></div>
+        <div class="stat-card"><div class="ico">👥</div><div class="value">12</div><div class="label">Anggota Tim</div><div class="trend up">▲ 2 baru</div></div>
+      </div>
+
+      <div class="dash-grid">
+        <div style="display:flex;flex-direction:column;gap:18px">
+          <div class="panel">
+            <div class="panel-head">
+              <h3>Task Hari Ini</h3>
+              <span class="nav-theme-light"><a href="tasks.html#light" class="panel-link">Lihat semua →</a></span>
+              <span class="nav-theme-dark" style="display:none"><a href="tasks.html#dark" class="panel-link">Lihat semua →</a></span>
+            </div>
+            <div>
+              <div class="task-row">
+                <div class="task-check done">✓</div>
+                <div class="task-main"><div class="title">Finalisasi desain onboarding</div><div class="meta"><span>🏷 Design</span><span>⏰ 09.00</span></div></div>
+                <span class="badge badge-success">Done</span>
+              </div>
+              <div class="task-row">
+                <div class="task-check"></div>
+                <div class="task-main"><div class="title">Review PR modul pembayaran</div><div class="meta"><span>🏷 Engineering</span><span>⏰ 11.30</span></div></div>
+                <span class="badge badge-warning">In Progress</span>
+              </div>
+              <div class="task-row">
+                <div class="task-check"></div>
+                <div class="task-main"><div class="title">Sprint planning Q2</div><div class="meta"><span>🏷 Product</span><span>⏰ 14.00</span></div></div>
+                <span class="badge badge-info">Meeting</span>
+              </div>
+              <div class="task-row">
+                <div class="task-check"></div>
+                <div class="task-main"><div class="title">Update dokumen API spec v2</div><div class="meta"><span>🏷 Docs</span><span>⏰ 16.00</span></div></div>
+                <span class="badge badge-danger">Overdue</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head">
+              <h3>Progres Project</h3>
+              <span class="nav-theme-light"><a href="projects.html#light" class="panel-link">Semua project →</a></span>
+              <span class="nav-theme-dark" style="display:none"><a href="projects.html#dark" class="panel-link">Semua project →</a></span>
+            </div>
+            <div class="panel-body" style="display:flex;flex-direction:column;gap:18px">
+              <div><div class="flex justify-between text-sm mb-2"><strong>Redesign Website v3</strong><span class="text-soft">78%</span></div><div class="progress"><span style="width:78%"></span></div></div>
+              <div><div class="flex justify-between text-sm mb-2"><strong>Mobile App MVP</strong><span class="text-soft">52%</span></div><div class="progress warn"><span style="width:52%"></span></div></div>
+              <div><div class="flex justify-between text-sm mb-2"><strong>API Gateway Refactor</strong><span class="text-soft">91%</span></div><div class="progress ok"><span style="width:91%"></span></div></div>
+              <div><div class="flex justify-between text-sm mb-2"><strong>Marketing Q2 Campaign</strong><span class="text-soft">34%</span></div><div class="progress"><span style="width:34%"></span></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:18px">
+          <div class="panel">
+            <div class="panel-head"><h3>Tim Aktif</h3>
+              <span class="nav-theme-light"><a href="team.html#light" class="panel-link">Semua</a></span>
+              <span class="nav-theme-dark" style="display:none"><a href="team.html#dark" class="panel-link">Semua</a></span>
+            </div>
+            <div class="panel-body" style="display:flex;flex-direction:column;gap:14px">
+              <div class="flex items-center gap-3"><div class="avatar">AR</div><div style="flex:1"><strong style="font-size:14px">Aisyah R.</strong><div class="text-xs text-mute">Product Manager</div></div><span class="badge badge-success"><span class="badge-dot"></span>Online</span></div>
+              <div class="flex items-center gap-3"><div class="avatar" style="background:linear-gradient(135deg,#f97316,#f59e0b)">BP</div><div style="flex:1"><strong style="font-size:14px">Bayu P.</strong><div class="text-xs text-mute">Frontend Dev</div></div><span class="badge badge-success"><span class="badge-dot"></span>Online</span></div>
+              <div class="flex items-center gap-3"><div class="avatar" style="background:linear-gradient(135deg,#22c55e,#10b981)">CN</div><div style="flex:1"><strong style="font-size:14px">Citra N.</strong><div class="text-xs text-mute">UI/UX Designer</div></div><span class="badge badge-neutral">Away</span></div>
+              <div class="flex items-center gap-3"><div class="avatar" style="background:linear-gradient(135deg,#a855f7,#6366f1)">DK</div><div style="flex:1"><strong style="font-size:14px">Dimas K.</strong><div class="text-xs text-mute">Backend Dev</div></div><span class="badge badge-success"><span class="badge-dot"></span>Online</span></div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head"><h3>Aktivitas Terbaru</h3></div>
+            <div class="panel-body" style="display:flex;flex-direction:column;gap:14px;font-size:13px">
+              <div><strong>Bayu</strong> menyelesaikan <em>"Review PR modul pembayaran"</em><div class="text-xs text-mute mt-1">5 menit lalu</div></div>
+              <div><strong>Citra</strong> mengunggah 3 file ke <em>"Mobile App MVP"</em><div class="text-xs text-mute mt-1">22 menit lalu</div></div>
+              <div><strong>Dimas</strong> membuat task <em>"Migrasi auth service"</em><div class="text-xs text-mute mt-1">1 jam lalu</div></div>
+              <div><strong>Aisyah</strong> mengubah deadline <em>"Sprint 14"</em><div class="text-xs text-mute mt-1">2 jam lalu</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
