@@ -1,0 +1,90 @@
+/* ===== JProMan Design System ===== */
+:root {
+  /* Brand */
+  --brand-50:#eef2ff;
+  --brand-100:#e0e7ff;
+  --brand-400:#818cf8;
+  --brand-500:#6366f1;
+  --brand-600:#4f46e5;
+  --brand-700:#4338ca;
+  --accent-500:#22d3ee;
+
+  /* Radius & spacing */
+  --radius-sm:8px;
+  --radius:14px;
+  --radius-lg:22px;
+  --gap:20px;
+  --shadow-sm:0 1px 2px rgba(0,0,0,.08);
+  --shadow:0 10px 30px -10px rgba(15,23,42,.25);
+  --shadow-lg:0 24px 60px -20px rgba(15,23,42,.45);
+  --transition:.25s cubic-bezier(.4,0,.2,1);
+  --font: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* ===== LIGHT MODE (default) ===== */
+[data-theme="light"] {
+  --bg:#f7f8fc;
+  --bg-elevated:#ffffff;
+  --bg-soft:#eef1f8;
+  --surface:#ffffff;
+  --border:#e2e8f0;
+  --border-strong:#cbd5e1;
+  --text:#0f172a;
+  --text-muted:#64748b;
+  --text-faint:#94a3b8;
+  --brand-text:#4f46e5;
+  --success:#10b981;
+  --warning:#f59e0b;
+  --danger:#ef4444;
+  --info:#3b82f6;
+  --ring:rgba(99,102,241,.35);
+}
+
+/* ===== DARK MODE (elegan) ===== */
+[data-theme="dark"] {
+  --bg:#0a0e1a;
+  --bg-elevated:#111726;
+  --bg-soft:#161d2f;
+  --surface:#111726;
+  --border:#232c42;
+  --border-strong:#334155;
+  --text:#e8edf7;
+  --text-muted:#94a3b8;
+  --text-faint:#64748b;
+  --brand-text:#a5b4fc;
+  --success:#34d399;
+  --warning:#fbbf24;
+  --danger:#f87171;
+  --info:#60a5fa;
+  --ring:rgba(129,140,248,.45);
+  --shadow:0 10px 30px -10px rgba(0,0,0,.7);
+  --shadow-lg:0 24px 60px -20px rgba(0,0,0,.85);
+}
+
+/* ===== RESET ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--font);
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.5;
+  min-height:100vh;
+  transition:background var(--transition), color var(--transition);
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--brand-text);text-decoration:none}
+a:hover{text-decoration:underline}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+input,select,textarea{font-family:inherit;font-size:1rem;color:inherit}
+img,svg{display:block;max-width:100%}
+ul{list-style:none}
+
+/* ===== THEME SWITCH (CSS-only via checkbox) ===== */
+/* Trik: checkbox tersembunyi mengontrol [data-theme] lewat :has() pada <html> */
+html:has(#theme-toggle:checked){ /* dark override when checked */ }
+
+/* Fallback menggunakan prefers-color-scheme + toggle via :has pada body */
+@media (prefers-color-scheme: dark){
+  :root:not(:has(#theme-toggle:checked)) { /* keep light if explicitly unchecked */ }
+}
