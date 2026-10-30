@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="JProMan — Professional project management workspace demo">
+  <meta name="theme-color" content="#f5f6fa">
+  <title>Calendar · JProMan</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <input class="theme-control" type="checkbox" id="theme-toggle" aria-label="Aktifkan dark mode">
+  <input class="theme-control mobile-toggle" type="checkbox" id="mobile-toggle" aria-label="Buka navigasi">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="index.html" aria-label="JProMan home">
+        <span class="brand-mark">J<span style="opacity:.7">P</span></span>
+        <span class="brand-copy">JProMan<small>PROJECT MANAGEMENT</small></span>
+      </a>
+      <div class="workspace-switch"><span class="workspace-mark">J</span><span class="workspace-text"><strong>JProMan Studio</strong><small>Professional workspace</small></span><span class="workspace-caret">⌄</span></div>
+      <div class="nav-section">WORKSPACE</div>
+      <nav class="nav-list" aria-label="Main navigation"><a class="nav-link " href="index.html" ><span class="nav-icon">▦</span>Overview</a><a class="nav-link " href="projects.html" ><span class="nav-icon">▧</span>Projects<span class=nav-badge>12</span></a><a class="nav-link " href="tasks.html" ><span class="nav-icon">☑</span>My Tasks<span class=nav-badge>8</span></a><a class="nav-link active" href="calendar.html" aria-current=page><span class="nav-icon">▦</span>Calendar</a><a class="nav-link " href="team.html" ><span class="nav-icon">♙</span>Team</a><a class="nav-link " href="reports.html" ><span class="nav-icon">▥</span>Reports</a></nav>
+      <div class="nav-section spaced">PREFERENCES</div>
+      <nav class="nav-list" aria-label="Preferences">
+        <a class="nav-link" href="reports.html#settings"><span class="nav-icon">⚙</span>Settings</a>
+        <a class="nav-link" href="reports.html#help"><span class="nav-icon">?</span>Help center</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-promo"><span class="promo-symbol">✦</span><strong>Make work flow better</strong><p>Bring projects, people, and progress into one clear space.</p><a href="projects.html">Explore projects →</a></div>
+        <div class="profile"><span class="avatar">AR</span><span class="profile-copy"><strong>Alexandra Rose</strong><small>Workspace admin</small></span><span class="profile-more">···</span></div>
+      </div>
+    </aside>
+    <label class="mobile-backdrop" for="mobile-toggle" aria-label="Tutup navigasi"></label>
+    <main class="main-area">
+      <header class="topbar">
+        <label class="mobile-menu" for="mobile-toggle" aria-label="Buka navigasi">☰</label>
+        <div class="breadcrumbs"><span>JProMan Studio</span><span class="crumb-sep">/</span><strong>Calendar</strong></div>
+        <div class="top-actions">
+          <label class="search-field" aria-label="Demo search"><span class="search-glyph">⌕</span><input type="search" placeholder="Search anything…" aria-label="Search anything"><kbd>⌘ K</kbd></label>
+          <label class="icon-button theme-label" for="theme-toggle" title="Toggle light/dark mode" aria-label="Ganti tema"><span class="moon">☾</span><span class="sun">☀</span></label>
+          <a class="icon-button" href="calendar.html" aria-label="Notifications">♧<i class="notification-dot"></i></a>
+          <span class="avatar round">AR</span>
+        </div>
+      </header>
+      <div class="page-wrap">
+        <section class="page-heading">
+          <div><div class="eyebrow"><i class="eyebrow-dot"></i>SCHEDULE & MILESTONES</div><h1>Calendar</h1><p class="page-subtitle">See milestones, team sessions, and delivery dates in one place.</p></div>
+          <div class="heading-actions"><a class="button button-secondary" href="tasks.html">☑ Task list</a><a class="button button-primary" href="#new-event">＋ Add event</a></div>
+        </section>
+        
+<section class="calendar-layout">
+ <article class="panel calendar-panel"><div class="calendar-top"><div><div class="eyebrow">PROJECT SCHEDULE</div><div class="calendar-month" style="margin-top:5px">November 2026</div></div><div class="calendar-arrows"><a href="#current-month" aria-label="Previous month">‹</a><a href="#current-month" aria-label="Current month">›</a></div></div>
+ <div class="calendar-grid" id="current-month"><div class="calendar-day-name">SUN</div><div class="calendar-day-name">MON</div><div class="calendar-day-name">TUE</div><div class="calendar-day-name">WED</div><div class="calendar-day-name">THU</div><div class="calendar-day-name">FRI</div><div class="calendar-day-name">SAT</div>
+ <div class="calendar-day muted-day"><span class="calendar-date">25</span></div><div class="calendar-day muted-day"><span class="calendar-date">26</span></div><div class="calendar-day muted-day"><span class="calendar-date">27</span></div><div class="calendar-day muted-day"><span class="calendar-date">28</span></div><div class="calendar-day muted-day"><span class="calendar-date">29</span></div><div class="calendar-day muted-day"><span class="calendar-date">30</span></div><div class="calendar-day muted-day"><span class="calendar-date">31</span></div>
+ <div class="calendar-day"><span class="calendar-date">1</span></div><div class="calendar-day"><span class="calendar-date">2</span><span class="calendar-event">Sprint planning</span></div><div class="calendar-day"><span class="calendar-date">3</span></div><div class="calendar-day"><span class="calendar-date">4</span><span class="calendar-event cyan-event">Design review</span></div><div class="calendar-day"><span class="calendar-date">5</span></div><div class="calendar-day"><span class="calendar-date">6</span></div><div class="calendar-day"><span class="calendar-date">7</span></div>
+ <div class="calendar-day"><span class="calendar-date">8</span><span class="calendar-event">Portal delivery</span></div><div class="calendar-day"><span class="calendar-date">9</span></div><div class="calendar-day"><span class="calendar-date">10</span><span class="calendar-event amber-event">Campaign check-in</span></div><div class="calendar-day"><span class="calendar-date">11</span></div><div class="calendar-day"><span class="calendar-date">12</span><span class="calendar-event">Website milestone</span></div><div class="calendar-day"><span class="calendar-date">13</span></div><div class="calendar-day"><span class="calendar-date">14</span></div>
+ <div class="calendar-day"><span class="calendar-date">15</span></div><div class="calendar-day"><span class="calendar-date">16</span><span class="calendar-event cyan-event">Sprint review</span></div><div class="calendar-day"><span class="calendar-date">17</span></div><div class="calendar-day"><span class="calendar-date">18</span><span class="calendar-event">App release</span></div><div class="calendar-day"><span class="calendar-date">19</span></div><div class="calendar-day"><span class="calendar-date">20</span></div><div class="calendar-day"><span class="calendar-date">21</span></div>
+ <div class="calendar-day"><span class="calendar-date">22</span><span class="calendar-event amber-event">Campaign launch</span></div><div class="calendar-day"><span class="calendar-date">23</span></div><div class="calendar-day"><span class="calendar-date">24</span></div><div class="calendar-day"><span class="calendar-date">25</span></div><div class="calendar-day"><span class="calendar-date">26</span><span class="calendar-event cyan-event">Team retro</span></div><div class="calendar-day"><span class="calendar-date">27</span></div><div class="calendar-day"><span class="calendar-date">28</span></div>
+ <div class="calendar-day"><span class="calendar-date">29</span></div><div class="calendar-day"><span class="calendar-date">30</span><span class="calendar-event">Monthly close</span></div><div class="calendar-day muted-day"><span class="calendar-date">1</span></div><div class="calendar-day muted-day"><span class="calendar-date">2</span></div><div class="calendar-day muted-day"><span class="calendar-date">3</span></div><div class="calendar-day muted-day"><span class="calendar-date">4</span></div><div class="calendar-day muted-day"><span class="calendar-date">5</span></div>
+ </div></article>
+ <aside style="display:grid;gap:15px;align-content:start"><article class="panel"><div class="panel-header"><div><h2>Upcoming agenda</h2><p>November highlights</p></div><a class="panel-link" href="tasks.html">Tasks →</a></div><div class="agenda-list">
+ <div class="agenda-item"><span class="agenda-time">09:30 AM</span><i class="agenda-bar"></i><div class="agenda-copy"><strong>Sprint planning</strong><small>Nov 02 · Product team</small></div></div>
+ <div class="agenda-item"><span class="agenda-time">01:00 PM</span><i class="agenda-bar"></i><div class="agenda-copy"><strong>Design review</strong><small>Nov 04 · Website redesign</small></div></div>
+ <div class="agenda-item"><span class="agenda-time">10:00 AM</span><i class="agenda-bar"></i><div class="agenda-copy"><strong>Campaign check-in</strong><small>Nov 10 · Marketing</small></div></div>
+ <div class="agenda-item"><span class="agenda-time">03:00 PM</span><i class="agenda-bar"></i><div class="agenda-copy"><strong>Website milestone</strong><small>Nov 12 · All hands</small></div></div>
+ </div></article><article class="panel"><div class="panel-header"><div><h2>Calendar legend</h2><p>Event categories</p></div></div><div class="legend-list"><div class="legend-row"><span class="legend-name"><i></i>Project milestone</span><strong>06</strong></div><div class="legend-row"><span class="legend-name"><i style="background:var(--cyan)"></i>Team meeting</span><strong>04</strong></div><div class="legend-row"><span class="legend-name"><i style="background:var(--amber)"></i>Review / launch</span><strong>03</strong></div><div class="legend-row"><span class="legend-name"><i style="background:var(--green)"></i>Completed</span><strong>08</strong></div></div></article><article class="panel"><h2>Schedule note</h2><p class="muted" style="font-size:9px;line-height:1.7;margin:8px 0 0">Calendar entries are static sample events. Month arrows are visual anchors only; they do not calculate another month without scripting.</p></article></aside>
+</section>
+        <footer class="page-footer"><span>© 2026 JProMan. Designed for focused teams.</span><span class="footer-live"><i></i> Demo workspace · Sample data</span></footer>
+      </div>
+    </main>
+  </div>
+
+
+<div class="modal" id="new-event"><div class="modal-card"><div class="modal-title"><div><h2>Add calendar event</h2><p>Visual form preview only — nothing is submitted.</p></div><a class="modal-close" href="#" aria-label="Close">×</a></div><form><div class="form-grid"><label class="form-field form-span">Event title<input placeholder="e.g. Project kickoff"></label><label class="form-field">Date<input type="date"></label><label class="form-field">Time<input type="time"></label><label class="form-field form-span">Description<textarea placeholder="Add event details"></textarea></label></div><div class="form-actions"><a class="button button-secondary" href="#">Cancel</a><button class="button button-primary" type="button">Save preview</button></div></form></div></div>
+</body>
+</html>
