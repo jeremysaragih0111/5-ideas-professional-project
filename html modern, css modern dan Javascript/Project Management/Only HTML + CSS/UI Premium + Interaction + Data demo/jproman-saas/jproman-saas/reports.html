@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="JProMan — Professional project management workspace demo">
+  <meta name="theme-color" content="#f5f6fa">
+  <title>Reports & Insights · JProMan</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <input class="theme-control" type="checkbox" id="theme-toggle" aria-label="Aktifkan dark mode">
+  <input class="theme-control mobile-toggle" type="checkbox" id="mobile-toggle" aria-label="Buka navigasi">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="index.html" aria-label="JProMan home">
+        <span class="brand-mark">J<span style="opacity:.7">P</span></span>
+        <span class="brand-copy">JProMan<small>PROJECT MANAGEMENT</small></span>
+      </a>
+      <div class="workspace-switch"><span class="workspace-mark">J</span><span class="workspace-text"><strong>JProMan Studio</strong><small>Professional workspace</small></span><span class="workspace-caret">⌄</span></div>
+      <div class="nav-section">WORKSPACE</div>
+      <nav class="nav-list" aria-label="Main navigation"><a class="nav-link " href="index.html" ><span class="nav-icon">▦</span>Overview</a><a class="nav-link " href="projects.html" ><span class="nav-icon">▧</span>Projects<span class=nav-badge>12</span></a><a class="nav-link " href="tasks.html" ><span class="nav-icon">☑</span>My Tasks<span class=nav-badge>8</span></a><a class="nav-link " href="calendar.html" ><span class="nav-icon">▦</span>Calendar</a><a class="nav-link " href="team.html" ><span class="nav-icon">♙</span>Team</a><a class="nav-link active" href="reports.html" aria-current=page><span class="nav-icon">▥</span>Reports</a></nav>
+      <div class="nav-section spaced">PREFERENCES</div>
+      <nav class="nav-list" aria-label="Preferences">
+        <a class="nav-link" href="reports.html#settings"><span class="nav-icon">⚙</span>Settings</a>
+        <a class="nav-link" href="reports.html#help"><span class="nav-icon">?</span>Help center</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-promo"><span class="promo-symbol">✦</span><strong>Make work flow better</strong><p>Bring projects, people, and progress into one clear space.</p><a href="projects.html">Explore projects →</a></div>
+        <div class="profile"><span class="avatar">AR</span><span class="profile-copy"><strong>Alexandra Rose</strong><small>Workspace admin</small></span><span class="profile-more">···</span></div>
+      </div>
+    </aside>
+    <label class="mobile-backdrop" for="mobile-toggle" aria-label="Tutup navigasi"></label>
+    <main class="main-area">
+      <header class="topbar">
+        <label class="mobile-menu" for="mobile-toggle" aria-label="Buka navigasi">☰</label>
+        <div class="breadcrumbs"><span>JProMan Studio</span><span class="crumb-sep">/</span><strong>Reports & Insights</strong></div>
+        <div class="top-actions">
+          <label class="search-field" aria-label="Demo search"><span class="search-glyph">⌕</span><input type="search" placeholder="Search anything…" aria-label="Search anything"><kbd>⌘ K</kbd></label>
+          <label class="icon-button theme-label" for="theme-toggle" title="Toggle light/dark mode" aria-label="Ganti tema"><span class="moon">☾</span><span class="sun">☀</span></label>
+          <a class="icon-button" href="calendar.html" aria-label="Notifications">♧<i class="notification-dot"></i></a>
+          <span class="avatar round">AR</span>
+        </div>
+      </header>
+      <div class="page-wrap">
+        <section class="page-heading">
+          <div><div class="eyebrow"><i class="eyebrow-dot"></i>WORKSPACE ANALYTICS</div><h1>Reports & Insights</h1><p class="page-subtitle">Understand team capacity, delivery health, and project outcomes.</p></div>
+          <div class="heading-actions"><a class="button button-secondary" href="projects.html">View projects</a><a class="button button-primary" href="#settings">ⓘ Report notes</a></div>
+        </section>
+        
+<section class="stats-grid"><article class="stat-card"><div class="stat-head"><span>Completed tasks</span><span class="stat-icon green">✓</span></div><div class="stat-value">1,482</div><div class="stat-foot"><span class="positive">↗ 11.4%</span><span>quarter to date</span></div></article><article class="stat-card"><div class="stat-head"><span>Avg. cycle time</span><span class="stat-icon purple">◷</span></div><div class="stat-value">4.6<span style="font-size:14px"> days</span></div><div class="stat-foot"><span class="positive">↓ 0.8 days</span><span>vs. previous quarter</span></div></article><article class="stat-card"><div class="stat-head"><span>On-time delivery</span><span class="stat-icon cyan">◎</span></div><div class="stat-value">94.8%</div><div class="stat-foot"><span class="positive">↗ 3.4%</span><span>quarter to date</span></div></article><article class="stat-card"><div class="stat-head"><span>Team utilization</span><span class="stat-icon amber">♙</span></div><div class="stat-value">82.3%</div><div class="stat-foot"><span class="positive">↗ 2.1%</span><span>quarter to date</span></div></article></section>
+<section class="report-grid">
+ <article class="panel"><div class="panel-header"><div><h2>Task completion trend</h2><p>Completed work by month · demo data</p></div><span class="status active">+11.4%</span></div><div class="report-kpi"><strong>1,482</strong><span>↗ 11.4%</span></div><div class="report-bars"><div class="report-bar-wrap"><i class="report-bar alt" style="height:42%"></i>May</div><div class="report-bar-wrap"><i class="report-bar alt" style="height:55%"></i>Jun</div><div class="report-bar-wrap"><i class="report-bar" style="height:62%"></i>Jul</div><div class="report-bar-wrap"><i class="report-bar" style="height:70%"></i>Aug</div><div class="report-bar-wrap"><i class="report-bar" style="height:66%"></i>Sep</div><div class="report-bar-wrap"><i class="report-bar" style="height:88%"></i>Oct</div></div></article>
+ <article class="panel"><div class="panel-header"><div><h2>Work by department</h2><p>Share of active tasks</p></div></div><div class="report-kpi"><strong>32</strong><span>team members</span></div><div class="legend-list"><div class="legend-row"><span class="legend-name"><i></i>Engineering</span><strong>38%</strong></div><div class="legend-row"><span class="legend-name"><i style="background:var(--cyan)"></i>Design</span><strong>24%</strong></div><div class="legend-row"><span class="legend-name"><i style="background:var(--amber)"></i>Marketing</span><strong>21%</strong></div><div class="legend-row"><span class="legend-name"><i style="background:var(--green)"></i>Operations</span><strong>17%</strong></div></div></article>
+ <article class="panel"><div class="panel-header"><div><h2>Delivery performance</h2><p>Planned vs. actual completion</p></div></div><div class="report-kpi"><strong>94.8%</strong><span>on-time delivery</span></div><div class="pipeline-rows"><div><div class="pipeline-meta"><span>On time</span><strong>94.8%</strong></div><div class="pipeline-track"><i class="pipeline-fill green" style="width:94.8%"></i></div></div><div><div class="pipeline-meta"><span>Delayed</span><strong>5.2%</strong></div><div class="pipeline-track"><i class="pipeline-fill" style="width:5.2%;background:var(--red)"></i></div></div></div></article>
+ <article class="panel"><div class="panel-header"><div><h2>Project status</h2><p>Portfolio overview · 24 projects</p></div></div><div class="report-kpi"><strong>15</strong><span>on track</span></div><div class="pipeline-rows"><div><div class="pipeline-meta"><span>On track</span><strong>15 · 62.5%</strong></div><div class="pipeline-track"><i class="pipeline-fill green" style="width:62.5%"></i></div></div><div><div class="pipeline-meta"><span>At risk</span><strong>6 · 25%</strong></div><div class="pipeline-track"><i class="pipeline-fill amber" style="width:25%"></i></div></div><div><div class="pipeline-meta"><span>Off track</span><strong>3 · 12.5%</strong></div><div class="pipeline-track"><i class="pipeline-fill" style="width:12.5%;background:var(--red)"></i></div></div></div></article>
+</section>
+<section class="panel" style="margin-top:15px" id="settings"><div class="panel-header"><div><h2>Report notes & definitions</h2><p>Understand the sample metrics displayed in JProMan.</p></div></div><details class="disclosure" open><summary>How is on-time delivery represented?</summary><div class="disclosure-body">The percentage is a static illustrative metric for this UI demo. No live project deadlines or task records are being queried.</div></details><details class="disclosure"><summary>Can I export reports?</summary><div class="disclosure-body">Export controls are not connected in this HTML/CSS-only edition. A real export requires JavaScript or a server-side reporting workflow.</div></details><details class="disclosure" id="help"><summary>How can I connect a real workspace?</summary><div class="disclosure-body">A production SaaS version would need authentication, a database, authorization rules, and API endpoints. None are included in this static front-end prototype.</div></details></section>
+        <footer class="page-footer"><span>© 2026 JProMan. Designed for focused teams.</span><span class="footer-live"><i></i> Demo workspace · Sample data</span></footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
