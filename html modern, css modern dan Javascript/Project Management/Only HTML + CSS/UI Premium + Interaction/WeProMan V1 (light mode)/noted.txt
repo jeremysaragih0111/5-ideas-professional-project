@@ -1,0 +1,31 @@
+Saya ingin: setelah user memilih Dark atau Light di awal, pilihan itu "terkunci" secara global — pindah halaman apa pun, refresh, buka tab baru, semuanya tetap pakai mode yang dipilih. Bukan kembali ke default (light).
+
+masalah teknis
+
+Tanpa JavaScript, persistensi sejati tidak mungkin karena:
+
+Cookie → hanya bisa di-set/dibaca via JavaScript atau server
+
+localStorage → hanya bisa diakses via JavaScript
+
+URL hash (#dark) → hilang saat user klik link tanpa hash, atau saat ketik URL manual
+
+Trik :target yang saya berikan sebelumnya hanya bertahan selama user mengklik link yang membawa hash. Kalau user ketik URL manual, atau bookmark tanpa hash, atau klik link eksternal — mode kembali ke default.
+
+
+solusi 
+Karena Anda membutuhkan persistensi sejati (bukan sekadar hash), maka JavaScript wajib — tapi cukup sangat minimal, hanya untuk localStorage. Ini bukan "JavaScript framework", hanya 3 baris untuk menyimpan preferensi.
+
+Jika Anda benar-benar tidak ingin JS sama sekali, satu-satunya cara adalah: setiap link di seluruh project WAJIB membawa hash #dark atau #light (yang sudah saya lakukan), dan user tidak boleh ketik URL manual tanpa hash. Ini rapuh, tapi bisa jalan.
+
+
+
+Solusi yang Saya Rekomendasikan
+
+Saya akan berikan dua versi:
+
+Versi A — Pure CSS + Hash URL (yang sudah ada) — tetap ada, tapi dengan penjelasan batasannya
+
+Versi B — JavaScript Minimal 5 baris (RECOMMENDED) — persistensi sejati via localStorage
+
+Karena Anda menekankan "mau pindah ke fitur dan navigasi lainnya dan apapun itu, mode tetap sama", Versi B adalah jawaban yang benar. Saya update dengan Versi B.
