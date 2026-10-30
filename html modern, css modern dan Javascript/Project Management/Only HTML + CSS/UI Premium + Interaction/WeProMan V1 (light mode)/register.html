@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daftar — WeProMan</title>
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+<div class="auth-wrap">
+  <aside class="auth-visual">
+    <a href="WeProMan.html" class="brand"><span class="brand-mark">W</span> WeProMan</a>
+    <div>
+      <h2>Mulai kelola proyek secara profesional — gratis 14 hari.</h2>
+      <p>Setup dalam 2 menit. Tanpa kartu kredit. Undang tim Anda kapan saja.</p>
+      <div class="quote">
+        "Onboarding cepat, UI-nya bersih, dan tim langsung paham cara pakainya."
+        <strong>— Rizky A., Engineering Lead, Kodalabs</strong>
+      </div>
+    </div>
+    <div style="font-size:12px;opacity:.6">© 2025 WeProMan</div>
+  </aside>
+
+  <main class="auth-form-side">
+    <div class="auth-card">
+      <div class="top-row">
+        <span class="theme-toggle-wrap">
+          <a href="#dark" class="theme-btn theme-to-dark" title="Aktifkan Dark Mode">🌙</a>
+          <a href="#light" class="theme-btn theme-to-light" title="Aktifkan Light Mode">☀️</a>
+        </span>
+      </div>
+      <h1>Buat akun baru</h1>
+      <p class="sub nav-theme-light">Sudah punya akun? <a href="login.html#light">Masuk di sini</a></p>
+      <p class="sub nav-theme-dark" style="display:none">Sudah punya akun? <a href="login.html#dark">Masuk di sini</a></p>
+
+      <form action="dashboard.html#light" class="nav-theme-light">
+        <div class="field"><label>Nama Lengkap</label><input type="text" class="input" placeholder="Nama Anda" required></div>
+        <div class="field"><label>Email Kantor</label><input type="email" class="input" placeholder="nama@perusahaan.com" required></div>
+        <div class="field"><label>Password</label><input type="password" class="input" placeholder="Minimal 8 karakter" required></div>
+        <div class="remember-row" style="margin-bottom:18px">
+          <label class="check"><input type="checkbox" required> Saya setuju dengan Syarat & Kebijakan</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Buat Akun</button>
+      </form>
+
+      <form action="dashboard.html#dark" class="nav-theme-dark" style="display:none">
+        <div class="field"><label>Nama Lengkap</label><input type="text" class="input" placeholder="Nama Anda" required></div>
+        <div class="field"><label>Email Kantor</label><input type="email" class="input" placeholder="nama@perusahaan.com" required></div>
+        <div class="field"><label>Password</label><input type="password" class="input" placeholder="Minimal 8 karakter" required></div>
+        <div class="remember-row" style="margin-bottom:18px">
+          <label class="check"><input type="checkbox" required> Saya setuju dengan Syarat & Kebijakan</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Buat Akun</button>
+      </form>
+
+      <div class="divider">atau daftar dengan</div>
+      <div class="social-row">
+        <button class="social-btn" type="button">𝕲 Google</button>
+        <button class="social-btn" type="button">⌘ GitHub</button>
+      </div>
+      <p class="fineprint">Data demo: akun contoh tidak menggunakan backend nyata.</p>
+    </div>
+  </main>
+</div>
+</body>
+</html>
