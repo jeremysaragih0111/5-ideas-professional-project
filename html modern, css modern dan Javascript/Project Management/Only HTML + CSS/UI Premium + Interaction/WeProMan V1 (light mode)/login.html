@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Masuk — WeProMan</title>
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+<div class="auth-wrap">
+  <aside class="auth-visual">
+    <a href="WeProMan.html" class="brand"><span class="brand-mark">W</span> WeProMan</a>
+    <div>
+      <h2>Selamat datang kembali di workspace Anda.</h2>
+      <p>Kelola proyek, lacak progres, dan tetap kolaboratif — semua dalam satu dashboard premium.</p>
+      <div class="quote">
+        "Sejak pakai WeProMan, tim kami 40% lebih cepat menyelesaikan sprint."
+        <strong>— Andini P., Head of Product, Nusatech</strong>
+      </div>
+    </div>
+    <div style="font-size:12px;opacity:.6">© 2025 WeProMan</div>
+  </aside>
+
+  <main class="auth-form-side">
+    <div class="auth-card">
+      <div class="top-row">
+        <span class="theme-toggle-wrap">
+          <a href="#dark" class="theme-btn theme-to-dark" title="Aktifkan Dark Mode">🌙</a>
+          <a href="#light" class="theme-btn theme-to-light" title="Aktifkan Light Mode">☀️</a>
+        </span>
+      </div>
+      <h1>Masuk ke akun</h1>
+      <p class="sub nav-theme-light">Belum punya akun? <a href="register.html#light">Daftar gratis</a></p>
+      <p class="sub nav-theme-dark" style="display:none">Belum punya akun? <a href="register.html#dark">Daftar gratis</a></p>
+
+      <!-- Form action dual theme -->
+      <form action="dashboard.html#light" class="nav-theme-light">
+        <div class="field"><label>Email</label><input type="email" class="input" placeholder="nama@perusahaan.com" required></div>
+        <div class="field"><label>Password</label><input type="password" class="input" placeholder="••••••••" required></div>
+        <div class="remember-row">
+          <label class="check"><input type="checkbox"> Ingat saya</label>
+          <a href="#" style="color:var(--brand-500);font-weight:600">Lupa password?</a>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Masuk</button>
+      </form>
+
+      <form action="dashboard.html#dark" class="nav-theme-dark" style="display:none">
+        <div class="field"><label>Email</label><input type="email" class="input" placeholder="nama@perusahaan.com" required></div>
+        <div class="field"><label>Password</label><input type="password" class="input" placeholder="••••••••" required></div>
+        <div class="remember-row">
+          <label class="check"><input type="checkbox"> Ingat saya</label>
+          <a href="#" style="color:var(--brand-500);font-weight:600">Lupa password?</a>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Masuk</button>
+      </form>
+
+      <div class="divider">atau masuk dengan</div>
+      <div class="social-row">
+        <button class="social-btn" type="button">𝕲 Google</button>
+        <button class="social-btn" type="button">⌘ GitHub</button>
+      </div>
+      <p class="fineprint">Dengan masuk Anda menyetujui Syarat Layanan & Kebijakan Privasi.</p>
+    </div>
+  </main>
+</div>
+</body>
+</html>
