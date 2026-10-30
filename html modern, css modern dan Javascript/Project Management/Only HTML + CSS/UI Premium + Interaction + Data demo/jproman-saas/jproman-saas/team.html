@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="JProMan — Professional project management workspace demo">
+  <meta name="theme-color" content="#f5f6fa">
+  <title>Team · JProMan</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <input class="theme-control" type="checkbox" id="theme-toggle" aria-label="Aktifkan dark mode">
+  <input class="theme-control mobile-toggle" type="checkbox" id="mobile-toggle" aria-label="Buka navigasi">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="index.html" aria-label="JProMan home">
+        <span class="brand-mark">J<span style="opacity:.7">P</span></span>
+        <span class="brand-copy">JProMan<small>PROJECT MANAGEMENT</small></span>
+      </a>
+      <div class="workspace-switch"><span class="workspace-mark">J</span><span class="workspace-text"><strong>JProMan Studio</strong><small>Professional workspace</small></span><span class="workspace-caret">⌄</span></div>
+      <div class="nav-section">WORKSPACE</div>
+      <nav class="nav-list" aria-label="Main navigation"><a class="nav-link " href="index.html" ><span class="nav-icon">▦</span>Overview</a><a class="nav-link " href="projects.html" ><span class="nav-icon">▧</span>Projects<span class=nav-badge>12</span></a><a class="nav-link " href="tasks.html" ><span class="nav-icon">☑</span>My Tasks<span class=nav-badge>8</span></a><a class="nav-link " href="calendar.html" ><span class="nav-icon">▦</span>Calendar</a><a class="nav-link active" href="team.html" aria-current=page><span class="nav-icon">♙</span>Team</a><a class="nav-link " href="reports.html" ><span class="nav-icon">▥</span>Reports</a></nav>
+      <div class="nav-section spaced">PREFERENCES</div>
+      <nav class="nav-list" aria-label="Preferences">
+        <a class="nav-link" href="reports.html#settings"><span class="nav-icon">⚙</span>Settings</a>
+        <a class="nav-link" href="reports.html#help"><span class="nav-icon">?</span>Help center</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-promo"><span class="promo-symbol">✦</span><strong>Make work flow better</strong><p>Bring projects, people, and progress into one clear space.</p><a href="projects.html">Explore projects →</a></div>
+        <div class="profile"><span class="avatar">AR</span><span class="profile-copy"><strong>Alexandra Rose</strong><small>Workspace admin</small></span><span class="profile-more">···</span></div>
+      </div>
+    </aside>
+    <label class="mobile-backdrop" for="mobile-toggle" aria-label="Tutup navigasi"></label>
+    <main class="main-area">
+      <header class="topbar">
+        <label class="mobile-menu" for="mobile-toggle" aria-label="Buka navigasi">☰</label>
+        <div class="breadcrumbs"><span>JProMan Studio</span><span class="crumb-sep">/</span><strong>Team</strong></div>
+        <div class="top-actions">
+          <label class="search-field" aria-label="Demo search"><span class="search-glyph">⌕</span><input type="search" placeholder="Search anything…" aria-label="Search anything"><kbd>⌘ K</kbd></label>
+          <label class="icon-button theme-label" for="theme-toggle" title="Toggle light/dark mode" aria-label="Ganti tema"><span class="moon">☾</span><span class="sun">☀</span></label>
+          <a class="icon-button" href="calendar.html" aria-label="Notifications">♧<i class="notification-dot"></i></a>
+          <span class="avatar round">AR</span>
+        </div>
+      </header>
+      <div class="page-wrap">
+        <section class="page-heading">
+          <div><div class="eyebrow"><i class="eyebrow-dot"></i>PEOPLE & COLLABORATION</div><h1>Team</h1><p class="page-subtitle">A connected team makes complex projects feel simple.</p></div>
+          <div class="heading-actions"><a class="button button-secondary" href="reports.html">Team report</a><a class="button button-primary" href="#invite-member">＋ Invite member</a></div>
+        </section>
+        
+<div class="panel" style="margin-bottom:15px"><div class="panel-header" style="align-items:center"><div><h2>People & permissions</h2><p>Meet the people moving your projects forward.</p></div><div class="filter-tabs"><a class="active" href="#members">All members</a><a href="#leads">Project leads</a><a href="#designers">Design</a><a href="#engineers">Engineering</a></div></div></div>
+<section class="team-grid" id="members">
+ <article class="member-card" id="leads"><span class="avatar">AR</span><h3>Alexandra Rose</h3><div class="member-role">Workspace Admin · Operations</div><div class="member-stats"><div><strong>08</strong><small>Projects</small></div><div><strong>24</strong><small>Tasks</small></div></div></article>
+ <article class="member-card"><span class="avatar aqua">SL</span><h3>Sarah Lee</h3><div class="member-role">Project Lead · Marketing</div><div class="member-stats"><div><strong>05</strong><small>Projects</small></div><div><strong>18</strong><small>Tasks</small></div></div></article>
+ <article class="member-card"><span class="avatar green">DK</span><h3>David Kim</h3><div class="member-role">Engineering Lead</div><div class="member-stats"><div><strong>04</strong><small>Projects</small></div><div><strong>31</strong><small>Tasks</small></div></div></article>
+ <article class="member-card" id="designers"><span class="avatar amber">JC</span><h3>Jamie Chen</h3><div class="member-role">Product Designer</div><div class="member-stats"><div><strong>03</strong><small>Projects</small></div><div><strong>16</strong><small>Tasks</small></div></div></article>
+ <article class="member-card" id="engineers"><span class="avatar rose">MT</span><h3>Michael Tan</h3><div class="member-role">Senior Developer</div><div class="member-stats"><div><strong>04</strong><small>Projects</small></div><div><strong>22</strong><small>Tasks</small></div></div></article>
+ <article class="member-card"><span class="avatar blue">NP</span><h3>Nadia Putri</h3><div class="member-role">UX Researcher</div><div class="member-stats"><div><strong>02</strong><small>Projects</small></div><div><strong>11</strong><small>Tasks</small></div></div></article>
+ <article class="member-card"><span class="avatar aqua">EW</span><h3>Emma Wilson</h3><div class="member-role">Content Strategist</div><div class="member-stats"><div><strong>03</strong><small>Projects</small></div><div><strong>14</strong><small>Tasks</small></div></div></article>
+ <article class="member-card"><span class="avatar green">RA</span><h3>Rizky Aditya</h3><div class="member-role">QA Engineer</div><div class="member-stats"><div><strong>02</strong><small>Projects</small></div><div><strong>19</strong><small>Tasks</small></div></div></article>
+</section>
+<section class="grid-bottom" style="margin-top:16px"><article class="panel"><div class="panel-header"><div><h2>Team workload</h2><p>Illustrative active task allocation</p></div><span class="status active">Balanced</span></div><div class="pipeline-rows"><div><div class="pipeline-meta"><span>Alexandra Rose</span><strong>78%</strong></div><div class="pipeline-track"><i class="pipeline-fill" style="width:78%"></i></div></div><div><div class="pipeline-meta"><span>Sarah Lee</span><strong>65%</strong></div><div class="pipeline-track"><i class="pipeline-fill blue" style="width:65%"></i></div></div><div><div class="pipeline-meta"><span>David Kim</span><strong>86%</strong></div><div class="pipeline-track"><i class="pipeline-fill green" style="width:86%"></i></div></div><div><div class="pipeline-meta"><span>Jamie Chen</span><strong>54%</strong></div><div class="pipeline-track"><i class="pipeline-fill amber" style="width:54%"></i></div></div></div></article><article class="panel"><h2>Team principles</h2><details class="disclosure" open><summary>Keep ownership clear</summary><div class="disclosure-body">Every deliverable should have one directly responsible owner and a visible next step.</div></details><details class="disclosure"><summary>Share progress early</summary><div class="disclosure-body">Surface risks early so teammates can help remove blockers before a deadline is affected.</div></details><details class="disclosure"><summary>Protect focus time</summary><div class="disclosure-body">Use clear priorities and meeting windows to keep collaboration productive.</div></details></article></section>
+<div class="modal" id="invite-member"><div class="modal-card"><div class="modal-title"><div><h2>Invite a teammate</h2><p>UI preview only — no invitation email will be sent.</p></div><a class="modal-close" href="#" aria-label="Close">×</a></div><form><div class="form-grid"><label class="form-field form-span">Work email<input type="email" placeholder="teammate@company.com"></label><label class="form-field form-span">Role<select><option>Member</option><option>Project lead</option><option>Admin</option></select></label></div><div class="form-actions"><a class="button button-secondary" href="#">Cancel</a><button class="button button-primary" type="button">Invite preview</button></div></form></div></div>
+        <footer class="page-footer"><span>© 2026 JProMan. Designed for focused teams.</span><span class="footer-live"><i></i> Demo workspace · Sample data</span></footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
