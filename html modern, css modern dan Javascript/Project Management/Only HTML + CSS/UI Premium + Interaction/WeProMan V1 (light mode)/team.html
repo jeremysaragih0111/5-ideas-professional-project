@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Team — WeProMan</title>
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+<input type="checkbox" id="menu-toggle" class="hidden">
+<div class="app-shell">
+  <aside class="sidebar">
+    <a href="WeProMan.html" class="sidebar-brand"><span class="brand-mark">W</span> WeProMan</a>
+    <div class="nav-group">
+      <div class="nav-label">Workspace</div>
+      <div class="nav-theme-light">
+        <a class="nav-link" href="dashboard.html#light"><span class="ico">▦</span> Dashboard</a>
+        <a class="nav-link" href="projects.html#light"><span class="ico">▣</span> Projects</a>
+        <a class="nav-link" href="tasks.html#light"><span class="ico">✓</span> Tasks</a>
+        <a class="nav-link active" href="team.html#light"><span class="ico">◉</span> Team</a>
+        <a class="nav-link" href="calendar.html#light"><span class="ico">▤</span> Calendar</a>
+        <a class="nav-link" href="reports.html#light"><span class="ico">▧</span> Reports</a>
+      </div>
+      <div class="nav-theme-dark">
+        <a class="nav-link" href="dashboard.html#dark"><span class="ico">▦</span> Dashboard</a>
+        <a class="nav-link" href="projects.html#dark"><span class="ico">▣</span> Projects</a>
+        <a class="nav-link" href="tasks.html#dark"><span class="ico">✓</span> Tasks</a>
+        <a class="nav-link active" href="team.html#dark"><span class="ico">◉</span> Team</a>
+        <a class="nav-link" href="calendar.html#dark"><span class="ico">▤</span> Calendar</a>
+        <a class="nav-link" href="reports.html#dark"><span class="ico">▧</span> Reports</a>
+      </div>
+    </div>
+    <div class="nav-group">
+      <div class="nav-label">Akun</div>
+      <div class="nav-theme-light">
+        <a class="nav-link" href="settings.html#light"><span class="ico">⚙</span> Settings</a>
+        <a class="nav-link" href="login.html#light"><span class="ico">↪</span> Keluar</a>
+      </div>
+      <div class="nav-theme-dark">
+        <a class="nav-link" href="settings.html#dark"><span class="ico">⚙</span> Settings</a>
+        <a class="nav-link" href="login.html#dark"><span class="ico">↪</span> Keluar</a>
+      </div>
+    </div>
+    <div class="sidebar-foot">
+      <div class="user-chip"><div class="avatar">AR</div><div class="meta"><strong>Aisyah R.</strong><br><span>Product Manager</span></div></div>
+    </div>
+  </aside>
+
+  <div class="main-area">
+    <header class="topbar">
+      <div class="flex items-center gap-3">
+        <label for="menu-toggle" class="menu-btn">☰</label>
+        <h1>Team</h1>
+      </div>
+      <div class="topbar-actions">
+        <span class="theme-toggle-wrap">
+          <a href="#dark" class="theme-btn theme-to-dark" title="Aktifkan Dark Mode">🌙</a>
+          <a href="#light" class="theme-btn theme-to-light" title="Aktifkan Light Mode">☀️</a>
+        </span>
+        <span class="nav-theme-light"><a href="settings.html#light" class="avatar">AR</a></span>
+        <span class="nav-theme-dark" style="display:none"><a href="settings.html#dark" class="avatar">AR</a></span>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="page-head">
+        <div><h2>Anggota Tim</h2><p>12 anggota aktif di workspace Anda.</p></div>
+        <div class="page-actions">
+          <a href="#" class="btn btn-primary btn-sm">+ Invite Member</a>
+        </div>
+      </div>
+
+      <div class="team-grid">
+        <div class="member-card"><div class="avatar">AR</div><h4>Aisyah Ramadhani</h4><div class="role">Product Manager</div><span class="badge badge-success"><span class="badge-dot"></span>Online</span><div class="meta-row"><span>12 task</span><span>2 project</span></div></div>
+        <div class="member-card"><div class="avatar" style="background:linear-gradient(135deg,#f97316,#f59e0b)">BP</div><h4>Bayu Pratama</h4><div class="role">Frontend Developer</div><span class="badge badge-success"><span class="badge-dot"></span>Online</span><div class="meta-row"><span>18 task</span><span>3 project</span></div></div>
+        <div class="member-card"><div class="avatar" style="background:linear-gradient(135deg,#22c55e,#10b981)">CN</div><h4>Citra Nuraini</h4><div class="role">UI/UX Designer</div><span class="badge badge-neutral">Away</span><div class="meta-row"><span>9 task</span><span>2 project</span></div></div>
+        <div class="member-card"><div class="avatar" style="background:linear-gradient(135deg,#a855f7,#6366f1)">DK</div><h4>Dimas Kurniawan</h4><div class="role">Backend Developer</div><span class="badge badge-success"><span class="badge-dot"></span>Online</span><div class="meta-row"><span>15 task</span><span>2 project</span></div></div>
+        <div class="member-card"><div class="avatar" style="background:linear-gradient(135deg,#ec4899,#f43f5e)">RS</div><h4>Rina Sari</h4><div class="role">Marketing Lead</div><span class="badge badge-warning">Busy</span><div class="meta-row"><span>7 task</span><span>1 project</span></div></div>
+        <div class="member-card"><div class="avatar" style="background:linear-gradient(135deg,#06b6d4,#0284c7)">FH</div><h4>Fajar Hidayat</h4><div class="role">QA Engineer</div><span class="badge badge-success"><span class="badge-dot"></span>Online</span><div class="meta-row"><span>11 task</span><span>2 project</span></div></div>
+        <div class="member-card"><div class="avatar" style="background:linear-gradient(135deg,#f59e0b,#d97706)">MW</div><h4>Maya Wulandari</h4><div class="role">Content Writer</div><span class="badge badge-neutral">Away</span><div class="meta-row"><span>5 task</span><span>1 project</span></div></div>
+        <div class="member-card"><div class="avatar" style="background:linear-gradient(135deg,#8b5cf6,#7c3aed)">AA</div><h4>Andi Ardianto</h4><div class="role">DevOps Engineer</div><span class="badge badge-success"><span class="badge-dot"></span>Online</span><div class="meta-row"><span>8 task</span><span>2 project</span></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
