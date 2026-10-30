@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="JProMan — Professional project management workspace demo">
+  <meta name="theme-color" content="#f5f6fa">
+  <title>My Tasks · JProMan</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <input class="theme-control" type="checkbox" id="theme-toggle" aria-label="Aktifkan dark mode">
+  <input class="theme-control mobile-toggle" type="checkbox" id="mobile-toggle" aria-label="Buka navigasi">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="index.html" aria-label="JProMan home">
+        <span class="brand-mark">J<span style="opacity:.7">P</span></span>
+        <span class="brand-copy">JProMan<small>PROJECT MANAGEMENT</small></span>
+      </a>
+      <div class="workspace-switch"><span class="workspace-mark">J</span><span class="workspace-text"><strong>JProMan Studio</strong><small>Professional workspace</small></span><span class="workspace-caret">⌄</span></div>
+      <div class="nav-section">WORKSPACE</div>
+      <nav class="nav-list" aria-label="Main navigation"><a class="nav-link " href="index.html" ><span class="nav-icon">▦</span>Overview</a><a class="nav-link " href="projects.html" ><span class="nav-icon">▧</span>Projects<span class=nav-badge>12</span></a><a class="nav-link active" href="tasks.html" aria-current=page><span class="nav-icon">☑</span>My Tasks<span class=nav-badge>8</span></a><a class="nav-link " href="calendar.html" ><span class="nav-icon">▦</span>Calendar</a><a class="nav-link " href="team.html" ><span class="nav-icon">♙</span>Team</a><a class="nav-link " href="reports.html" ><span class="nav-icon">▥</span>Reports</a></nav>
+      <div class="nav-section spaced">PREFERENCES</div>
+      <nav class="nav-list" aria-label="Preferences">
+        <a class="nav-link" href="reports.html#settings"><span class="nav-icon">⚙</span>Settings</a>
+        <a class="nav-link" href="reports.html#help"><span class="nav-icon">?</span>Help center</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-promo"><span class="promo-symbol">✦</span><strong>Make work flow better</strong><p>Bring projects, people, and progress into one clear space.</p><a href="projects.html">Explore projects →</a></div>
+        <div class="profile"><span class="avatar">AR</span><span class="profile-copy"><strong>Alexandra Rose</strong><small>Workspace admin</small></span><span class="profile-more">···</span></div>
+      </div>
+    </aside>
+    <label class="mobile-backdrop" for="mobile-toggle" aria-label="Tutup navigasi"></label>
+    <main class="main-area">
+      <header class="topbar">
+        <label class="mobile-menu" for="mobile-toggle" aria-label="Buka navigasi">☰</label>
+        <div class="breadcrumbs"><span>JProMan Studio</span><span class="crumb-sep">/</span><strong>My Tasks</strong></div>
+        <div class="top-actions">
+          <label class="search-field" aria-label="Demo search"><span class="search-glyph">⌕</span><input type="search" placeholder="Search anything…" aria-label="Search anything"><kbd>⌘ K</kbd></label>
+          <label class="icon-button theme-label" for="theme-toggle" title="Toggle light/dark mode" aria-label="Ganti tema"><span class="moon">☾</span><span class="sun">☀</span></label>
+          <a class="icon-button" href="calendar.html" aria-label="Notifications">♧<i class="notification-dot"></i></a>
+          <span class="avatar round">AR</span>
+        </div>
+      </header>
+      <div class="page-wrap">
+        <section class="page-heading">
+          <div><div class="eyebrow"><i class="eyebrow-dot"></i>TASK MANAGEMENT</div><h1>My Tasks</h1><p class="page-subtitle">A clear view of priorities, ownership, and what comes next.</p></div>
+          <div class="heading-actions"><a class="button button-secondary" href="calendar.html">▦ Calendar</a><a class="button button-primary" href="#task-guide">＋ Add task</a></div>
+        </section>
+        
+<div class="panel" style="margin-bottom:14px"><div class="panel-header" style="align-items:center"><div><h2>Task board <span class="muted" style="font:600 10px 'DM Sans'">· 32 tasks</span></h2><p>Sample tasks grouped by workflow stage.</p></div><div class="filter-tabs"><a class="active" href="#board">Board</a><a href="#task-list">List</a><a href="calendar.html">Calendar</a></div></div></div>
+<section class="kanban" id="board">
+  <div class="kanban-column"><div class="kanban-head"><span class="kanban-title"><i></i> To do</span><span class="kanban-count">3</span></div>
+    <article class="kanban-card"><span class="card-tag">Product</span><h3>Map onboarding journey</h3><p>Document the key steps for first-time users.</p><div class="kanban-foot"><span>◷ Nov 04</span><span class="avatar">AR</span></div></article>
+    <article class="kanban-card"><span class="card-tag design">Design</span><h3>Prepare icon library</h3><p>Review and export approved icon set.</p><div class="kanban-foot"><span>◷ Nov 06</span><span class="avatar aqua">SL</span></div></article>
+    <article class="kanban-card"><span class="card-tag marketing">Marketing</span><h3>Draft launch announcement</h3><p>Write the first version of launch copy.</p><div class="kanban-foot"><span>◷ Nov 09</span><span class="avatar amber">JC</span></div></article>
+  </div>
+  <div class="kanban-column"><div class="kanban-head"><span class="kanban-title"><i></i> In progress</span><span class="kanban-count">4</span></div>
+    <article class="kanban-card"><span class="card-tag design">Design</span><h3>Review homepage wireframes</h3><p>Collect feedback from product stakeholders.</p><div class="kanban-foot"><span>◷ Today</span><span class="avatar">AR</span></div></article>
+    <article class="kanban-card"><span class="card-tag">Engineering</span><h3>Set up staging environment</h3><p>Prepare a stable environment for QA.</p><div class="kanban-foot"><span>◷ Nov 03</span><span class="avatar green">DK</span></div></article>
+  </div>
+  <div class="kanban-column"><div class="kanban-head"><span class="kanban-title"><i></i> In review</span><span class="kanban-count">2</span></div>
+    <article class="kanban-card"><span class="card-tag design">Design</span><h3>Checkout screen concepts</h3><p>Waiting for product review and approval.</p><div class="kanban-foot"><span>◷ Nov 02</span><span class="avatar rose">MT</span></div></article>
+    <article class="kanban-card"><span class="card-tag">Product</span><h3>Update sprint backlog</h3><p>Confirm scope for the next sprint.</p><div class="kanban-foot"><span>◷ Nov 05</span><span class="avatar aqua">SL</span></div></article>
+  </div>
+  <div class="kanban-column"><div class="kanban-head"><span class="kanban-title"><i></i> Done</span><span class="kanban-count">5</span></div>
+    <article class="kanban-card"><span class="card-tag">Research</span><h3>Interview customer panel</h3><p>Completed interviews with five customers.</p><div class="kanban-foot"><span>✓ Oct 27</span><span class="avatar amber">JC</span></div></article>
+    <article class="kanban-card"><span class="card-tag design">Design</span><h3>Audit existing components</h3><p>Documented reusable patterns and gaps.</p><div class="kanban-foot"><span>✓ Oct 26</span><span class="avatar">AR</span></div></article>
+  </div>
+</section>
+<section class="grid-bottom" style="margin-top:16px" id="task-list"><article class="panel"><div class="panel-header"><div><h2>My task checklist</h2><p>CSS checkbox demo — check items visually in this page.</p></div><span class="status progress">This week</span></div><div class="task-list">
+<label class="task-row"><input class="task-toggle" type="checkbox"><span class="task-copy"><strong>Review homepage wireframes</strong><small>Website redesign · Today, 11:00 AM</small></span><span class="priority">High</span></label>
+<label class="task-row"><input class="task-toggle" type="checkbox"><span class="task-copy"><strong>Approve sprint backlog</strong><small>Mobile app launch · Today, 2:30 PM</small></span><span class="priority">High</span></label>
+<label class="task-row"><input class="task-toggle" type="checkbox"><span class="task-copy"><strong>Share campaign feedback</strong><small>Q4 campaign · Tomorrow</small></span><span class="priority low">Low</span></label>
+<label class="task-row"><input class="task-toggle" type="checkbox"><span class="task-copy"><strong>Send weekly progress update</strong><small>Team operations · Nov 02</small></span><span class="priority">Medium</span></label>
+</div></article><article class="panel" id="task-guide"><div class="panel-header"><div><h2>Task notes</h2><p>Workflow reference</p></div></div><details class="disclosure" open><summary>Priority guide</summary><div class="disclosure-body">High: needs attention today. Medium: expected during this week. Low: flexible work that can be scheduled around critical tasks.</div></details><details class="disclosure"><summary>How to use this board</summary><div class="disclosure-body">The columns represent a sample workflow. Without JavaScript or a backend, cards cannot be dragged, edited, or synchronized between columns.</div></details></article></section>
+        <footer class="page-footer"><span>© 2026 JProMan. Designed for focused teams.</span><span class="footer-live"><i></i> Demo workspace · Sample data</span></footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
