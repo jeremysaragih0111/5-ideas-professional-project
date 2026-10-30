@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects — WeProMan</title>
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+<input type="checkbox" id="menu-toggle" class="hidden">
+<div class="app-shell">
+  <aside class="sidebar">
+    <a href="WeProMan.html" class="sidebar-brand"><span class="brand-mark">W</span> WeProMan</a>
+    <div class="nav-group">
+      <div class="nav-label">Workspace</div>
+      <div class="nav-theme-light">
+        <a class="nav-link" href="dashboard.html#light"><span class="ico">▦</span> Dashboard</a>
+        <a class="nav-link active" href="projects.html#light"><span class="ico">▣</span> Projects</a>
+        <a class="nav-link" href="tasks.html#light"><span class="ico">✓</span> Tasks</a>
+        <a class="nav-link" href="team.html#light"><span class="ico">◉</span> Team</a>
+        <a class="nav-link" href="calendar.html#light"><span class="ico">▤</span> Calendar</a>
+        <a class="nav-link" href="reports.html#light"><span class="ico">▧</span> Reports</a>
+      </div>
+      <div class="nav-theme-dark">
+        <a class="nav-link" href="dashboard.html#dark"><span class="ico">▦</span> Dashboard</a>
+        <a class="nav-link active" href="projects.html#dark"><span class="ico">▣</span> Projects</a>
+        <a class="nav-link" href="tasks.html#dark"><span class="ico">✓</span> Tasks</a>
+        <a class="nav-link" href="team.html#dark"><span class="ico">◉</span> Team</a>
+        <a class="nav-link" href="calendar.html#dark"><span class="ico">▤</span> Calendar</a>
+        <a class="nav-link" href="reports.html#dark"><span class="ico">▧</span> Reports</a>
+      </div>
+    </div>
+    <div class="nav-group">
+      <div class="nav-label">Akun</div>
+      <div class="nav-theme-light">
+        <a class="nav-link" href="settings.html#light"><span class="ico">⚙</span> Settings</a>
+        <a class="nav-link" href="login.html#light"><span class="ico">↪</span> Keluar</a>
+      </div>
+      <div class="nav-theme-dark">
+        <a class="nav-link" href="settings.html#dark"><span class="ico">⚙</span> Settings</a>
+        <a class="nav-link" href="login.html#dark"><span class="ico">↪</span> Keluar</a>
+      </div>
+    </div>
+    <div class="sidebar-foot">
+      <div class="user-chip"><div class="avatar">AR</div><div class="meta"><strong>Aisyah R.</strong><br><span>Product Manager</span></div></div>
+    </div>
+  </aside>
+
+  <div class="main-area">
+    <header class="topbar">
+      <div class="flex items-center gap-3">
+        <label for="menu-toggle" class="menu-btn">☰</label>
+        <h1>Projects</h1>
+      </div>
+      <div class="topbar-actions">
+        <div class="search-box">🔎 <input type="search" placeholder="Cari project…"></div>
+        <span class="theme-toggle-wrap">
+          <a href="#dark" class="theme-btn theme-to-dark" title="Aktifkan Dark Mode">🌙</a>
+          <a href="#light" class="theme-btn theme-to-light" title="Aktifkan Light Mode">☀️</a>
+        </span>
+        <span class="nav-theme-light"><a href="settings.html#light" class="avatar">AR</a></span>
+        <span class="nav-theme-dark" style="display:none"><a href="settings.html#dark" class="avatar">AR</a></span>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="page-head">
+        <div><h2>Semua Project</h2><p>12 project aktif, 3 selesai bulan ini.</p></div>
+        <div class="page-actions nav-theme-light">
+          <a href="#" class="btn btn-ghost btn-sm">Filter</a>
+          <a href="#" class="btn btn-primary btn-sm">+ New Project</a>
+        </div>
+        <div class="page-actions nav-theme-dark" style="display:none">
+          <a href="#" class="btn btn-ghost btn-sm">Filter</a>
+          <a href="#" class="btn btn-primary btn-sm">+ New Project</a>
+        </div>
+      </div>
+
+      <div class="project-grid">
+        <!-- Project cards: pakai dual-theme link -->
+        <div class="project-card">
+          <div class="pc-top"><div class="proj-ico">🎨</div><span class="badge badge-info">Active</span></div>
+          <div class="pc-title">Redesign Website v3</div>
+          <div class="pc-desc">Overhaul desain landing page, dashboard, dan portal customer.</div>
+          <div><div class="flex justify-between text-xs text-soft mb-2"><span>Progress</span><span>78%</span></div><div class="progress"><span style="width:78%"></span></div></div>
+          <div class="pc-foot">
+            <div class="avatar-stack"><div class="avatar avatar-sm">AR</div><div class="avatar avatar-sm" style="background:linear-gradient(135deg,#f97316,#f59e0b)">BP</div><div class="avatar avatar-sm" style="background:linear-gradient(135deg,#22c55e,#10b981)">CN</div></div>
+            <span class="nav-theme-light"><a href="project-detail.html#light" class="text-xs" style="color:var(--brand-500);font-weight:600">Buka →</a></span>
+            <span class="nav-theme-dark" style="display:none"><a href="project-detail.html#dark" class="text-xs" style="color:var(--brand-500);font-weight:600">Buka →</a></span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="pc-top"><div class="proj-ico" style="background:linear-gradient(135deg,#f97316,#f59e0b)">📱</div><span class="badge badge-warning">At Risk</span></div>
+          <div class="pc-title">Mobile App MVP</div>
+          <div class="pc-desc">Buat MVP aplikasi mobile untuk iOS & Android dengan fitur inti.</div>
+          <div><div class="flex justify-between text-xs text-soft mb-2"><span>Progress</span><span>52%</span></div><div class="progress warn"><span style="width:52%"></span></div></div>
+          <div class="pc-foot">
+            <div class="avatar-stack"><div class="avatar avatar-sm" style="background:linear-gradient(135deg,#a855f7,#6366f1)">DK</div><div class="avatar avatar-sm">AR</div></div>
+            <span class="nav-theme-light"><a href="project-detail.html#light" class="text-xs" style="color:var(--brand-500);font-weight:600">Buka →</a></span>
+            <span class="nav-theme-dark" style="display:none"><a href="project-detail.html#dark" class="text-xs" style="color:var(--brand-500);font-weight:600">Buka →</a></span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="pc-top"><div class="proj-ico" style="background:linear-gradient(135deg,#22c55e,#10b981)">⚙️</div><span class="badge badge-success">On Track</span></div>
+          <div class="pc-title">API Gateway Refactor</div>
+          <div class="pc-desc">Refactor gateway untuk skalabilitas dan observability yang lebih baik.</div>
+          <div><div class="flex justify-between text-xs text-soft mb-2"><span>Progress</span><span>91%</span></div><div class="progress ok"><span style="width:91%"></span></div></div>
+          <div class="pc-foot">
+            <div class="avatar-stack"><div class="avatar avatar-sm" style="background:linear-gradient(135deg,#a855f7,#6366f1)">DK</div></div>
+            <span class="nav-theme-light"><a href="project-detail.html#light" class="text-xs" style="color:var(--brand-500);font-weight:600">Buka →</a></span>
+            <span class="nav-theme-dark" style="display:none"><a href="project-detail.html#dark" class="text-xs" style="color:var(--brand-500);font-weight:600">Buka →</a></span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="pc-top"><div class="proj-ico" style="background:linear-gradient(135deg,#ec4899,#f43f5e)">📣</div><span class="badge badge-info">Active</span></div>
+          <div class="pc-title">Marketing Q2 Campaign</div>
+          <div class="pc-desc">Kampanye multi-channel untuk akuisisi user Q2 2025.</div>
+          <div><div class="flex justify-between text-xs text-soft mb-2"><span>Progress</span><span>34%</span></div><div class="progress"><span style="width:34%"></span></div></div>
+          <div class="pc-foot">
+            <div class="avatar-stack"><div class="avatar avatar-sm" style="background:linear-gradient(135deg,#22c55e,#10b981)">CN</div><div class="avatar avatar-sm">AR</div></div>
+            <span class="nav-theme-light"><a href="project-detail.html#light" class="text-xs" style="color:var(--brand-500);font-weight:600">Buka →</a></span>
+            <span class="nav-theme-dark" style="display:none"><a href="project-detail.html#dark" class="text-xs" style="color:var(--brand-500);font-weight:600">Buka →</a></span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="pc-top"><div class="proj-ico" style="background:linear-gradient(135deg,#06b6d4,#0284c7)">🧪</div><span class="badge badge-success">Done</span></div>
+          <div class="pc-title">QA Automation Suite</div>
+          <div class="pc-desc">Framework pengujian otomatis untuk CI/CD pipeline.</div>
+          <div><div class="flex justify-between text-xs text-soft mb-2"><span>Progress</span><span>100%</span></div><div class="progress ok"><span style="width:100%"></span></div></div>
+          <div class="pc-foot">
+            <div class="avatar-stack"><div class="avatar avatar-sm" style="background:linear-gradient(135deg,#f97316,#f59e0b)">BP</div></div>
+            <span class="nav-theme-light"><a href="project-detail.html#light" class="text-xs" style="color:var(--brand-500);font-weight:600">Buka →</a></span>
+            <span class="nav-theme-dark" style="display:none"><a href="project-detail.html#dark" class="text-xs" style="color:var(--brand-500);font-weight:600">Buka →</a></span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="pc-top"><div class="proj-ico" style="background:linear-gradient(135deg,#8b5cf6,#7c3aed)">🔐</div><span class="badge badge-danger">Overdue</span></div>
+          <div class="pc-title">Security Audit 2025</div>
+          <div class="pc-desc">Audit keamanan menyeluruh dan remediasi temuan kritis.</div>
+          <div><div class="flex justify-between text-xs text-soft mb-2"><span>Progress</span><span>60%</span></div><div class="progress warn"><span style="width:60%"></span></div></div>
+          <div class="pc-foot">
+            <div class="avatar-stack"><div class="avatar avatar-sm" style="background:linear-gradient(135deg,#a855f7,#6366f1)">DK</div><div class="avatar avatar-sm">AR</div></div>
+            <span class="nav-theme-light"><a href="project-detail.html#light" class="text-xs" style="color:var(--brand-500);font-weight:600">Buka →</a></span>
+            <span class="nav-theme-dark" style="display:none"><a href="project-detail.html#dark" class="text-xs" style="color:var(--brand-500);font-weight:600">Buka →</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
