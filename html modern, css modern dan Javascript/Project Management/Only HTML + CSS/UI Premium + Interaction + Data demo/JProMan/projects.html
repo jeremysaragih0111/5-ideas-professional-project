@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JProMan — Projects</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/JProMan.css">
+<link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+<input type="checkbox" id="theme-toggle" class="theme-input">
+<input type="checkbox" id="nav-toggle" class="theme-input">
+
+<div class="app">
+  <aside class="sidebar">
+    <a href="JProMan.html" class="brand" style="text-decoration:none;color:inherit">
+      <span class="brand-logo">JP</span>
+      <span class="brand-name">JProMan<small>Project Suite</small></span>
+    </a>
+    <span class="nav-label">Menu Utama</span>
+    <a href="JProMan.html" class="nav-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+      Dashboard
+    </a>
+    <a href="projects.html" class="nav-link active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/></svg>
+      Projects <span class="nav-badge">8</span>
+    </a>
+    <a href="tasks.html" class="nav-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      Tasks <span class="nav-badge">24</span>
+    </a>
+    <a href="team.html" class="nav-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+      Team
+    </a>
+    <span class="nav-label">Akun</span>
+    <a href="settings.html" class="nav-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      Settings
+    </a>
+    <div class="sidebar-footer">
+      <div class="user-card">
+        <span class="avatar">AR</span>
+        <div class="user-meta"><strong>Andi Rahman</strong><span>Project Lead</span></div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </label>
+      <h1>Projects</h1>
+      <div class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="text" placeholder="Cari project…">
+      </div>
+      <div class="topbar-actions">
+        <label for="theme-toggle" class="theme-toggle-label">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </label>
+        <a href="project-detail.html" class="btn btn-primary btn-sm">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          New Project
+        </a>
+      </div>
+    </header>
+
+    <main class="content">
+      <!-- Filter chips -->
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <span class="badge badge-brand">Semua (8)</span>
+        <span class="badge badge-neutral">Berjalan (5)</span>
+        <span class="badge badge-success">Selesai (2)</span>
+        <span class="badge badge-warning">Ditahan (1)</span>
+      </div>
+
+      <section class="grid grid-3">
+        <a href="project-detail.html" class="card" style="text-decoration:none;color:inherit">
+          <div class="card-head">
+            <div class="stat-icon" style="width:38px;height:38px;border-radius:10px">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/></svg>
+            </div>
+            <span class="badge badge-warning">Berjalan</span>
+          </div>
+          <h3 style="font-size:1rem;font-weight:700;margin-bottom:4px">Website Redesign</h3>
+          <p style="font-size:.8rem;color:var(--text-muted);margin-bottom:16px">Redesign total UI/UX website perusahaan dengan tema modern.</p>
+          <div class="progress"><span style="width:72%"></span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px">
+            <div class="avatar-stack">
+              <span class="avatar sm">AR</span>
+              <span class="avatar sm" style="background:linear-gradient(135deg,#f59e0b,#f97316)">SA</span>
+              <span class="avatar sm" style="background:linear-gradient(135deg,#10b981,#059669)">BW</span>
+            </div>
+            <span class="helper">Deadline 30 Jun</span>
+          </div>
+        </a>
+
+        <a href="project-detail.html" class="card" style="text-decoration:none;color:inherit">
+          <div class="card-head">
+            <div class="stat-icon" style="width:38px;height:38px;border-radius:10px">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>
+            </div>
+            <span class="badge badge-warning">Berjalan</span>
+          </div>
+          <h3 style="font-size:1rem;font-weight:700;margin-bottom:4px">Mobile App v2.0</h3>
+          <p style="font-size:.8rem;color:var(--text-muted);margin-bottom:16px">Rilis versi kedua aplikasi mobile dengan fitur offline.</p>
+          <div class="progress"><span style="width:45%"></span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px">
+            <div class="avatar-stack">
+              <span class="avatar sm">DP</span>
+              <span class="avatar sm" style="background:linear-gradient(135deg,#f43f5e,#e11d48)">RF</span>
+            </div>
+            <span class="helper">Deadline 15 Jul</span>
+          </div>
+        </a>
+
+        <a href="project-detail.html" class="card" style="text-decoration:none;color:inherit">
+          <div class="card-head">
+            <div class="stat-icon" style="width:38px;height:38px;border-radius:10px">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 17l6-6 4 4 6-8"/><path d="M14 7h6v6"/></svg>
+            </div>
+            <span class="badge badge-success">Selesai</span>
+          </div>
+          <h3 style="font-size:1rem;font-weight:700;margin-bottom:4px">CRM Integration</h3>
+          <p style="font-size:.8rem;color:var(--text-muted);margin-bottom:16px">Integrasi sistem CRM dengan dashboard internal.</p>
+          <div class="progress"><span style="width:100%"></span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px">
+            <div class="avatar-stack">
+              <span class="avatar sm">SA</span>
+              <span class="avatar sm" style="background:linear-gradient(135deg,#8b5cf6,#7c3aed)">MK</span>
+            </div>
+            <span class="helper">Selesai 18 Jun</span>
+          </div>
+        </a>
+
+        <a href="project-detail.html" class="card" style="text-decoration:none;color:inherit">
+          <div class="card-head">
+            <div class="stat-icon" style="width:38px;height:38px;border-radius:10px">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg>
+            </div>
+            <span class="badge badge-warning">Berjalan</span>
+          </div>
+          <h3 style="font-size:1rem;font-weight:700;margin-bottom:4px">Marketing Campaign Q3</h3>
+          <p style="font-size:.8rem;color:var(--text-muted);margin-bottom:16px">Kampanye pemasaran digital Q3 untuk segmen B2B.</p>
+          <div class="progress"><span style="width:28%"></span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px">
+            <div class="avatar-stack">
+              <span class="avatar sm">BW</span>
+              <span class="avatar sm" style="background:linear-gradient(135deg,#06b6d4,#0891b2)">LN</span>
+            </div>
+            <span class="helper">Deadline 05 Aug</span>
+          </div>
+        </a>
+
+        <a href="project-detail.html" class="card" style="text-decoration:none;color:inherit">
+          <div class="card-head">
+            <div class="stat-icon" style="width:38px;height:38px;border-radius:10px">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7l3-7z"/></svg>
+            </div>
+            <span class="badge badge-warning">Berjalan</span>
+          </div>
+          <h3 style="font-size:1rem;font-weight:700;margin-bottom:4px">Brand Identity Refresh</h3>
+          <p style="font-size:.8rem;color:var(--text-muted);margin-bottom:16px">Penyegaran identitas visual brand & guidelines.</p>
+          <div class="progress"><span style="width:63%"></span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px">
+            <div class="avatar-stack">
+              <span class="avatar sm">MK</span>
+              <span class="avatar sm" style="background:linear-gradient(135deg,#f59e0b,#f97316)">SA</span>
+            </div>
+            <span class="helper">Deadline 12 Jul</span>
+          </div>
+        </a>
+
+        <a href="project-detail.html" class="card" style="text-decoration:none;color:inherit">
+          <div class="card-head">
+            <div class="stat-icon" style="width:38px;height:38px;border-radius:10px">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            </div>
+            <span class="badge badge-warning">Ditahan</span>
+          </div>
+          <h3 style="font-size:1rem;font-weight:700;margin-bottom:4px">Data Warehouse Migration</h3>
+          <p style="font-size:.8rem;color:var(--text-muted);margin-bottom:16px">Migrasi data ke warehouse cloud — menunggu approval.</p>
+          <div class="progress"><span style="width:15%"></span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px">
+            <div class="avatar-stack">
+              <span class="avatar sm">RF</span>
+            </div>
+            <span class="helper">Deadline 01 Sep</span>
+          </div>
+        </a>
+      </section>
+    </main>
+  </div>
+</div>
+</body>
+</html>
