@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="JProMan — Professional project management workspace demo">
+  <meta name="theme-color" content="#f5f6fa">
+  <title>Projects · JProMan</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <input class="theme-control" type="checkbox" id="theme-toggle" aria-label="Aktifkan dark mode">
+  <input class="theme-control mobile-toggle" type="checkbox" id="mobile-toggle" aria-label="Buka navigasi">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="index.html" aria-label="JProMan home">
+        <span class="brand-mark">J<span style="opacity:.7">P</span></span>
+        <span class="brand-copy">JProMan<small>PROJECT MANAGEMENT</small></span>
+      </a>
+      <div class="workspace-switch"><span class="workspace-mark">J</span><span class="workspace-text"><strong>JProMan Studio</strong><small>Professional workspace</small></span><span class="workspace-caret">⌄</span></div>
+      <div class="nav-section">WORKSPACE</div>
+      <nav class="nav-list" aria-label="Main navigation"><a class="nav-link " href="index.html" ><span class="nav-icon">▦</span>Overview</a><a class="nav-link active" href="projects.html" aria-current=page><span class="nav-icon">▧</span>Projects<span class=nav-badge>12</span></a><a class="nav-link " href="tasks.html" ><span class="nav-icon">☑</span>My Tasks<span class=nav-badge>8</span></a><a class="nav-link " href="calendar.html" ><span class="nav-icon">▦</span>Calendar</a><a class="nav-link " href="team.html" ><span class="nav-icon">♙</span>Team</a><a class="nav-link " href="reports.html" ><span class="nav-icon">▥</span>Reports</a></nav>
+      <div class="nav-section spaced">PREFERENCES</div>
+      <nav class="nav-list" aria-label="Preferences">
+        <a class="nav-link" href="reports.html#settings"><span class="nav-icon">⚙</span>Settings</a>
+        <a class="nav-link" href="reports.html#help"><span class="nav-icon">?</span>Help center</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-promo"><span class="promo-symbol">✦</span><strong>Make work flow better</strong><p>Bring projects, people, and progress into one clear space.</p><a href="projects.html">Explore projects →</a></div>
+        <div class="profile"><span class="avatar">AR</span><span class="profile-copy"><strong>Alexandra Rose</strong><small>Workspace admin</small></span><span class="profile-more">···</span></div>
+      </div>
+    </aside>
+    <label class="mobile-backdrop" for="mobile-toggle" aria-label="Tutup navigasi"></label>
+    <main class="main-area">
+      <header class="topbar">
+        <label class="mobile-menu" for="mobile-toggle" aria-label="Buka navigasi">☰</label>
+        <div class="breadcrumbs"><span>JProMan Studio</span><span class="crumb-sep">/</span><strong>Projects</strong></div>
+        <div class="top-actions">
+          <label class="search-field" aria-label="Demo search"><span class="search-glyph">⌕</span><input type="search" placeholder="Search anything…" aria-label="Search anything"><kbd>⌘ K</kbd></label>
+          <label class="icon-button theme-label" for="theme-toggle" title="Toggle light/dark mode" aria-label="Ganti tema"><span class="moon">☾</span><span class="sun">☀</span></label>
+          <a class="icon-button" href="calendar.html" aria-label="Notifications">♧<i class="notification-dot"></i></a>
+          <span class="avatar round">AR</span>
+        </div>
+      </header>
+      <div class="page-wrap">
+        <section class="page-heading">
+          <div><div class="eyebrow"><i class="eyebrow-dot"></i>PROJECT PORTFOLIO</div><h1>Projects</h1><p class="page-subtitle">Keep every initiative organized, visible, and moving forward.</p></div>
+          <div class="heading-actions"><a class="button button-secondary" href="reports.html">↗ Portfolio report</a><a class="button button-primary" href="#new-project">＋ New project</a></div>
+        </section>
+        
+<div class="panel" style="margin-bottom:15px"><div class="panel-header" style="align-items:center"><div><h2>All projects <span class="muted" style="font:600 10px 'DM Sans'">· 24 total</span></h2><p>Plan, track, and deliver great work together.</p></div><div class="filter-tabs"><a class="active" href="#all-projects">All projects</a><a href="#active-projects">In progress</a><a href="#completed-projects">Completed</a><a href="#at-risk-projects">At risk</a></div></div></div>
+<section class="project-grid" id="all-projects">
+  <article class="project-card" id="active-projects"><div class="project-top"><span class="project-mark">✦</span><span class="status active">On track</span></div><h3>Website redesign</h3><p>Refresh the company website with a modern visual system and improved user journeys.</p><div class="project-meta"><span>Progress</span><strong>78%</strong></div><div class="progress-line"><span style="width:78%"></span></div><div class="project-bottom"><div class="avatar-stack"><span class="avatar">AR</span><span class="avatar aqua">SL</span><span class="avatar amber">DK</span><span class="avatar blue">+2</span></div><span class="due">Due Nov 12, 2026</span></div></article>
+  <article class="project-card"><div class="project-top"><span class="project-mark cyan">◈</span><span class="status progress">In progress</span></div><h3>Mobile app launch</h3><p>Coordinate product, engineering, and QA work for the next mobile release.</p><div class="project-meta"><span>Progress</span><strong>52%</strong></div><div class="progress-line"><span style="width:52%;background:var(--blue)"></span></div><div class="project-bottom"><div class="avatar-stack"><span class="avatar green">DK</span><span class="avatar rose">MT</span><span class="avatar">AR</span></div><span class="due">Due Nov 18, 2026</span></div></article>
+  <article class="project-card" id="at-risk-projects"><div class="project-top"><span class="project-mark amber">↗</span><span class="status review">At risk</span></div><h3>Q4 campaign</h3><p>Deliver a coordinated seasonal campaign across content, social, and paid channels.</p><div class="project-meta"><span>Progress</span><strong>35%</strong></div><div class="progress-line"><span style="width:35%;background:var(--amber)"></span></div><div class="project-bottom"><div class="avatar-stack"><span class="avatar aqua">SL</span><span class="avatar amber">JC</span><span class="avatar blue">+1</span></div><span class="due">Due Nov 22, 2026</span></div></article>
+  <article class="project-card"><div class="project-top"><span class="project-mark green">▤</span><span class="status active">On track</span></div><h3>Customer portal</h3><p>Build a self-service portal for account management and support requests.</p><div class="project-meta"><span>Progress</span><strong>91%</strong></div><div class="progress-line"><span style="width:91%;background:var(--green)"></span></div><div class="project-bottom"><div class="avatar-stack"><span class="avatar rose">MT</span><span class="avatar">AR</span><span class="avatar aqua">SL</span></div><span class="due">Due Nov 08, 2026</span></div></article>
+  <article class="project-card"><div class="project-top"><span class="project-mark blue">◎</span><span class="status progress">In progress</span></div><h3>Design system v2</h3><p>Unify UI patterns, tokens, and reusable components across product surfaces.</p><div class="project-meta"><span>Progress</span><strong>64%</strong></div><div class="progress-line"><span style="width:64%;background:var(--cyan)"></span></div><div class="project-bottom"><div class="avatar-stack"><span class="avatar">AR</span><span class="avatar blue">JC</span><span class="avatar green">DK</span></div><span class="due">Due Dec 02, 2026</span></div></article>
+  <article class="project-card" id="completed-projects"><div class="project-top"><span class="project-mark amber">⌁</span><span class="status done">Completed</span></div><h3>Brand refresh</h3><p>Finalize brand foundations, guidelines, and launch-ready marketing assets.</p><div class="project-meta"><span>Progress</span><strong>100%</strong></div><div class="progress-line"><span style="width:100%;background:var(--green)"></span></div><div class="project-bottom"><div class="avatar-stack"><span class="avatar aqua">SL</span><span class="avatar">AR</span><span class="avatar amber">JC</span></div><span class="due">Completed Oct 18, 2026</span></div></article>
+</section>
+<div class="panel" style="margin-top:16px"><div class="panel-header"><div><h2>Project guidelines</h2><p>Helpful notes for keeping work organized</p></div></div><details class="disclosure"><summary>How are project statuses defined?</summary><div class="disclosure-body">On track means delivery is progressing as planned. At risk means the team should review blockers or timeline. Completed means all project milestones have been marked finished in this sample workspace.</div></details><details class="disclosure"><summary>What does project progress represent?</summary><div class="disclosure-body">Progress percentages are illustrative demo values. They are not calculated from a live task database.</div></details></div>
+<div class="modal" id="new-project"><div class="modal-card"><div class="modal-title"><div><h2>Create a project</h2><p>UI preview only — this form does not save a project.</p></div><a class="modal-close" href="#" aria-label="Close">×</a></div><form><div class="form-grid"><label class="form-field form-span">Project name<input type="text" placeholder="e.g. Product launch" /></label><label class="form-field">Project owner<select><option>Alexandra Rose</option><option>David Kim</option><option>Sarah Lee</option></select></label><label class="form-field">Due date<input type="date" /></label><label class="form-field form-span">Description<textarea placeholder="What is this project about?"></textarea></label></div><div class="form-actions"><a class="button button-secondary" href="#">Cancel</a><button class="button button-primary" type="button">Create project preview</button></div></form></div></div>
+        <footer class="page-footer"><span>© 2026 JProMan. Designed for focused teams.</span><span class="footer-live"><i></i> Demo workspace · Sample data</span></footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
