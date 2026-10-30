@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Redesign Website v3 — WeProMan</title>
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+<input type="checkbox" id="menu-toggle" class="hidden">
+<div class="app-shell">
+  <aside class="sidebar">
+    <a href="WeProMan.html" class="sidebar-brand"><span class="brand-mark">W</span> WeProMan</a>
+    <div class="nav-group">
+      <div class="nav-label">Workspace</div>
+      <div class="nav-theme-light">
+        <a class="nav-link" href="dashboard.html#light"><span class="ico">▦</span> Dashboard</a>
+        <a class="nav-link active" href="projects.html#light"><span class="ico">▣</span> Projects</a>
+        <a class="nav-link" href="tasks.html#light"><span class="ico">✓</span> Tasks</a>
+        <a class="nav-link" href="team.html#light"><span class="ico">◉</span> Team</a>
+        <a class="nav-link" href="calendar.html#light"><span class="ico">▤</span> Calendar</a>
+        <a class="nav-link" href="reports.html#light"><span class="ico">▧</span> Reports</a>
+      </div>
+      <div class="nav-theme-dark">
+        <a class="nav-link" href="dashboard.html#dark"><span class="ico">▦</span> Dashboard</a>
+        <a class="nav-link active" href="projects.html#dark"><span class="ico">▣</span> Projects</a>
+        <a class="nav-link" href="tasks.html#dark"><span class="ico">✓</span> Tasks</a>
+        <a class="nav-link" href="team.html#dark"><span class="ico">◉</span> Team</a>
+        <a class="nav-link" href="calendar.html#dark"><span class="ico">▤</span> Calendar</a>
+        <a class="nav-link" href="reports.html#dark"><span class="ico">▧</span> Reports</a>
+      </div>
+    </div>
+    <div class="nav-group">
+      <div class="nav-label">Akun</div>
+      <div class="nav-theme-light">
+        <a class="nav-link" href="settings.html#light"><span class="ico">⚙</span> Settings</a>
+        <a class="nav-link" href="login.html#light"><span class="ico">↪</span> Keluar</a>
+      </div>
+      <div class="nav-theme-dark">
+        <a class="nav-link" href="settings.html#dark"><span class="ico">⚙</span> Settings</a>
+        <a class="nav-link" href="login.html#dark"><span class="ico">↪</span> Keluar</a>
+      </div>
+    </div>
+    <div class="sidebar-foot">
+      <div class="user-chip"><div class="avatar">AR</div><div class="meta"><strong>Aisyah R.</strong><br><span>Product Manager</span></div></div>
+    </div>
+  </aside>
+
+  <div class="main-area">
+    <header class="topbar">
+      <div class="flex items-center gap-3">
+        <label for="menu-toggle" class="menu-btn">☰</label>
+        <h1>Redesign Website v3</h1>
+      </div>
+      <div class="topbar-actions">
+        <span class="nav-theme-light"><a href="projects.html#light" class="btn btn-ghost btn-sm">← Semua project</a></span>
+        <span class="nav-theme-dark" style="display:none"><a href="projects.html#dark" class="btn btn-ghost btn-sm">← Semua project</a></span>
+        <span class="theme-toggle-wrap">
+          <a href="#dark" class="theme-btn theme-to-dark" title="Aktifkan Dark Mode">🌙</a>
+          <a href="#light" class="theme-btn theme-to-light" title="Aktifkan Light Mode">☀️</a>
+        </span>
+        <span class="nav-theme-light"><a href="settings.html#light" class="avatar">AR</a></span>
+        <span class="nav-theme-dark" style="display:none"><a href="settings.html#dark" class="avatar">AR</a></span>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="page-head">
+        <div>
+          <h2>Overhaul desain landing page, dashboard, dan portal customer.</h2>
+          <p>12 task · 4 anggota · Due 25 Jun 2025</p>
+        </div>
+        <div class="page-actions nav-theme-light">
+          <a href="#" class="btn btn-ghost btn-sm">Share</a>
+          <a href="#" class="btn btn-primary btn-sm">+ Add Task</a>
+        </div>
+        <div class="page-actions nav-theme-dark" style="display:none">
+          <a href="#" class="btn btn-ghost btn-sm">Share</a>
+          <a href="#" class="btn btn-primary btn-sm">+ Add Task</a>
+        </div>
+      </div>
+
+      <div class="stat-grid" style="grid-template-columns: repeat(auto-fit,minmax(160px,1fr))">
+        <div class="stat-card"><div class="ico">📊</div><div class="value">78%</div><div class="label">Progress</div></div>
+        <div class="stat-card"><div class="ico">✅</div><div class="value">9/12</div><div class="label">Task Selesai</div></div>
+        <div class="stat-card"><div class="ico">⏰</div><div class="value">6 hari</div><div class="label">Sisa Waktu</div></div>
+        <div class="stat-card"><div class="ico">👥</div><div class="value">4</div><div class="label">Anggota</div></div>
+      </div>
+
+      <div class="kanban">
+        <div class="kanban-col">
+          <div class="col-head"><h4>Backlog</h4><span class="col-count">3</span></div>
+          <div class="task-card">
+            <div class="tc-title">Riset kompetitor UI dashboard</div>
+            <div class="tc-meta"><span>Due 22 Jun</span><span class="avatar avatar-sm">CN</span></div>
+            <div class="tc-tags"><span class="badge badge-neutral">Riset</span></div>
+          </div>
+          <div class="task-card">
+            <div class="tc-title">Susun moodboard & style guide</div>
+            <div class="tc-meta"><span>Due 23 Jun</span><span class="avatar avatar-sm">CN</span></div>
+            <div class="tc-tags"><span class="badge badge-neutral">Design</span></div>
+          </div>
+          <div class="task-card">
+            <div class="tc-title">Buat wireframe portal customer</div>
+            <div class="tc-meta"><span>Due 24 Jun</span><span class="avatar avatar-sm">AR</span></div>
+            <div class="tc-tags"><span class="badge badge-neutral">Design</span></div>
+          </div>
+        </div>
+
+        <div class="kanban-col">
+          <div class="col-head"><h4>To Do</h4><span class="col-count">3</span></div>
+          <div class="task-card">
+            <div class="tc-title">Implementasikan hero section baru</div>
+            <div class="tc-meta"><span>Due 24 Jun</span><span class="avatar avatar-sm" style="background:linear-gradient(135deg,#f97316,#f59e0b)">BP</span></div>
+            <div class="tc-tags"><span class="badge badge-info">Frontend</span></div>
+          </div>
+          <div class="task-card">
+            <div class="tc-title">Setup analytics event tracking</div>
+            <div class="tc-meta"><span>Due 25 Jun</span><span class="avatar avatar-sm" style="background:linear-gradient(135deg,#a855f7,#6366f1)">DK</span></div>
+            <div class="tc-tags"><span class="badge badge-info">Backend</span></div>
+          </div>
+          <div class="task-card">
+            <div class="tc-title">Siapkan copywriting landing page</div>
+            <div class="tc-meta"><span>Due 25 Jun</span><span class="avatar avatar-sm">AR</span></div>
+            <div class="tc-tags"><span class="badge badge-neutral">Content</span></div>
+          </div>
+        </div>
+
+        <div class="kanban-col">
+          <div class="col-head"><h4>In Progress</h4><span class="col-count">2</span></div>
+          <div class="task-card">
+            <div class="tc-title">Redesign navbar & footer responsif</div>
+            <div class="tc-meta"><span>Due 23 Jun</span><span class="avatar avatar-sm" style="background:linear-gradient(135deg,#f97316,#f59e0b)">BP</span></div>
+            <div class="tc-tags"><span class="badge badge-warning">Frontend</span></div>
+          </div>
+          <div class="task-card">
+            <div class="tc-title">Integrasi form kontak dengan CRM</div>
+            <div class="tc-meta"><span>Due 24 Jun</span><span class="avatar avatar-sm" style="background:linear-gradient(135deg,#a855f7,#6366f1)">DK</span></div>
+            <div class="tc-tags"><span class="badge badge-warning">Integrasi</span></div>
+          </div>
+        </div>
+
+        <div class="kanban-col">
+          <div class="col-head"><h4>Done</h4><span class="col-count">4</span></div>
+          <div class="task-card">
+            <div class="tc-title">Audit UI existing</div>
+            <div class="tc-meta"><span>Selesai</span><span class="avatar avatar-sm">CN</span></div>
+            <div class="tc-tags"><span class="badge badge-success">Done</span></div>
+          </div>
+          <div class="task-card">
+            <div class="tc-title">User interview (5 partisipan)</div>
+            <div class="tc-meta"><span>Selesai</span><span class="avatar avatar-sm">AR</span></div>
+            <div class="tc-tags"><span class="badge badge-success">Done</span></div>
+          </div>
+          <div class="task-card">
+            <div class="tc-title">Setup design system tokens</div>
+            <div class="tc-meta"><span>Selesai</span><span class="avatar avatar-sm">CN</span></div>
+            <div class="tc-tags"><span class="badge badge-success">Done</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
