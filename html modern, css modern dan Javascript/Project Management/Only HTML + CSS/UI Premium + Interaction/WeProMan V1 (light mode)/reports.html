@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reports — WeProMan</title>
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+<input type="checkbox" id="menu-toggle" class="hidden">
+<div class="app-shell">
+  <aside class="sidebar">
+    <a href="WeProMan.html" class="sidebar-brand"><span class="brand-mark">W</span> WeProMan</a>
+    <div class="nav-group">
+      <div class="nav-label">Workspace</div>
+      <div class="nav-theme-light">
+        <a class="nav-link" href="dashboard.html#light"><span class="ico">▦</span> Dashboard</a>
+        <a class="nav-link" href="projects.html#light"><span class="ico">▣</span> Projects</a>
+        <a class="nav-link" href="tasks.html#light"><span class="ico">✓</span> Tasks</a>
+        <a class="nav-link" href="team.html#light"><span class="ico">◉</span> Team</a>
+        <a class="nav-link" href="calendar.html#light"><span class="ico">▤</span> Calendar</a>
+        <a class="nav-link active" href="reports.html#light"><span class="ico">▧</span> Reports</a>
+      </div>
+      <div class="nav-theme-dark">
+        <a class="nav-link" href="dashboard.html#dark"><span class="ico">▦</span> Dashboard</a>
+        <a class="nav-link" href="projects.html#dark"><span class="ico">▣</span> Projects</a>
+        <a class="nav-link" href="tasks.html#dark"><span class="ico">✓</span> Tasks</a>
+        <a class="nav-link" href="team.html#dark"><span class="ico">◉</span> Team</a>
+        <a class="nav-link" href="calendar.html#dark"><span class="ico">▤</span> Calendar</a>
+        <a class="nav-link active" href="reports.html#dark"><span class="ico">▧</span> Reports</a>
+      </div>
+    </div>
+    <div class="nav-group">
+      <div class="nav-label">Akun</div>
+      <div class="nav-theme-light">
+        <a class="nav-link" href="settings.html#light"><span class="ico">⚙</span> Settings</a>
+        <a class="nav-link" href="login.html#light"><span class="ico">↪</span> Keluar</a>
+      </div>
+      <div class="nav-theme-dark">
+        <a class="nav-link" href="settings.html#dark"><span class="ico">⚙</span> Settings</a>
+        <a class="nav-link" href="login.html#dark"><span class="ico">↪</span> Keluar</a>
+      </div>
+    </div>
+    <div class="sidebar-foot">
+      <div class="user-chip"><div class="avatar">AR</div><div class="meta"><strong>Aisyah R.</strong><br><span>Product Manager</span></div></div>
+    </div>
+  </aside>
+
+  <div class="main-area">
+    <header class="topbar">
+      <div class="flex items-center gap-3">
+        <label for="menu-toggle" class="menu-btn">☰</label>
+        <h1>Reports</h1>
+      </div>
+      <div class="topbar-actions">
+        <span class="theme-toggle-wrap">
+          <a href="#dark" class="theme-btn theme-to-dark" title="Aktifkan Dark Mode">🌙</a>
+          <a href="#light" class="theme-btn theme-to-light" title="Aktifkan Light Mode">☀️</a>
+        </span>
+        <span class="nav-theme-light"><a href="settings.html#light" class="avatar">AR</a></span>
+        <span class="nav-theme-dark" style="display:none"><a href="settings.html#dark" class="avatar">AR</a></span>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="page-head">
+        <div><h2>Laporan & Analitik</h2><p>Ringkasan performa tim dan produktivitas workspace.</p></div>
+        <div class="page-actions"><a href="#" class="btn btn-primary btn-sm">Export CSV</a></div>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card"><div class="ico">✅</div><div class="value">186</div><div class="label">Task Selesai</div><div class="trend up">▲ 12%</div></div>
+        <div class="stat-card"><div class="ico">⚡</div><div class="value">84%</div><div class="label">On-time Delivery</div><div class="trend up">▲ 6%</div></div>
+        <div class="stat-card"><div class="ico">🕒</div><div class="value">312 jam</div><div class="label">Waktu Tim</div><div class="trend up">+ 24 jam</div></div>
+        <div class="stat-card"><div class="ico">🎯</div><div class="value">92</div><div class="label">Velocity Score</div><div class="trend down">▼ 3</div></div>
+      </div>
+
+      <div class="dash-grid">
+        <div class="panel">
+          <div class="panel-head"><h3>Task Selesai per Minggu</h3><span class="text-xs text-mute">8 minggu terakhir</span></div>
+          <div class="panel-body">
+            <div class="chart-mock">
+              <div class="bar" style="height:45%"></div>
+              <div class="bar" style="height:62%"></div>
+              <div class="bar" style="height:52%"></div>
+              <div class="bar alt" style="height:78%"></div>
+              <div class="bar" style="height:70%"></div>
+              <div class="bar alt" style="height:88%"></div>
+              <div class="bar" style="height:65%"></div>
+              <div class="bar" style="height:92%"></div>
+            </div>
+            <div class="flex justify-between text-xs text-mute mt-3">
+              <span>W1</span><span>W2</span><span>W3</span><span>W4</span><span>W5</span><span>W6</span><span>W7</span><span>W8</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h3>Distribusi Status</h3></div>
+          <div class="panel-body donut-wrap">
+            <div class="donut"><div class="center"><strong>186</strong><span>Total Task</span></div></div>
+          </div>
+          <div class="panel-body legend" style="padding-top:0">
+            <div class="item"><span class="dot" style="background:var(--brand-500)"></span> Selesai — 45%</div>
+            <div class="item"><span class="dot" style="background:var(--accent-500)"></span> In Progress — 25%</div>
+            <div class="item"><span class="dot" style="background:var(--warning)"></span> To Do — 18%</div>
+            <div class="item"><span class="dot" style="background:var(--border-strong)"></span> Backlog — 12%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel mt-4">
+        <div class="panel-head"><h3>Beban Kerja per Anggota</h3><span class="text-xs text-mute">Bulan ini</span></div>
+        <div class="panel-body" style="display:flex;flex-direction:column;gap:18px">
+          <div><div class="flex justify-between text-sm mb-2"><strong>Bayu Pratama</strong><span class="text-soft">28 task</span></div><div class="progress"><span style="width:92%"></span></div></div>
+          <div><div class="flex justify-between text-sm mb-2"><strong>Dimas Kurniawan</strong><span class="text-soft">24 task</span></div><div class="progress"><span style="width:80%"></span></div></div>
+          <div><div class="flex justify-between text-sm mb-2"><strong>Aisyah Ramadhani</strong><span class="text-soft">20 task</span></div><div class="progress warn"><span style="width:67%"></span></div></div>
+          <div><div class="flex justify-between text-sm mb-2"><strong>Citra Nuraini</strong><span class="text-soft">16 task</span></div><div class="progress ok"><span style="width:53%"></span></div></div>
+          <div><div class="flex justify-between text-sm mb-2"><strong>Fajar Hidayat</strong><span class="text-soft">12 task</span></div><div class="progress ok"><span style="width:40%"></span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
