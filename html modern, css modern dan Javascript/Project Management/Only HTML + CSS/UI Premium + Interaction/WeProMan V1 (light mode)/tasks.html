@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tasks — WeProMan</title>
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+<input type="checkbox" id="menu-toggle" class="hidden">
+<div class="app-shell">
+  <aside class="sidebar">
+    <a href="WeProMan.html" class="sidebar-brand"><span class="brand-mark">W</span> WeProMan</a>
+    <div class="nav-group">
+      <div class="nav-label">Workspace</div>
+      <div class="nav-theme-light">
+        <a class="nav-link" href="dashboard.html#light"><span class="ico">▦</span> Dashboard</a>
+        <a class="nav-link" href="projects.html#light"><span class="ico">▣</span> Projects</a>
+        <a class="nav-link active" href="tasks.html#light"><span class="ico">✓</span> Tasks</a>
+        <a class="nav-link" href="team.html#light"><span class="ico">◉</span> Team</a>
+        <a class="nav-link" href="calendar.html#light"><span class="ico">▤</span> Calendar</a>
+        <a class="nav-link" href="reports.html#light"><span class="ico">▧</span> Reports</a>
+      </div>
+      <div class="nav-theme-dark">
+        <a class="nav-link" href="dashboard.html#dark"><span class="ico">▦</span> Dashboard</a>
+        <a class="nav-link" href="projects.html#dark"><span class="ico">▣</span> Projects</a>
+        <a class="nav-link active" href="tasks.html#dark"><span class="ico">✓</span> Tasks</a>
+        <a class="nav-link" href="team.html#dark"><span class="ico">◉</span> Team</a>
+        <a class="nav-link" href="calendar.html#dark"><span class="ico">▤</span> Calendar</a>
+        <a class="nav-link" href="reports.html#dark"><span class="ico">▧</span> Reports</a>
+      </div>
+    </div>
+    <div class="nav-group">
+      <div class="nav-label">Akun</div>
+      <div class="nav-theme-light">
+        <a class="nav-link" href="settings.html#light"><span class="ico">⚙</span> Settings</a>
+        <a class="nav-link" href="login.html#light"><span class="ico">↪</span> Keluar</a>
+      </div>
+      <div class="nav-theme-dark">
+        <a class="nav-link" href="settings.html#dark"><span class="ico">⚙</span> Settings</a>
+        <a class="nav-link" href="login.html#dark"><span class="ico">↪</span> Keluar</a>
+      </div>
+    </div>
+    <div class="sidebar-foot">
+      <div class="user-chip"><div class="avatar">AR</div><div class="meta"><strong>Aisyah R.</strong><br><span>Product Manager</span></div></div>
+    </div>
+  </aside>
+
+  <div class="main-area">
+    <header class="topbar">
+      <div class="flex items-center gap-3">
+        <label for="menu-toggle" class="menu-btn">☰</label>
+        <h1>Tasks</h1>
+      </div>
+      <div class="topbar-actions">
+        <div class="search-box">🔎 <input type="search" placeholder="Cari task…"></div>
+        <span class="theme-toggle-wrap">
+          <a href="#dark" class="theme-btn theme-to-dark" title="Aktifkan Dark Mode">🌙</a>
+          <a href="#light" class="theme-btn theme-to-light" title="Aktifkan Light Mode">☀️</a>
+        </span>
+        <span class="nav-theme-light"><a href="settings.html#light" class="avatar">AR</a></span>
+        <span class="nav-theme-dark" style="display:none"><a href="settings.html#dark" class="avatar">AR</a></span>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="page-head">
+        <div><h2>Semua Task</h2><p>42 task aktif · 6 due hari ini · 3 overdue</p></div>
+        <div class="page-actions nav-theme-light">
+          <a href="#" class="btn btn-ghost btn-sm">Filter</a>
+          <a href="#" class="btn btn-primary btn-sm">+ New Task</a>
+        </div>
+        <div class="page-actions nav-theme-dark" style="display:none">
+          <a href="#" class="btn btn-ghost btn-sm">Filter</a>
+          <a href="#" class="btn btn-primary btn-sm">+ New Task</a>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="table-wrap">
+          <table class="tbl">
+            <thead>
+              <tr>
+                <th style="width:36px"><input type="checkbox" style="accent-color:var(--brand-500)"></th>
+                <th>Task</th><th>Project</th><th>Assignee</th><th>Priority</th><th>Status</th><th>Due</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" style="accent-color:var(--brand-500)"></td>
+                <td><strong>Finalisasi desain onboarding</strong></td>
+                <td class="text-soft">Redesign Website</td>
+                <td><div class="flex items-center gap-2"><div class="avatar avatar-sm">CN</div> Citra N.</div></td>
+                <td><span class="badge badge-danger">High</span></td>
+                <td><span class="badge badge-success">Done</span></td>
+                <td class="text-soft">18 Jun</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" style="accent-color:var(--brand-500)"></td>
+                <td><strong>Review PR modul pembayaran</strong></td>
+                <td class="text-soft">API Gateway</td>
+                <td><div class="flex items-center gap-2"><div class="avatar avatar-sm" style="background:linear-gradient(135deg,#a855f7,#6366f1)">DK</div> Dimas K.</div></td>
+                <td><span class="badge badge-warning">Medium</span></td>
+                <td><span class="badge badge-warning">In Progress</span></td>
+                <td class="text-soft">19 Jun</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" style="accent-color:var(--brand-500)"></td>
+                <td><strong>Sprint planning Q2</strong></td>
+                <td class="text-soft">Redesign Website</td>
+                <td><div class="flex items-center gap-2"><div class="avatar avatar-sm">AR</div> Aisyah R.</div></td>
+                <td><span class="badge badge-danger">High</span></td>
+                <td><span class="badge badge-info">Scheduled</span></td>
+                <td class="text-soft">19 Jun</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" style="accent-color:var(--brand-500)"></td>
+                <td><strong>Update dokumen API spec v2</strong></td>
+                <td class="text-soft">API Gateway</td>
+                <td><div class="flex items-center gap-2"><div class="avatar avatar-sm" style="background:linear-gradient(135deg,#a855f7,#6366f1)">DK</div> Dimas K.</div></td>
+                <td><span class="badge badge-warning">Medium</span></td>
+                <td><span class="badge badge-danger">Overdue</span></td>
+                <td class="text-soft">17 Jun</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" style="accent-color:var(--brand-500)"></td>
+                <td><strong>Implementasikan hero section baru</strong></td>
+                <td class="text-soft">Redesign Website</td>
+                <td><div class="flex items-center gap-2"><div class="avatar avatar-sm" style="background:linear-gradient(135deg,#f97316,#f59e0b)">BP</div> Bayu P.</div></td>
+                <td><span class="badge badge-danger">High</span></td>
+                <td><span class="badge badge-warning">In Progress</span></td>
+                <td class="text-soft">24 Jun</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" style="accent-color:var(--brand-500)"></td>
+                <td><strong>Setup analytics event tracking</strong></td>
+                <td class="text-soft">Marketing Q2</td>
+                <td><div class="flex items-center gap-2"><div class="avatar avatar-sm" style="background:linear-gradient(135deg,#a855f7,#6366f1)">DK</div> Dimas K.</div></td>
+                <td><span class="badge badge-neutral">Low</span></td>
+                <td><span class="badge badge-neutral">To Do</span></td>
+                <td class="text-soft">25 Jun</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" style="accent-color:var(--brand-500)"></td>
+                <td><strong>User interview batch 2</strong></td>
+                <td class="text-soft">Mobile App MVP</td>
+                <td><div class="flex items-center gap-2"><div class="avatar avatar-sm">AR</div> Aisyah R.</div></td>
+                <td><span class="badge badge-warning">Medium</span></td>
+                <td><span class="badge badge-neutral">To Do</span></td>
+                <td class="text-soft">28 Jun</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
